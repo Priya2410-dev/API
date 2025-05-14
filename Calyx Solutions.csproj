@@ -1,0 +1,228 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Calyx_Solutions</RootNamespace>
+<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\IResourceOwnerPasswordValidator.cs" />
+    <Compile Remove="JwtBearerDefaults.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="nlog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="nlog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AjaxMin" Version="5.14.5506.26202" />
+    <PackageReference Include="Auth0.ManagementApi" Version="7.26.0" />
+    <PackageReference Include="Microsoft.AspNet.Razor" Version="3.3.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
+    <PackageReference Include="MicrosoftAjax" Version="4.0.20526" />
+    <PackageReference Include="MySqlConnector" Version="2.0.0" />
+    <PackageReference Include="NLog" Version="5.3.4" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.3.15" />
+    <PackageReference Include="NLog.Web" Version="5.3.15" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="UAParser" Version="3.1.47" />
+    <PackageReference Include="Yoti" Version="3.17.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Web Controller\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="nlog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebaseAdmin">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\FirebaseAdmin.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.Gax">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Google.Api.Gax.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.Gax.Rest">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Google.Api.Gax.Rest.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="gudusoft.gsqlparser">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\gudusoft.gsqlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="gudusoft.gsqlparser.yyrec">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\gudusoft.gsqlparser.yyrec.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JsonSubTypes">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\JsonSubTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="ListToDataTable">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\ListToDataTable.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authentication.JwtBearer">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OpenApi">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Microsoft.OpenApi.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlConnector">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\MySqlConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extensions.Logging">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\NLog.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Web">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\NLog.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeOpenXml.Core.ExcelPackage">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\OfficeOpenXml.Core.ExcelPackage.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Console">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Serilog.Sinks.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.AspNetCore.Swagger">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.AspNetCore.SwaggerGen">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.AspNetCore.SwaggerUI">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Web.DynamicData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="UAParser">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\UAParser.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Yoti.Auth">
+      <HintPath>F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Debug\net6.0\Yoti.Auth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
