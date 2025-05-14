@@ -1,0 +1,65 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+        //"applicationUrl": "https://muthootglobalpay.co.uk/muthoottestapi",
+        //"applicationUrl": "https://finestpay.co.uk/appapilive",
+        //"applicationUrl": "https://myremituk.com/testapi",
+        // "applicationUrl": "https://riyoremit.com/testapi",
+        // "applicationUrl": "https://supertransfer.co.uk/appapi",
+        //"applicationUrl": "https://truslypay.com/truslypayapi",
+        "applicationUrl": "http://localhost:5233", // Localhost
+        // "applicationUrl": "http://57.128.159.165/balazooapi",
+        //"applicationUrl": "https://alphandomega.co.uk/alphaomega",
+        // "applicationUrl": "https://currencyexchangesoftware.eu/pilot",
+        // "applicationUrl": "https://currencyexchangesoftware.eu/live",
+        //"applicationUrl": "https://pay-quik.co.uk/appapilive",
+        //"applicationUrl": "https://kobotrade.com/koboapi",
+        //"applicationUrl": "https://kobotrade.com/koboliveapi",
+
+        //"applicationUrl": "https://teeparamexchange.co.uk/teeparamtestapi",
+
+        "sslPort": 0
+    }
+  },
+  "profiles": {
+    "Calyx_Solutions": {
+        "commandName": "Project",
+        "dotnetRunMessages": true,
+        "launchBrowser": true,
+        "launchUrl": "swagger",
+
+        //"applicationUrl": "https://finestpay.co.uk/appapilive",
+        // "applicationUrl": "https://muthootglobalpay.co.uk/muthoottestapi",
+        //"applicationUrl": "https://myremituk.com/testapi",
+        //"applicationUrl": "https://riyoremit.com/testapi",
+        //"applicationUrl": "https://supertransfer.co.uk/appapi",
+        //"applicationUrl": "https://truslypay.com/truslypayapi",
+         "applicationUrl": "http://localhost:5233", // Localhost
+        // "applicationUrl": "http://57.128.159.165/balazooapi",
+        //"applicationUrl": "https://alphandomega.co.uk/alphaomega",
+
+        // "applicationUrl": "https://currencyexchangesoftware.eu/pilot",
+        //"applicationUrl": "https://currencyexchangesoftware.eu/live",
+        //"applicationUrl": "https://pay-quik.co.uk/appapilive",
+        //"applicationUrl": "https://kobotrade.com/koboapi",
+        //"applicationUrl": "https://kobotrade.com/koboliveapi",
+
+        // "applicationUrl": "https://teeparamexchange.co.uk/teeparamtestapi",
+
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development"
+        }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
