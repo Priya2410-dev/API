@@ -1,0 +1,122 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\Calyx Solutions.csproj": {}
+  },
+  "projects": {
+    "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\Calyx Solutions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\Calyx Solutions.csproj",
+        "projectName": "Calyx Solutions",
+        "projectPath": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\Calyx Solutions.csproj",
+        "packagesPath": "C:\\Users\\CALYX\\.nuget\\packages\\",
+        "outputPath": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\CALYX\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://github.com": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AjaxMin": {
+              "target": "Package",
+              "version": "[5.14.5506.26202, )"
+            },
+            "Auth0.ManagementApi": {
+              "target": "Package",
+              "version": "[7.26.0, )"
+            },
+            "Microsoft.AspNet.Razor": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "Microsoft.AspNet.WebApi": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "MicrosoftAjax": {
+              "target": "Package",
+              "version": "[4.0.20526, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[5.3.4, )"
+            },
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.3.15, )"
+            },
+            "NLog.Web": {
+              "target": "Package",
+              "version": "[5.3.15, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "UAParser": {
+              "target": "Package",
+              "version": "[3.1.47, )"
+            },
+            "Yoti": {
+              "target": "Package",
+              "version": "[3.17.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

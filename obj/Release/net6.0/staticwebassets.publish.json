@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "c91TReTON5bmAColAupg/XRlPGi3jeNb2OAPTiBMmoE=",
+  "Source": "Calyx Solutions",
+  "BasePath": "_content/Calyx Solutions",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Calyx Solutions\\wwwroot",
+      "Source": "Calyx Solutions",
+      "ContentRoot": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\wwwroot\\",
+      "BasePath": "_content/Calyx Solutions",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\wwwroot\\uploads\\1000090236.jpg",
+      "SourceId": "Calyx Solutions",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\wwwroot\\",
+      "BasePath": "_content/Calyx Solutions",
+      "RelativePath": "uploads/1000090236.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\1000090236.jpg"
+    },
+    {
+      "Identity": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\wwwroot\\uploads\\1000090237.jpg",
+      "SourceId": "Calyx Solutions",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\wwwroot\\",
+      "BasePath": "_content/Calyx Solutions",
+      "RelativePath": "uploads/1000090237.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\1000090237.jpg"
+    },
+    {
+      "Identity": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\wwwroot\\uploads\\Image_20240105_152727_207.jpeg",
+      "SourceId": "Calyx Solutions",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\wwwroot\\",
+      "BasePath": "_content/Calyx Solutions",
+      "RelativePath": "uploads/Image_20240105_152727_207.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Image_20240105_152727_207.jpeg"
+    }
+  ]
+}

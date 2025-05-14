@@ -1,0 +1,850 @@
+2025-05-14 12:25:46.6137 DEBUG Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2025-05-14 12:25:47.1054 DEBUG Hosting starting 
+2025-05-14 12:25:47.2679 INFO User profile is available. Using 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2025-05-14 12:25:47.2850 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-0bf881db-1369-442d-a02e-0ead21594d9e.xml'. 
+2025-05-14 12:25:47.2928 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-4a947aa7-3357-4223-bb35-7ea3ed5e7e79.xml'. 
+2025-05-14 12:25:47.2928 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-717c74c0-1060-4427-a9d9-182861a01a05.xml'. 
+2025-05-14 12:25:47.2928 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-735fade6-aa8a-474a-9efd-32bb20aff617.xml'. 
+2025-05-14 12:25:47.2928 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-81cebca2-fe54-44d1-9088-c635f75e300d.xml'. 
+2025-05-14 12:25:47.2928 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-dad14520-ce8a-4798-a091-64c23a11c6e5.xml'. 
+2025-05-14 12:25:47.2928 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-f8885a70-e6c1-42d8-8dd1-af0efebb8645.xml'. 
+2025-05-14 12:25:47.2928 DEBUG Found key {0bf881db-1369-442d-a02e-0ead21594d9e}. 
+2025-05-14 12:25:47.3192 DEBUG Found key {4a947aa7-3357-4223-bb35-7ea3ed5e7e79}. 
+2025-05-14 12:25:47.3253 DEBUG Found key {717c74c0-1060-4427-a9d9-182861a01a05}. 
+2025-05-14 12:25:47.3253 DEBUG Found key {735fade6-aa8a-474a-9efd-32bb20aff617}. 
+2025-05-14 12:25:47.3253 DEBUG Found key {81cebca2-fe54-44d1-9088-c635f75e300d}. 
+2025-05-14 12:25:47.3253 DEBUG Found key {dad14520-ce8a-4798-a091-64c23a11c6e5}. 
+2025-05-14 12:25:47.3253 DEBUG Found key {f8885a70-e6c1-42d8-8dd1-af0efebb8645}. 
+2025-05-14 12:25:47.3395 DEBUG Considering key {735fade6-aa8a-474a-9efd-32bb20aff617} with expiration date 2025-06-10 09:15:18Z as default key. 
+2025-05-14 12:25:47.3395 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-05-14 12:25:47.3395 DEBUG Decrypting secret element using Windows DPAPI. 
+2025-05-14 12:25:47.3395 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-05-14 12:25:47.3581 DEBUG Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2025-05-14 12:25:47.3581 DEBUG Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2025-05-14 12:25:47.3581 DEBUG Using key {735fade6-aa8a-474a-9efd-32bb20aff617} as the default key. 
+2025-05-14 12:25:47.3581 DEBUG Key ring with default key {735fade6-aa8a-474a-9efd-32bb20aff617} was loaded during application startup. 
+2025-05-14 12:25:47.7823 INFO Now listening on: http://localhost:5233 
+2025-05-14 12:25:47.7921 DEBUG Loaded hosting startup assembly Calyx Solutions 
+2025-05-14 12:25:47.7921 DEBUG Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2025-05-14 12:25:47.7921 DEBUG Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2025-05-14 12:25:47.7921 INFO Application started. Press Ctrl+C to shut down. 
+2025-05-14 12:25:47.7921 INFO Hosting environment: Development 
+2025-05-14 12:25:47.7921 INFO Content root path: G:\calyx-api\MTS-Web-API\Calyx Solutions\ 
+2025-05-14 12:25:47.7921 DEBUG Hosting started 
+2025-05-14 12:25:47.9282 DEBUG Connection id "0HNCIMHDK19M7" accepted. 
+2025-05-14 12:25:47.9282 DEBUG Connection id "0HNCIMHDK19M6" accepted. 
+2025-05-14 12:25:47.9282 DEBUG Connection id "0HNCIMHDK19M6" started. 
+2025-05-14 12:25:47.9282 DEBUG Connection id "0HNCIMHDK19M7" started. 
+2025-05-14 12:25:48.7359 DEBUG Connection id "0HNCIMHDK19M8" accepted. 
+2025-05-14 12:25:48.7359 DEBUG Connection id "0HNCIMHDK19M8" started. 
+2025-05-14 12:25:48.7493 DEBUG Connection id "0HNCIMHDK19M9" accepted. 
+2025-05-14 12:25:48.7493 DEBUG Connection id "0HNCIMHDK19M9" started. 
+2025-05-14 12:25:48.8650 INFO Request starting HTTP/1.1 GET http://localhost:5233/swagger/index.html - - 
+2025-05-14 12:25:48.9431 DEBUG Wildcard detected, all requests with hosts will be allowed. 
+2025-05-14 12:25:49.0294 DEBUG No candidates found for the request path '/swagger/index.html' 
+2025-05-14 12:25:49.0294 DEBUG Request did not match any endpoints 
+2025-05-14 12:25:49.2122 DEBUG Response markup is scheduled to include browser refresh script injection. 
+2025-05-14 12:25:49.4495 INFO Request starting HTTP/1.1 GET http://localhost:5233/_framework/aspnetcore-browser-refresh.js - - 
+2025-05-14 12:25:49.4495 DEBUG Connection id "0HNCIMHDK19MA" accepted. 
+2025-05-14 12:25:49.4495 DEBUG Connection id "0HNCIMHDK19MA" started. 
+2025-05-14 12:25:49.4495 INFO Request starting HTTP/1.1 GET http://localhost:5233/_vs/browserLink - - 
+2025-05-14 12:25:49.4642 DEBUG Connection id "0HNCIMHDK19M9" completed keep alive response. 
+2025-05-14 12:25:49.4642 INFO Request finished HTTP/1.1 GET http://localhost:5233/_framework/aspnetcore-browser-refresh.js - - - 200 12000 application/javascript;+charset=utf-8 14.9233ms 
+2025-05-14 12:25:49.4814 DEBUG Response markup was updated to include browser refresh script injection. 
+2025-05-14 12:25:49.4814 DEBUG Connection id "0HNCIMHDK19M8" completed keep alive response. 
+2025-05-14 12:25:49.4814 INFO Request finished HTTP/1.1 GET http://localhost:5233/swagger/index.html - - - 200 - text/html;charset=utf-8 625.5805ms 
+2025-05-14 12:25:49.6951 DEBUG Connection id "0HNCIMHDK19MA" completed keep alive response. 
+2025-05-14 12:25:49.6951 INFO Request finished HTTP/1.1 GET http://localhost:5233/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 231.9279ms 
+2025-05-14 12:25:51.2958 INFO Request starting HTTP/1.1 GET http://localhost:5233/swagger/v1/swagger.json - - 
+2025-05-14 12:25:51.2958 DEBUG No candidates found for the request path '/swagger/v1/swagger.json' 
+2025-05-14 12:25:51.2958 DEBUG Request did not match any endpoints 
+2025-05-14 12:25:51.6506 ERROR An unhandled exception has occurred while executing the request. Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - Calyx_Solutions.Controllers.IDController.Upload (Calyx Solutions). See inner exception
+ ---> System.ArgumentException: An item with the same key has already been added. Key: ContentType
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchemaFromFormParameters(IEnumerable`1 formParameters, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBodyFromFormParameters(ApiDescription apiDescription, SchemaRepository schemaRepository, IEnumerable`1 formParameters)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBody(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2025-05-14 12:25:51.7769 ERROR An unhandled exception occurred. 
+2025-05-14 12:25:51.7769 DEBUG Connection id "0HNCIMHDK19MA" completed keep alive response. 
+2025-05-14 12:25:51.7769 INFO Request finished HTTP/1.1 GET http://localhost:5233/swagger/v1/swagger.json - - - 500 - - 482.9979ms 
+2025-05-14 12:25:51.8204 INFO Request starting HTTP/1.1 GET http://localhost:5233/swagger/index.html - - 
+2025-05-14 12:25:51.8204 DEBUG No candidates found for the request path '/swagger/index.html' 
+2025-05-14 12:25:51.8204 DEBUG Request did not match any endpoints 
+2025-05-14 12:25:51.8249 DEBUG Connection id "0HNCIMHDK19MA" completed keep alive response. 
+2025-05-14 12:25:51.8249 INFO Request finished HTTP/1.1 GET http://localhost:5233/swagger/index.html - - - 200 - text/html;charset=utf-8 4.7985ms 
+2025-05-14 12:25:53.5493 INFO Request starting HTTP/1.1 GET http://localhost:5233/swagger/index.html - - 
+2025-05-14 12:25:53.5493 DEBUG No candidates found for the request path '/swagger/index.html' 
+2025-05-14 12:25:53.5493 DEBUG Request did not match any endpoints 
+2025-05-14 12:25:53.5493 DEBUG Connection id "0HNCIMHDK19MA" completed keep alive response. 
+2025-05-14 12:25:53.5493 INFO Request finished HTTP/1.1 GET http://localhost:5233/swagger/index.html - - - 200 - text/html;charset=utf-8 1.2966ms 
+2025-05-14 12:26:00.3694 DEBUG Connection id "0HNCIMHDK19MB" accepted. 
+2025-05-14 12:26:00.3698 DEBUG Connection id "0HNCIMHDK19MB" started. 
+2025-05-14 12:26:00.3698 DEBUG Connection id "0HNCIMHDK19MC" accepted. 
+2025-05-14 12:26:00.3698 DEBUG Connection id "0HNCIMHDK19MB" received FIN. 
+2025-05-14 12:26:00.3698 DEBUG Connection id "0HNCIMHDK19MC" started. 
+2025-05-14 12:26:00.3698 INFO Request starting HTTP/1.1 POST http://localhost:5233/api/userlogin/checklogin application/json 409 
+2025-05-14 12:26:00.3698 DEBUG Connection id "0HNCIMHDK19MB" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 12:26:00.3698 DEBUG Connection id "0HNCIMHDK19MB" disconnecting. 
+2025-05-14 12:26:00.3698 DEBUG 1 candidate(s) found for the request path '/api/userlogin/checklogin' 
+2025-05-14 12:26:00.3698 DEBUG Connection id "0HNCIMHDK19MB" stopped. 
+2025-05-14 12:26:00.3864 DEBUG Endpoint 'Calyx_Solutions.Controllers.UserLoginController.CheckLogin (Calyx Solutions)' with route pattern 'api/UserLogin/CheckLogin' is valid for the request path '/api/userlogin/checklogin' 
+2025-05-14 12:26:00.3864 DEBUG Request matched endpoint 'Calyx_Solutions.Controllers.UserLoginController.CheckLogin (Calyx Solutions)' 
+2025-05-14 12:26:00.3864 DEBUG Static files was skipped as the request already matched an endpoint. 
+2025-05-14 12:26:00.3864 WARN Failed to determine the https port for redirect. 
+2025-05-14 12:26:00.7704 INFO Failed to validate the token. Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-05-14 12:26:00.7704 INFO Bearer was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'. 
+2025-05-14 12:26:00.7831 INFO Executing endpoint 'Calyx_Solutions.Controllers.UserLoginController.CheckLogin (Calyx Solutions)' 
+2025-05-14 12:26:00.8226 INFO Route matched with {action = "CheckLogin", controller = "UserLogin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckLogin(System.Text.Json.JsonElement) on controller Calyx_Solutions.Controllers.UserLoginController (Calyx Solutions). 
+2025-05-14 12:26:00.8226 DEBUG Execution plan of authorization filters (in the following order): None 
+2025-05-14 12:26:00.8226 DEBUG Execution plan of resource filters (in the following order): None 
+2025-05-14 12:26:00.8226 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-14 12:26:00.8226 DEBUG Execution plan of exception filters (in the following order): None 
+2025-05-14 12:26:00.8226 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-14 12:26:00.8226 DEBUG Executing controller factory for controller Calyx_Solutions.Controllers.UserLoginController (Calyx Solutions) 
+2025-05-14 12:26:00.8226 DEBUG Executed controller factory for controller Calyx_Solutions.Controllers.UserLoginController (Calyx Solutions) 
+2025-05-14 12:26:00.8226 DEBUG Attempting to bind parameter 'objdata' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 12:26:00.8425 DEBUG Attempting to bind parameter 'objdata' of type 'System.Text.Json.JsonElement' using the name '' in request data ... 
+2025-05-14 12:26:00.8425 DEBUG Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-05-14 12:26:00.8425 DEBUG Connection id "0HNCIMHDK19MC", Request id "0HNCIMHDK19MC:00000002": started reading request body. 
+2025-05-14 12:26:00.8425 DEBUG Connection id "0HNCIMHDK19MC", Request id "0HNCIMHDK19MC:00000002": done reading request body. 
+2025-05-14 12:26:00.8582 DEBUG JSON input formatter succeeded, deserializing to type 'System.Text.Json.JsonElement' 
+2025-05-14 12:26:00.8582 DEBUG Done attempting to bind parameter 'objdata' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:26:00.8582 DEBUG Done attempting to bind parameter 'objdata' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:26:00.8582 DEBUG Attempting to validate the bound parameter 'objdata' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 12:26:00.8582 DEBUG Done attempting to validate the bound parameter 'objdata' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:26:13.7152 DEBUG Connection id "0HNCIMHDK19MD" accepted. 
+2025-05-14 12:26:13.7152 DEBUG Connection id "0HNCIMHDK19MD" started. 
+2025-05-14 12:26:13.7152 INFO Request starting HTTP/1.1 POST http://localhost:5233/api/auth application/json 124 
+2025-05-14 12:26:13.7152 DEBUG 2 candidate(s) found for the request path '/api/auth' 
+2025-05-14 12:26:13.7152 DEBUG Endpoint 'Calyx_Solutions.Controllers.AuthController.Auth (Calyx Solutions)' with route pattern 'api/Auth' is valid for the request path '/api/auth' 
+2025-05-14 12:26:13.7152 DEBUG Endpoint 'Calyx_Solutions.Controllers.AuthController.expiretokenforcelly (Calyx Solutions)' with route pattern 'api/Auth' is valid for the request path '/api/auth' 
+2025-05-14 12:26:13.7152 DEBUG Request matched endpoint 'Calyx_Solutions.Controllers.AuthController.Auth (Calyx Solutions)' 
+2025-05-14 12:26:13.7152 DEBUG Static files was skipped as the request already matched an endpoint. 
+2025-05-14 12:26:13.7152 DEBUG AuthenticationScheme: Bearer was not authenticated. 
+2025-05-14 12:26:13.7152 INFO Executing endpoint 'Calyx_Solutions.Controllers.AuthController.Auth (Calyx Solutions)' 
+2025-05-14 12:26:13.7152 INFO Route matched with {action = "Auth", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Auth(Calyx_Solutions.UserLogin) on controller Calyx_Solutions.Controllers.AuthController (Calyx Solutions). 
+2025-05-14 12:26:13.7152 DEBUG Execution plan of authorization filters (in the following order): None 
+2025-05-14 12:26:13.7287 DEBUG Execution plan of resource filters (in the following order): None 
+2025-05-14 12:26:13.7287 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-14 12:26:13.7287 DEBUG Execution plan of exception filters (in the following order): None 
+2025-05-14 12:26:13.7287 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-14 12:26:13.7287 DEBUG Executing controller factory for controller Calyx_Solutions.Controllers.AuthController (Calyx Solutions) 
+2025-05-14 12:26:13.7287 DEBUG Executed controller factory for controller Calyx_Solutions.Controllers.AuthController (Calyx Solutions) 
+2025-05-14 12:26:13.7287 DEBUG Attempting to bind parameter 'user' of type 'Calyx_Solutions.UserLogin' ... 
+2025-05-14 12:26:13.7287 DEBUG Attempting to bind parameter 'user' of type 'Calyx_Solutions.UserLogin' using the name '' in request data ... 
+2025-05-14 12:26:13.7287 DEBUG Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-05-14 12:26:13.7287 DEBUG Connection id "0HNCIMHDK19MD", Request id "0HNCIMHDK19MD:00000002": started reading request body. 
+2025-05-14 12:26:13.7287 DEBUG Connection id "0HNCIMHDK19MD", Request id "0HNCIMHDK19MD:00000002": done reading request body. 
+2025-05-14 12:26:13.7287 DEBUG JSON input formatter succeeded, deserializing to type 'Calyx_Solutions.UserLogin' 
+2025-05-14 12:26:13.7287 DEBUG Done attempting to bind parameter 'user' of type 'Calyx_Solutions.UserLogin'. 
+2025-05-14 12:26:13.7287 DEBUG Done attempting to bind parameter 'user' of type 'Calyx_Solutions.UserLogin'. 
+2025-05-14 12:26:13.7287 DEBUG Attempting to validate the bound parameter 'user' of type 'Calyx_Solutions.UserLogin' ... 
+2025-05-14 12:26:13.7479 DEBUG Done attempting to validate the bound parameter 'user' of type 'Calyx_Solutions.UserLogin'. 
+2025-05-14 12:26:13.8515 DEBUG List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2025-05-14 12:26:13.8591 DEBUG Attempting to select an output formatter based on Accept header 'application/json, application/xml, text/json, text/x-json, text/javascript, text/xml'. 
+2025-05-14 12:26:13.8591 DEBUG Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2025-05-14 12:26:13.8591 INFO Executing OkObjectResult, writing value of type 'System.String'. 
+2025-05-14 12:26:13.8804 INFO Executed action Calyx_Solutions.Controllers.AuthController.Auth (Calyx Solutions) in 140.6854ms 
+2025-05-14 12:26:13.8804 INFO Executed endpoint 'Calyx_Solutions.Controllers.AuthController.Auth (Calyx Solutions)' 
+2025-05-14 12:26:13.8804 INFO Session started; Key:08270365-29a2-fc9d-7eab-74fbdf5d5c2f, Id:6f7a2e95-e8f0-b710-67a5-d1dc6996809b 
+2025-05-14 12:26:13.8972 DEBUG Session stored; Key:08270365-29a2-fc9d-7eab-74fbdf5d5c2f, Id:6f7a2e95-e8f0-b710-67a5-d1dc6996809b, Count:1 
+2025-05-14 12:26:13.8972 DEBUG Connection id "0HNCIMHDK19MD" completed keep alive response. 
+2025-05-14 12:26:13.8972 INFO Request finished HTTP/1.1 POST http://localhost:5233/api/auth application/json 124 - 200 - application/json;+charset=utf-8 180.3869ms 
+2025-05-14 12:26:13.9015 DEBUG Connection id "0HNCIMHDK19MD" received FIN. 
+2025-05-14 12:26:13.9015 DEBUG Connection id "0HNCIMHDK19MD" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 12:26:13.9015 DEBUG Connection id "0HNCIMHDK19MD" disconnecting. 
+2025-05-14 12:26:13.9015 DEBUG Connection id "0HNCIMHDK19MD" stopped. 
+2025-05-14 12:26:13.9015 INFO Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-05-14 12:26:13.9015 INFO Executed action Calyx_Solutions.Controllers.UserLoginController.CheckLogin (Calyx Solutions) in 13085.4112ms 
+2025-05-14 12:26:13.9015 INFO Executed endpoint 'Calyx_Solutions.Controllers.UserLoginController.CheckLogin (Calyx Solutions)' 
+2025-05-14 12:26:13.9015 INFO Session started; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:614052aa-f752-c599-1d8b-d671609e2918 
+2025-05-14 12:26:13.9015 DEBUG Session stored; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:614052aa-f752-c599-1d8b-d671609e2918, Count:2 
+2025-05-14 12:26:13.9015 DEBUG Connection id "0HNCIMHDK19MC" completed keep alive response. 
+2025-05-14 12:26:13.9015 INFO Request finished HTTP/1.1 POST http://localhost:5233/api/userlogin/checklogin application/json 409 - 200 - application/json;+charset=utf-8 13536.4012ms 
+2025-05-14 12:26:38.3981 INFO Request starting HTTP/1.1 POST http://localhost:5233/api/id/startonboard application/json 346 
+2025-05-14 12:26:38.3981 DEBUG 1 candidate(s) found for the request path '/api/id/startonboard' 
+2025-05-14 12:26:38.3981 DEBUG Endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' with route pattern 'api/ID/startonboard' is valid for the request path '/api/id/startonboard' 
+2025-05-14 12:26:38.3981 DEBUG Request matched endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:26:38.3981 DEBUG Static files was skipped as the request already matched an endpoint. 
+2025-05-14 12:26:38.4294 DEBUG Successfully validated the token. 
+2025-05-14 12:26:38.4592 DEBUG AuthenticationScheme: Bearer was successfully authenticated. 
+2025-05-14 12:26:38.4664 DEBUG Authorization was successful. 
+2025-05-14 12:26:38.4664 INFO Executing endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:26:38.4664 INFO Route matched with {action = "StartOnBoard", controller = "ID"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult StartOnBoard(System.Text.Json.JsonElement) on controller Calyx_Solutions.Controllers.IDController (Calyx Solutions). 
+2025-05-14 12:26:38.4664 DEBUG Execution plan of authorization filters (in the following order): None 
+2025-05-14 12:26:38.4664 DEBUG Execution plan of resource filters (in the following order): None 
+2025-05-14 12:26:38.4664 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-14 12:26:38.4664 DEBUG Execution plan of exception filters (in the following order): None 
+2025-05-14 12:26:38.4664 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-14 12:26:38.4664 DEBUG Executing controller factory for controller Calyx_Solutions.Controllers.IDController (Calyx Solutions) 
+2025-05-14 12:26:38.4664 DEBUG Executed controller factory for controller Calyx_Solutions.Controllers.IDController (Calyx Solutions) 
+2025-05-14 12:26:38.4664 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 12:26:38.4664 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' using the name '' in request data ... 
+2025-05-14 12:26:38.4664 DEBUG Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-05-14 12:26:38.4664 DEBUG Connection id "0HNCIMHDK19MC", Request id "0HNCIMHDK19MC:00000003": started reading request body. 
+2025-05-14 12:26:38.4664 DEBUG Connection id "0HNCIMHDK19MC", Request id "0HNCIMHDK19MC:00000003": done reading request body. 
+2025-05-14 12:26:38.4664 DEBUG JSON input formatter succeeded, deserializing to type 'System.Text.Json.JsonElement' 
+2025-05-14 12:26:38.4664 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:26:38.4664 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:26:38.4664 DEBUG Attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 12:26:38.4664 DEBUG Done attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:26:38.4856 INFO Accessing expired session, Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb 
+2025-05-14 12:27:24.9397 INFO Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-05-14 12:27:24.9397 INFO Executed action Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions) in 46472.0147ms 
+2025-05-14 12:27:24.9397 INFO Executed endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:27:24.9397 INFO Session started; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:3a7c007f-669e-8416-021b-24629c89f93b 
+2025-05-14 12:27:24.9397 DEBUG Session stored; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:3a7c007f-669e-8416-021b-24629c89f93b, Count:1 
+2025-05-14 12:27:24.9397 DEBUG Connection id "0HNCIMHDK19MC" completed keep alive response. 
+2025-05-14 12:27:24.9397 INFO Request finished HTTP/1.1 POST http://localhost:5233/api/id/startonboard application/json 346 - 200 - application/json;+charset=utf-8 46546.0383ms 
+2025-05-14 12:28:28.9602 DEBUG Connection id "0HNCIMHDK19M9" received FIN. 
+2025-05-14 12:28:28.9679 DEBUG Connection id "0HNCIMHDK19M8" received FIN. 
+2025-05-14 12:28:28.9797 DEBUG Connection id "0HNCIMHDK19MA" received FIN. 
+2025-05-14 12:28:28.9797 DEBUG Connection id "0HNCIMHDK19M9" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 12:28:28.9797 DEBUG Connection id "0HNCIMHDK19M9" disconnecting. 
+2025-05-14 12:28:28.9797 DEBUG Connection id "0HNCIMHDK19M8" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 12:28:28.9797 DEBUG Connection id "0HNCIMHDK19M9" stopped. 
+2025-05-14 12:28:28.9797 DEBUG Connection id "0HNCIMHDK19MA" disconnecting. 
+2025-05-14 12:28:28.9797 DEBUG Connection id "0HNCIMHDK19MA" stopped. 
+2025-05-14 12:28:28.9990 DEBUG Connection id "0HNCIMHDK19M8" disconnecting. 
+2025-05-14 12:28:28.9990 DEBUG Connection id "0HNCIMHDK19MA" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 12:28:29.0181 DEBUG Connection id "0HNCIMHDK19M8" stopped. 
+2025-05-14 12:28:40.8052 DEBUG Connection id "0HNCIMHDK19ME" received FIN. 
+2025-05-14 12:28:40.8052 DEBUG Connection id "0HNCIMHDK19ME" accepted. 
+2025-05-14 12:28:40.8052 DEBUG Connection id "0HNCIMHDK19ME" started. 
+2025-05-14 12:28:40.8052 DEBUG Connection id "0HNCIMHDK19MF" accepted. 
+2025-05-14 12:28:40.8052 DEBUG Connection id "0HNCIMHDK19ME" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 12:28:40.8072 DEBUG Connection id "0HNCIMHDK19MF" started. 
+2025-05-14 12:28:40.8072 DEBUG Connection id "0HNCIMHDK19ME" disconnecting. 
+2025-05-14 12:28:40.8072 INFO Request starting HTTP/1.1 POST http://localhost:5233/api/id/startonboard application/json 346 
+2025-05-14 12:28:40.8072 DEBUG Connection id "0HNCIMHDK19ME" stopped. 
+2025-05-14 12:28:40.8072 DEBUG 1 candidate(s) found for the request path '/api/id/startonboard' 
+2025-05-14 12:28:40.8072 DEBUG Endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' with route pattern 'api/ID/startonboard' is valid for the request path '/api/id/startonboard' 
+2025-05-14 12:28:40.8072 DEBUG Request matched endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:28:40.8072 DEBUG Static files was skipped as the request already matched an endpoint. 
+2025-05-14 12:28:40.8072 DEBUG Successfully validated the token. 
+2025-05-14 12:28:40.8072 DEBUG AuthenticationScheme: Bearer was successfully authenticated. 
+2025-05-14 12:28:40.8072 DEBUG Authorization was successful. 
+2025-05-14 12:28:40.8072 INFO Executing endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:28:40.8072 INFO Route matched with {action = "StartOnBoard", controller = "ID"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult StartOnBoard(System.Text.Json.JsonElement) on controller Calyx_Solutions.Controllers.IDController (Calyx Solutions). 
+2025-05-14 12:28:40.8072 DEBUG Execution plan of authorization filters (in the following order): None 
+2025-05-14 12:28:40.8072 DEBUG Execution plan of resource filters (in the following order): None 
+2025-05-14 12:28:40.8072 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-14 12:28:40.8072 DEBUG Execution plan of exception filters (in the following order): None 
+2025-05-14 12:28:40.8072 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-14 12:28:40.8072 DEBUG Executing controller factory for controller Calyx_Solutions.Controllers.IDController (Calyx Solutions) 
+2025-05-14 12:28:40.8072 DEBUG Executed controller factory for controller Calyx_Solutions.Controllers.IDController (Calyx Solutions) 
+2025-05-14 12:28:40.8072 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 12:28:40.8072 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' using the name '' in request data ... 
+2025-05-14 12:28:40.8072 DEBUG Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-05-14 12:28:40.8072 DEBUG Connection id "0HNCIMHDK19MF", Request id "0HNCIMHDK19MF:00000002": started reading request body. 
+2025-05-14 12:28:40.8072 DEBUG Connection id "0HNCIMHDK19MF", Request id "0HNCIMHDK19MF:00000002": done reading request body. 
+2025-05-14 12:28:40.8072 DEBUG JSON input formatter succeeded, deserializing to type 'System.Text.Json.JsonElement' 
+2025-05-14 12:28:40.8072 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:28:40.8072 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:28:40.8072 DEBUG Attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 12:28:40.8072 DEBUG Done attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:28:40.8072 INFO Accessing expired session, Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb 
+2025-05-14 12:28:44.0803 INFO Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-05-14 12:28:44.0803 INFO Executed action Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions) in 3264.9581ms 
+2025-05-14 12:28:44.0803 INFO Executed endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:28:44.0803 INFO Session started; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:b314fe17-7d21-4f4f-abf3-40ce129b4052 
+2025-05-14 12:28:44.0803 DEBUG Session stored; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:b314fe17-7d21-4f4f-abf3-40ce129b4052, Count:1 
+2025-05-14 12:28:44.0803 DEBUG Connection id "0HNCIMHDK19MF" completed keep alive response. 
+2025-05-14 12:28:44.0803 INFO Request finished HTTP/1.1 POST http://localhost:5233/api/id/startonboard application/json 346 - 200 - application/json;+charset=utf-8 3275.0205ms 
+2025-05-14 12:29:55.1226 DEBUG Connection id "0HNCIMHDK19MG" accepted. 
+2025-05-14 12:29:55.1226 DEBUG Connection id "0HNCIMHDK19MG" started. 
+2025-05-14 12:29:55.1606 DEBUG Connection id "0HNCIMHDK19MH" accepted. 
+2025-05-14 12:29:55.1606 DEBUG Connection id "0HNCIMHDK19MG" received FIN. 
+2025-05-14 12:29:55.1606 DEBUG Connection id "0HNCIMHDK19MH" started. 
+2025-05-14 12:29:55.1606 INFO Request starting HTTP/1.1 POST http://localhost:5233/api/id/startonboard application/json 346 
+2025-05-14 12:29:55.1606 DEBUG 1 candidate(s) found for the request path '/api/id/startonboard' 
+2025-05-14 12:29:55.1606 DEBUG Endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' with route pattern 'api/ID/startonboard' is valid for the request path '/api/id/startonboard' 
+2025-05-14 12:29:55.1606 DEBUG Request matched endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:29:55.1681 DEBUG Connection id "0HNCIMHDK19MG" disconnecting. 
+2025-05-14 12:29:55.1681 DEBUG Connection id "0HNCIMHDK19MG" stopped. 
+2025-05-14 12:29:55.1681 DEBUG Static files was skipped as the request already matched an endpoint. 
+2025-05-14 12:29:55.1681 DEBUG Successfully validated the token. 
+2025-05-14 12:29:55.1681 DEBUG AuthenticationScheme: Bearer was successfully authenticated. 
+2025-05-14 12:29:55.1681 DEBUG Connection id "0HNCIMHDK19MG" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 12:29:55.1681 DEBUG Authorization was successful. 
+2025-05-14 12:29:55.1839 INFO Executing endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:29:55.1839 INFO Route matched with {action = "StartOnBoard", controller = "ID"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult StartOnBoard(System.Text.Json.JsonElement) on controller Calyx_Solutions.Controllers.IDController (Calyx Solutions). 
+2025-05-14 12:29:55.1839 DEBUG Execution plan of authorization filters (in the following order): None 
+2025-05-14 12:29:55.1839 DEBUG Execution plan of resource filters (in the following order): None 
+2025-05-14 12:29:55.1839 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-14 12:29:55.1839 DEBUG Execution plan of exception filters (in the following order): None 
+2025-05-14 12:29:55.1839 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-14 12:29:55.1839 DEBUG Executing controller factory for controller Calyx_Solutions.Controllers.IDController (Calyx Solutions) 
+2025-05-14 12:29:55.1839 DEBUG Executed controller factory for controller Calyx_Solutions.Controllers.IDController (Calyx Solutions) 
+2025-05-14 12:29:55.1839 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 12:29:55.1839 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' using the name '' in request data ... 
+2025-05-14 12:29:55.1839 DEBUG Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-05-14 12:29:55.1839 DEBUG Connection id "0HNCIMHDK19MH", Request id "0HNCIMHDK19MH:00000002": started reading request body. 
+2025-05-14 12:29:55.1839 DEBUG Connection id "0HNCIMHDK19MH", Request id "0HNCIMHDK19MH:00000002": done reading request body. 
+2025-05-14 12:29:55.1839 DEBUG JSON input formatter succeeded, deserializing to type 'System.Text.Json.JsonElement' 
+2025-05-14 12:29:55.1839 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:29:55.1839 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:29:55.1839 DEBUG Attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 12:29:55.1839 DEBUG Done attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:29:55.1839 INFO Accessing expired session, Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb 
+2025-05-14 12:30:25.8801 INFO Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-05-14 12:30:25.8801 INFO Executed action Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions) in 30696.135ms 
+2025-05-14 12:30:25.8801 INFO Executed endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:30:25.8801 INFO Session started; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:586dd535-3b40-732b-70e4-e3650c7d56bb 
+2025-05-14 12:30:25.8801 DEBUG Session stored; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:586dd535-3b40-732b-70e4-e3650c7d56bb, Count:1 
+2025-05-14 12:30:25.8801 DEBUG Connection id "0HNCIMHDK19MH" completed keep alive response. 
+2025-05-14 12:30:25.8801 INFO Request finished HTTP/1.1 POST http://localhost:5233/api/id/startonboard application/json 346 - 200 - application/json;+charset=utf-8 30718.3727ms 
+2025-05-14 12:31:21.2574 DEBUG Connection id "0HNCIMHDK19MI" accepted. 
+2025-05-14 12:31:21.2574 DEBUG Connection id "0HNCIMHDK19MI" started. 
+2025-05-14 12:31:21.2617 DEBUG Connection id "0HNCIMHDK19MI" received FIN. 
+2025-05-14 12:31:21.2617 DEBUG Connection id "0HNCIMHDK19MJ" accepted. 
+2025-05-14 12:31:21.2617 DEBUG Connection id "0HNCIMHDK19MI" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 12:31:21.2617 DEBUG Connection id "0HNCIMHDK19MJ" started. 
+2025-05-14 12:31:21.2617 DEBUG Connection id "0HNCIMHDK19MI" disconnecting. 
+2025-05-14 12:31:21.2617 DEBUG Connection id "0HNCIMHDK19MI" stopped. 
+2025-05-14 12:31:21.2617 INFO Request starting HTTP/1.1 POST http://localhost:5233/api/id/startonboard application/json 346 
+2025-05-14 12:31:21.2756 DEBUG 1 candidate(s) found for the request path '/api/id/startonboard' 
+2025-05-14 12:31:21.2756 DEBUG Endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' with route pattern 'api/ID/startonboard' is valid for the request path '/api/id/startonboard' 
+2025-05-14 12:31:21.2756 DEBUG Request matched endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:31:21.2756 DEBUG Static files was skipped as the request already matched an endpoint. 
+2025-05-14 12:31:21.2756 DEBUG Successfully validated the token. 
+2025-05-14 12:31:21.2756 DEBUG AuthenticationScheme: Bearer was successfully authenticated. 
+2025-05-14 12:31:21.2756 DEBUG Authorization was successful. 
+2025-05-14 12:31:21.2756 INFO Executing endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:31:21.2756 INFO Route matched with {action = "StartOnBoard", controller = "ID"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult StartOnBoard(System.Text.Json.JsonElement) on controller Calyx_Solutions.Controllers.IDController (Calyx Solutions). 
+2025-05-14 12:31:21.2756 DEBUG Execution plan of authorization filters (in the following order): None 
+2025-05-14 12:31:21.2756 DEBUG Execution plan of resource filters (in the following order): None 
+2025-05-14 12:31:21.2756 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-14 12:31:21.2756 DEBUG Execution plan of exception filters (in the following order): None 
+2025-05-14 12:31:21.2756 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-14 12:31:21.2756 DEBUG Executing controller factory for controller Calyx_Solutions.Controllers.IDController (Calyx Solutions) 
+2025-05-14 12:31:21.2756 DEBUG Executed controller factory for controller Calyx_Solutions.Controllers.IDController (Calyx Solutions) 
+2025-05-14 12:31:21.2756 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 12:31:21.2756 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' using the name '' in request data ... 
+2025-05-14 12:31:21.2756 DEBUG Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-05-14 12:31:21.2756 DEBUG Connection id "0HNCIMHDK19MJ", Request id "0HNCIMHDK19MJ:00000002": started reading request body. 
+2025-05-14 12:31:21.2756 DEBUG Connection id "0HNCIMHDK19MJ", Request id "0HNCIMHDK19MJ:00000002": done reading request body. 
+2025-05-14 12:31:21.2756 DEBUG JSON input formatter succeeded, deserializing to type 'System.Text.Json.JsonElement' 
+2025-05-14 12:31:21.2756 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:31:21.2756 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:31:21.2756 DEBUG Attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 12:31:21.2756 DEBUG Done attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:31:21.2756 INFO Accessing expired session, Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb 
+2025-05-14 12:31:25.1809 DEBUG Creating a Yoti Doc Scan session... 
+2025-05-14 12:31:26.1945 INFO Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-05-14 12:31:26.1945 INFO Executed action Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions) in 4911.4419ms 
+2025-05-14 12:31:26.1945 INFO Executed endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:31:26.1945 INFO Session started; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:87bba0ef-de2d-1ff9-1614-2e1c050bf945 
+2025-05-14 12:31:26.1945 DEBUG Session stored; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:87bba0ef-de2d-1ff9-1614-2e1c050bf945, Count:1 
+2025-05-14 12:31:26.1945 DEBUG Connection id "0HNCIMHDK19MJ" completed keep alive response. 
+2025-05-14 12:31:26.1945 INFO Request finished HTTP/1.1 POST http://localhost:5233/api/id/startonboard application/json 346 - 200 - application/json;+charset=utf-8 4922.1917ms 
+2025-05-14 12:31:47.3060 INFO Request starting HTTP/1.1 POST http://localhost:5233/api/id/startonboard application/json 346 
+2025-05-14 12:31:47.3060 DEBUG 1 candidate(s) found for the request path '/api/id/startonboard' 
+2025-05-14 12:31:47.3060 DEBUG Endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' with route pattern 'api/ID/startonboard' is valid for the request path '/api/id/startonboard' 
+2025-05-14 12:31:47.3060 DEBUG Request matched endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:31:47.3060 DEBUG Static files was skipped as the request already matched an endpoint. 
+2025-05-14 12:31:47.3060 DEBUG Successfully validated the token. 
+2025-05-14 12:31:47.3060 DEBUG AuthenticationScheme: Bearer was successfully authenticated. 
+2025-05-14 12:31:47.3060 DEBUG Authorization was successful. 
+2025-05-14 12:31:47.3060 INFO Executing endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:31:47.3060 INFO Route matched with {action = "StartOnBoard", controller = "ID"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult StartOnBoard(System.Text.Json.JsonElement) on controller Calyx_Solutions.Controllers.IDController (Calyx Solutions). 
+2025-05-14 12:31:47.3060 DEBUG Execution plan of authorization filters (in the following order): None 
+2025-05-14 12:31:47.3060 DEBUG Execution plan of resource filters (in the following order): None 
+2025-05-14 12:31:47.3060 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-14 12:31:47.3060 DEBUG Execution plan of exception filters (in the following order): None 
+2025-05-14 12:31:47.3060 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-14 12:31:47.3077 DEBUG Executing controller factory for controller Calyx_Solutions.Controllers.IDController (Calyx Solutions) 
+2025-05-14 12:31:47.3077 DEBUG Executed controller factory for controller Calyx_Solutions.Controllers.IDController (Calyx Solutions) 
+2025-05-14 12:31:47.3077 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 12:31:47.3077 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' using the name '' in request data ... 
+2025-05-14 12:31:47.3077 DEBUG Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-05-14 12:31:47.3077 DEBUG Connection id "0HNCIMHDK19MJ", Request id "0HNCIMHDK19MJ:00000003": started reading request body. 
+2025-05-14 12:31:47.3077 DEBUG Connection id "0HNCIMHDK19MJ", Request id "0HNCIMHDK19MJ:00000003": done reading request body. 
+2025-05-14 12:31:47.3077 DEBUG JSON input formatter succeeded, deserializing to type 'System.Text.Json.JsonElement' 
+2025-05-14 12:31:47.3077 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:31:47.3077 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:31:47.3077 DEBUG Attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 12:31:47.3077 DEBUG Done attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 12:31:47.3077 INFO Accessing expired session, Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb 
+2025-05-14 12:32:32.6962 INFO Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-05-14 12:32:32.6962 INFO Executed action Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions) in 45389.6865ms 
+2025-05-14 12:32:32.6962 INFO Executed endpoint 'Calyx_Solutions.Controllers.IDController.StartOnBoard (Calyx Solutions)' 
+2025-05-14 12:32:32.6962 INFO Session started; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:9c27b035-d3e8-c2f4-51b5-9100773bddf1 
+2025-05-14 12:32:32.6982 DEBUG Session stored; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:9c27b035-d3e8-c2f4-51b5-9100773bddf1, Count:1 
+2025-05-14 12:32:32.6982 DEBUG Connection id "0HNCIMHDK19MJ" completed keep alive response. 
+2025-05-14 12:32:32.6982 INFO Request finished HTTP/1.1 POST http://localhost:5233/api/id/startonboard application/json 346 - 200 - application/json;+charset=utf-8 45392.6586ms 
+2025-05-14 15:02:11.0023 DEBUG Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2025-05-14 15:02:11.1624 DEBUG Hosting starting 
+2025-05-14 15:02:11.1970 INFO User profile is available. Using 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2025-05-14 15:02:11.1970 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-0bf881db-1369-442d-a02e-0ead21594d9e.xml'. 
+2025-05-14 15:02:11.1970 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-4a947aa7-3357-4223-bb35-7ea3ed5e7e79.xml'. 
+2025-05-14 15:02:11.1970 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-717c74c0-1060-4427-a9d9-182861a01a05.xml'. 
+2025-05-14 15:02:11.1970 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-735fade6-aa8a-474a-9efd-32bb20aff617.xml'. 
+2025-05-14 15:02:11.2047 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-81cebca2-fe54-44d1-9088-c635f75e300d.xml'. 
+2025-05-14 15:02:11.2047 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-dad14520-ce8a-4798-a091-64c23a11c6e5.xml'. 
+2025-05-14 15:02:11.2047 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-f8885a70-e6c1-42d8-8dd1-af0efebb8645.xml'. 
+2025-05-14 15:02:11.2047 DEBUG Found key {0bf881db-1369-442d-a02e-0ead21594d9e}. 
+2025-05-14 15:02:11.2047 DEBUG Found key {4a947aa7-3357-4223-bb35-7ea3ed5e7e79}. 
+2025-05-14 15:02:11.2047 DEBUG Found key {717c74c0-1060-4427-a9d9-182861a01a05}. 
+2025-05-14 15:02:11.2047 DEBUG Found key {735fade6-aa8a-474a-9efd-32bb20aff617}. 
+2025-05-14 15:02:11.2047 DEBUG Found key {81cebca2-fe54-44d1-9088-c635f75e300d}. 
+2025-05-14 15:02:11.2047 DEBUG Found key {dad14520-ce8a-4798-a091-64c23a11c6e5}. 
+2025-05-14 15:02:11.2047 DEBUG Found key {f8885a70-e6c1-42d8-8dd1-af0efebb8645}. 
+2025-05-14 15:02:11.2047 DEBUG Considering key {735fade6-aa8a-474a-9efd-32bb20aff617} with expiration date 2025-06-10 09:15:18Z as default key. 
+2025-05-14 15:02:11.2230 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-05-14 15:02:11.2230 DEBUG Decrypting secret element using Windows DPAPI. 
+2025-05-14 15:02:11.2357 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-05-14 15:02:11.2357 DEBUG Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2025-05-14 15:02:11.2357 DEBUG Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2025-05-14 15:02:11.2357 DEBUG Using key {735fade6-aa8a-474a-9efd-32bb20aff617} as the default key. 
+2025-05-14 15:02:11.2357 DEBUG Key ring with default key {735fade6-aa8a-474a-9efd-32bb20aff617} was loaded during application startup. 
+2025-05-14 15:02:40.2838 DEBUG Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2025-05-14 15:02:40.4440 DEBUG Hosting starting 
+2025-05-14 15:02:40.4760 INFO User profile is available. Using 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2025-05-14 15:02:40.4760 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-0bf881db-1369-442d-a02e-0ead21594d9e.xml'. 
+2025-05-14 15:02:40.4760 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-4a947aa7-3357-4223-bb35-7ea3ed5e7e79.xml'. 
+2025-05-14 15:02:40.4760 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-717c74c0-1060-4427-a9d9-182861a01a05.xml'. 
+2025-05-14 15:02:40.4760 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-735fade6-aa8a-474a-9efd-32bb20aff617.xml'. 
+2025-05-14 15:02:40.4760 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-81cebca2-fe54-44d1-9088-c635f75e300d.xml'. 
+2025-05-14 15:02:40.4760 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-dad14520-ce8a-4798-a091-64c23a11c6e5.xml'. 
+2025-05-14 15:02:40.4760 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-f8885a70-e6c1-42d8-8dd1-af0efebb8645.xml'. 
+2025-05-14 15:02:40.4860 DEBUG Found key {0bf881db-1369-442d-a02e-0ead21594d9e}. 
+2025-05-14 15:02:40.4860 DEBUG Found key {4a947aa7-3357-4223-bb35-7ea3ed5e7e79}. 
+2025-05-14 15:02:40.4860 DEBUG Found key {717c74c0-1060-4427-a9d9-182861a01a05}. 
+2025-05-14 15:02:40.4860 DEBUG Found key {735fade6-aa8a-474a-9efd-32bb20aff617}. 
+2025-05-14 15:02:40.4860 DEBUG Found key {81cebca2-fe54-44d1-9088-c635f75e300d}. 
+2025-05-14 15:02:40.4860 DEBUG Found key {dad14520-ce8a-4798-a091-64c23a11c6e5}. 
+2025-05-14 15:02:40.4860 DEBUG Found key {f8885a70-e6c1-42d8-8dd1-af0efebb8645}. 
+2025-05-14 15:02:40.4860 DEBUG Considering key {735fade6-aa8a-474a-9efd-32bb20aff617} with expiration date 2025-06-10 09:15:18Z as default key. 
+2025-05-14 15:02:40.4860 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-05-14 15:02:40.4860 DEBUG Decrypting secret element using Windows DPAPI. 
+2025-05-14 15:02:40.4860 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-05-14 15:02:40.5034 DEBUG Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2025-05-14 15:02:40.5034 DEBUG Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2025-05-14 15:02:40.5034 DEBUG Using key {735fade6-aa8a-474a-9efd-32bb20aff617} as the default key. 
+2025-05-14 15:02:40.5034 DEBUG Key ring with default key {735fade6-aa8a-474a-9efd-32bb20aff617} was loaded during application startup. 
+2025-05-14 15:02:40.5904 INFO Now listening on: http://localhost:5233 
+2025-05-14 15:02:40.5904 DEBUG Loaded hosting startup assembly Calyx Solutions 
+2025-05-14 15:02:40.5904 DEBUG Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2025-05-14 15:02:40.5904 DEBUG Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2025-05-14 15:02:40.5904 INFO Application started. Press Ctrl+C to shut down. 
+2025-05-14 15:02:40.5904 INFO Hosting environment: Development 
+2025-05-14 15:02:40.5904 INFO Content root path: G:\calyx-api\MTS-Web-API\Calyx Solutions\ 
+2025-05-14 15:02:40.5904 DEBUG Hosting started 
+2025-05-14 15:02:40.6289 DEBUG Connection id "0HNCIP92QJ0AU" accepted. 
+2025-05-14 15:02:40.6289 DEBUG Connection id "0HNCIP92QJ0AU" started. 
+2025-05-14 15:02:40.6289 DEBUG Connection id "0HNCIP92QJ0AV" accepted. 
+2025-05-14 15:02:40.6289 DEBUG Connection id "0HNCIP92QJ0AV" started. 
+2025-05-14 15:02:40.6590 DEBUG Connection id "0HNCIP92QJ0AU" received FIN. 
+2025-05-14 15:02:40.6590 DEBUG Connection id "0HNCIP92QJ0AV" received FIN. 
+2025-05-14 15:02:40.6772 DEBUG Connection id "0HNCIP92QJ0AV" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 15:02:40.6772 DEBUG Connection id "0HNCIP92QJ0AU" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 15:02:40.6772 DEBUG Connection id "0HNCIP92QJ0AU" disconnecting. 
+2025-05-14 15:02:40.6772 DEBUG Connection id "0HNCIP92QJ0AV" disconnecting. 
+2025-05-14 15:02:40.6772 DEBUG Connection id "0HNCIP92QJ0AV" stopped. 
+2025-05-14 15:02:40.6772 DEBUG Connection id "0HNCIP92QJ0AU" stopped. 
+2025-05-14 15:02:40.8566 DEBUG Connection id "0HNCIP92QJ0B0" accepted. 
+2025-05-14 15:02:40.8566 DEBUG Connection id "0HNCIP92QJ0B0" started. 
+2025-05-14 15:02:40.8625 DEBUG Connection id "0HNCIP92QJ0B1" accepted. 
+2025-05-14 15:02:40.8625 DEBUG Connection id "0HNCIP92QJ0B1" started. 
+2025-05-14 15:02:40.8892 INFO Request starting HTTP/1.1 GET http://localhost:5233/swagger/index.html - - 
+2025-05-14 15:02:40.9410 DEBUG Wildcard detected, all requests with hosts will be allowed. 
+2025-05-14 15:02:40.9789 DEBUG No candidates found for the request path '/swagger/index.html' 
+2025-05-14 15:02:40.9789 DEBUG Request did not match any endpoints 
+2025-05-14 15:02:41.0705 DEBUG Response markup is scheduled to include browser refresh script injection. 
+2025-05-14 15:02:41.1677 DEBUG Connection id "0HNCIP92QJ0B2" accepted. 
+2025-05-14 15:02:41.1677 DEBUG Connection id "0HNCIP92QJ0B2" started. 
+2025-05-14 15:02:41.1677 INFO Request starting HTTP/1.1 GET http://localhost:5233/_framework/aspnetcore-browser-refresh.js - - 
+2025-05-14 15:02:41.1677 INFO Request starting HTTP/1.1 GET http://localhost:5233/_vs/browserLink - - 
+2025-05-14 15:02:41.1793 DEBUG Connection id "0HNCIP92QJ0B1" completed keep alive response. 
+2025-05-14 15:02:41.1793 INFO Request finished HTTP/1.1 GET http://localhost:5233/_framework/aspnetcore-browser-refresh.js - - - 200 12000 application/javascript;+charset=utf-8 7.2789ms 
+2025-05-14 15:02:41.1793 DEBUG Response markup was updated to include browser refresh script injection. 
+2025-05-14 15:02:41.1793 DEBUG Connection id "0HNCIP92QJ0B0" completed keep alive response. 
+2025-05-14 15:02:41.1888 INFO Request finished HTTP/1.1 GET http://localhost:5233/swagger/index.html - - - 200 - text/html;charset=utf-8 302.4811ms 
+2025-05-14 15:02:41.1888 DEBUG Connection id "0HNCIP92QJ0B2" completed keep alive response. 
+2025-05-14 15:02:41.1888 INFO Request finished HTTP/1.1 GET http://localhost:5233/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.9498ms 
+2025-05-14 15:02:41.9940 INFO Request starting HTTP/1.1 GET http://localhost:5233/swagger/v1/swagger.json - - 
+2025-05-14 15:02:41.9940 DEBUG No candidates found for the request path '/swagger/v1/swagger.json' 
+2025-05-14 15:02:41.9940 DEBUG Request did not match any endpoints 
+2025-05-14 15:02:42.1174 ERROR An unhandled exception has occurred while executing the request. Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - Calyx_Solutions.Controllers.IDController.Upload (Calyx Solutions). See inner exception
+ ---> System.ArgumentException: An item with the same key has already been added. Key: ContentType
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchemaFromFormParameters(IEnumerable`1 formParameters, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBodyFromFormParameters(ApiDescription apiDescription, SchemaRepository schemaRepository, IEnumerable`1 formParameters)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBody(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2025-05-14 15:02:42.1431 ERROR An unhandled exception occurred. 
+2025-05-14 15:02:42.1431 DEBUG Connection id "0HNCIP92QJ0B2" completed keep alive response. 
+2025-05-14 15:02:42.1431 INFO Request finished HTTP/1.1 GET http://localhost:5233/swagger/v1/swagger.json - - - 500 - - 149.7966ms 
+2025-05-14 15:02:42.2229 INFO Request starting HTTP/1.1 GET http://localhost:5233/swagger/index.html - - 
+2025-05-14 15:02:42.2229 DEBUG No candidates found for the request path '/swagger/index.html' 
+2025-05-14 15:02:42.2229 DEBUG Request did not match any endpoints 
+2025-05-14 15:02:42.2229 DEBUG Connection id "0HNCIP92QJ0B2" completed keep alive response. 
+2025-05-14 15:02:42.2229 INFO Request finished HTTP/1.1 GET http://localhost:5233/swagger/index.html - - - 200 - text/html;charset=utf-8 1.4936ms 
+2025-05-14 15:02:43.8838 INFO Request starting HTTP/1.1 GET http://localhost:5233/swagger/index.html - - 
+2025-05-14 15:02:43.8838 DEBUG No candidates found for the request path '/swagger/index.html' 
+2025-05-14 15:02:43.8838 DEBUG Request did not match any endpoints 
+2025-05-14 15:02:43.8838 DEBUG Connection id "0HNCIP92QJ0B2" completed keep alive response. 
+2025-05-14 15:02:43.8838 INFO Request finished HTTP/1.1 GET http://localhost:5233/swagger/index.html - - - 200 - text/html;charset=utf-8 1.0386ms 
+2025-05-14 15:02:44.0607 DEBUG Connection id "0HNCIP92QJ0B3" accepted. 
+2025-05-14 15:02:44.0607 DEBUG Connection id "0HNCIP92QJ0B3" received FIN. 
+2025-05-14 15:02:44.0607 DEBUG Connection id "0HNCIP92QJ0B3" started. 
+2025-05-14 15:02:44.0607 DEBUG Connection id "0HNCIP92QJ0B4" accepted. 
+2025-05-14 15:02:44.0607 DEBUG Connection id "0HNCIP92QJ0B3" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 15:02:44.0607 DEBUG Connection id "0HNCIP92QJ0B4" started. 
+2025-05-14 15:02:44.0607 DEBUG Connection id "0HNCIP92QJ0B3" disconnecting. 
+2025-05-14 15:02:44.0607 DEBUG Connection id "0HNCIP92QJ0B3" stopped. 
+2025-05-14 15:02:44.0607 INFO Request starting HTTP/1.1 POST http://localhost:5233/api/beneficiary/savebeneficiarybank application/json 527 
+2025-05-14 15:02:44.0655 DEBUG 1 candidate(s) found for the request path '/api/beneficiary/savebeneficiarybank' 
+2025-05-14 15:02:44.0655 DEBUG Endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' with route pattern 'api/Beneficiary/savebeneficiarybank' is valid for the request path '/api/beneficiary/savebeneficiarybank' 
+2025-05-14 15:02:44.0655 DEBUG Request matched endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:02:44.0655 DEBUG Static files was skipped as the request already matched an endpoint. 
+2025-05-14 15:02:44.0655 WARN Failed to determine the https port for redirect. 
+2025-05-14 15:02:44.2619 INFO Failed to validate the token. Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-05-14 15:02:44.2619 INFO Bearer was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'. 
+2025-05-14 15:02:44.2690 INFO Executing endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:02:44.2849 INFO Route matched with {action = "SaveBeneficiaryBank", controller = "Beneficiary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveBeneficiaryBank(System.Text.Json.JsonElement) on controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions). 
+2025-05-14 15:02:44.2849 DEBUG Execution plan of authorization filters (in the following order): None 
+2025-05-14 15:02:44.2849 DEBUG Execution plan of resource filters (in the following order): None 
+2025-05-14 15:02:44.2849 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-14 15:02:44.2849 DEBUG Execution plan of exception filters (in the following order): None 
+2025-05-14 15:02:44.2849 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-14 15:02:44.2849 DEBUG Executing controller factory for controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions) 
+2025-05-14 15:02:44.2849 DEBUG Executed controller factory for controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions) 
+2025-05-14 15:02:44.2849 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 15:02:44.2849 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' using the name '' in request data ... 
+2025-05-14 15:02:44.2849 DEBUG Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-05-14 15:02:44.2849 DEBUG Connection id "0HNCIP92QJ0B4", Request id "0HNCIP92QJ0B4:00000002": started reading request body. 
+2025-05-14 15:02:44.2849 DEBUG Connection id "0HNCIP92QJ0B4", Request id "0HNCIP92QJ0B4:00000002": done reading request body. 
+2025-05-14 15:02:44.3012 DEBUG JSON input formatter succeeded, deserializing to type 'System.Text.Json.JsonElement' 
+2025-05-14 15:02:44.3012 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:02:44.3012 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:02:44.3012 DEBUG Attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 15:02:44.3012 DEBUG Done attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:02:44.5767 INFO Accessing expired session, Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb 
+2025-05-14 15:02:56.1746 INFO Executed action Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions) in 11881.8959ms 
+2025-05-14 15:02:56.1746 INFO Executed endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:02:56.1746 INFO Session started; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:05af7097-3b98-4dd2-8d5f-c7680ad4f86e 
+2025-05-14 15:02:56.1746 DEBUG Session stored; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:05af7097-3b98-4dd2-8d5f-c7680ad4f86e, Count:1 
+2025-05-14 15:02:56.1746 ERROR An unhandled exception has occurred while executing the request. Newtonsoft.Json.JsonReaderException: Could not convert string to DateTime: 14/05/2025. Path 'RecordDate', line 1, position 417.
+   at Newtonsoft.Json.JsonReader.ReadDateTimeString(String s)
+   at Newtonsoft.Json.JsonTextReader.FinishReadQuotedStringValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadStringValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadAsDateTime()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank(JsonElement obj) in G:\calyx-api\MTS-Web-API\Calyx Solutions\Controllers\BeneficiaryController.cs:line 5246
+   at lambda_method6(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2025-05-14 15:02:56.2255 ERROR An unhandled exception occurred. 
+2025-05-14 15:02:56.2255 DEBUG Connection id "0HNCIP92QJ0B4" completed keep alive response. 
+2025-05-14 15:02:56.2255 INFO Request finished HTTP/1.1 POST http://localhost:5233/api/beneficiary/savebeneficiarybank application/json 527 - 500 - - 12163.7670ms 
+2025-05-14 15:03:11.9149 INFO Request starting HTTP/1.1 POST http://localhost:5233/api/beneficiary/savebeneficiarybank application/json 517 
+2025-05-14 15:03:11.9254 DEBUG 1 candidate(s) found for the request path '/api/beneficiary/savebeneficiarybank' 
+2025-05-14 15:03:11.9254 DEBUG Endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' with route pattern 'api/Beneficiary/savebeneficiarybank' is valid for the request path '/api/beneficiary/savebeneficiarybank' 
+2025-05-14 15:03:11.9254 DEBUG Request matched endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:03:11.9254 DEBUG Static files was skipped as the request already matched an endpoint. 
+2025-05-14 15:03:11.9254 INFO Failed to validate the token. Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-05-14 15:03:11.9254 INFO Bearer was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'. 
+2025-05-14 15:03:11.9254 INFO Executing endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:03:11.9254 INFO Route matched with {action = "SaveBeneficiaryBank", controller = "Beneficiary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveBeneficiaryBank(System.Text.Json.JsonElement) on controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions). 
+2025-05-14 15:03:11.9254 DEBUG Execution plan of authorization filters (in the following order): None 
+2025-05-14 15:03:11.9254 DEBUG Execution plan of resource filters (in the following order): None 
+2025-05-14 15:03:11.9254 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-14 15:03:11.9254 DEBUG Execution plan of exception filters (in the following order): None 
+2025-05-14 15:03:11.9254 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-14 15:03:11.9254 DEBUG Executing controller factory for controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions) 
+2025-05-14 15:03:11.9254 DEBUG Executed controller factory for controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions) 
+2025-05-14 15:03:11.9254 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 15:03:11.9254 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' using the name '' in request data ... 
+2025-05-14 15:03:11.9254 DEBUG Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-05-14 15:03:11.9254 DEBUG Connection id "0HNCIP92QJ0B4", Request id "0HNCIP92QJ0B4:00000003": started reading request body. 
+2025-05-14 15:03:11.9254 DEBUG Connection id "0HNCIP92QJ0B4", Request id "0HNCIP92QJ0B4:00000003": done reading request body. 
+2025-05-14 15:03:11.9254 DEBUG JSON input formatter succeeded, deserializing to type 'System.Text.Json.JsonElement' 
+2025-05-14 15:03:11.9254 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:03:11.9254 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:03:11.9254 DEBUG Attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 15:03:11.9254 DEBUG Done attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:03:11.9472 INFO Accessing expired session, Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb 
+2025-05-14 15:04:42.4896 INFO Executed action Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions) in 90554.3129ms 
+2025-05-14 15:04:42.4896 INFO Executed endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:04:42.4896 INFO Session started; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:a12ff4e9-d588-a68e-8316-40a576f2bace 
+2025-05-14 15:04:42.4896 DEBUG Session stored; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:a12ff4e9-d588-a68e-8316-40a576f2bace, Count:1 
+2025-05-14 15:04:42.4896 ERROR An unhandled exception has occurred while executing the request. Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.DateTime'. Path 'RecordDate', line 1, position 407.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank(JsonElement obj) in G:\calyx-api\MTS-Web-API\Calyx Solutions\Controllers\BeneficiaryController.cs:line 5246
+   at lambda_method6(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2025-05-14 15:04:42.4896 ERROR An unhandled exception occurred. 
+2025-05-14 15:04:42.4896 DEBUG Connection id "0HNCIP92QJ0B4" completed keep alive response. 
+2025-05-14 15:04:42.4896 INFO Request finished HTTP/1.1 POST http://localhost:5233/api/beneficiary/savebeneficiarybank application/json 517 - 500 - - 90581.9428ms 
+2025-05-14 15:04:45.3297 DEBUG Connection id "0HNCIP92QJ0B5" received FIN. 
+2025-05-14 15:04:45.3297 DEBUG Connection id "0HNCIP92QJ0B5" accepted. 
+2025-05-14 15:04:45.3297 DEBUG Connection id "0HNCIP92QJ0B5" started. 
+2025-05-14 15:04:45.3297 DEBUG Connection id "0HNCIP92QJ0B5" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 15:04:45.3297 DEBUG Connection id "0HNCIP92QJ0B5" disconnecting. 
+2025-05-14 15:04:45.3297 DEBUG Connection id "0HNCIP92QJ0B5" stopped. 
+2025-05-14 15:04:45.3297 DEBUG Connection id "0HNCIP92QJ0B6" accepted. 
+2025-05-14 15:04:45.3297 DEBUG Connection id "0HNCIP92QJ0B6" started. 
+2025-05-14 15:04:45.3297 INFO Request starting HTTP/1.1 POST http://localhost:5233/api/beneficiary/savebeneficiarybank application/json 497 
+2025-05-14 15:04:45.3297 DEBUG 1 candidate(s) found for the request path '/api/beneficiary/savebeneficiarybank' 
+2025-05-14 15:04:45.3297 DEBUG Endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' with route pattern 'api/Beneficiary/savebeneficiarybank' is valid for the request path '/api/beneficiary/savebeneficiarybank' 
+2025-05-14 15:04:45.3297 DEBUG Request matched endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:04:45.3297 DEBUG Static files was skipped as the request already matched an endpoint. 
+2025-05-14 15:04:45.3297 INFO Failed to validate the token. Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-05-14 15:04:45.3297 INFO Bearer was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'. 
+2025-05-14 15:04:45.3297 INFO Executing endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:04:45.3297 INFO Route matched with {action = "SaveBeneficiaryBank", controller = "Beneficiary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveBeneficiaryBank(System.Text.Json.JsonElement) on controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions). 
+2025-05-14 15:04:45.3297 DEBUG Execution plan of authorization filters (in the following order): None 
+2025-05-14 15:04:45.3297 DEBUG Execution plan of resource filters (in the following order): None 
+2025-05-14 15:04:45.3297 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-14 15:04:45.3297 DEBUG Execution plan of exception filters (in the following order): None 
+2025-05-14 15:04:45.3297 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-14 15:04:45.3297 DEBUG Executing controller factory for controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions) 
+2025-05-14 15:04:45.3297 DEBUG Executed controller factory for controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions) 
+2025-05-14 15:04:45.3297 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 15:04:45.3297 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' using the name '' in request data ... 
+2025-05-14 15:04:45.3297 DEBUG Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-05-14 15:04:45.3297 DEBUG Connection id "0HNCIP92QJ0B6", Request id "0HNCIP92QJ0B6:00000002": started reading request body. 
+2025-05-14 15:04:45.3297 DEBUG Connection id "0HNCIP92QJ0B6", Request id "0HNCIP92QJ0B6:00000002": done reading request body. 
+2025-05-14 15:04:45.3297 DEBUG JSON input formatter succeeded, deserializing to type 'System.Text.Json.JsonElement' 
+2025-05-14 15:04:45.3297 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:04:45.3297 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:04:45.3297 DEBUG Attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 15:04:45.3297 DEBUG Done attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:04:45.3297 DEBUG Session loaded; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:a12ff4e9-d588-a68e-8316-40a576f2bace, Count:1 
+2025-05-14 15:06:30.6994 INFO Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-05-14 15:06:30.6994 INFO Executed action Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions) in 105366.0797ms 
+2025-05-14 15:06:30.6994 INFO Executed endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:06:30.6994 INFO Session started; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:a12ff4e9-d588-a68e-8316-40a576f2bace 
+2025-05-14 15:06:30.6994 DEBUG Session stored; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:a12ff4e9-d588-a68e-8316-40a576f2bace, Count:1 
+2025-05-14 15:06:30.6994 DEBUG Connection id "0HNCIP92QJ0B6" completed keep alive response. 
+2025-05-14 15:06:30.6994 INFO Request finished HTTP/1.1 POST http://localhost:5233/api/beneficiary/savebeneficiarybank application/json 497 - 200 - application/json;+charset=utf-8 105370.1313ms 
+2025-05-14 15:06:38.6258 DEBUG Connection id "0HNCIP92QJ0B7" received FIN. 
+2025-05-14 15:06:38.6258 DEBUG Connection id "0HNCIP92QJ0B7" accepted. 
+2025-05-14 15:06:38.6262 DEBUG Connection id "0HNCIP92QJ0B7" started. 
+2025-05-14 15:06:38.6262 DEBUG Connection id "0HNCIP92QJ0B7" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 15:06:38.6262 DEBUG Connection id "0HNCIP92QJ0B7" disconnecting. 
+2025-05-14 15:06:38.6262 DEBUG Connection id "0HNCIP92QJ0B8" accepted. 
+2025-05-14 15:06:38.6262 DEBUG Connection id "0HNCIP92QJ0B7" stopped. 
+2025-05-14 15:06:38.6262 DEBUG Connection id "0HNCIP92QJ0B8" started. 
+2025-05-14 15:06:38.6262 INFO Request starting HTTP/1.1 POST http://localhost:5233/api/beneficiary/savebeneficiarybank application/json 536 
+2025-05-14 15:06:38.6262 DEBUG 1 candidate(s) found for the request path '/api/beneficiary/savebeneficiarybank' 
+2025-05-14 15:06:38.6262 DEBUG Endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' with route pattern 'api/Beneficiary/savebeneficiarybank' is valid for the request path '/api/beneficiary/savebeneficiarybank' 
+2025-05-14 15:06:38.6262 DEBUG Request matched endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:06:38.6262 DEBUG Static files was skipped as the request already matched an endpoint. 
+2025-05-14 15:06:38.6262 INFO Failed to validate the token. Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-05-14 15:06:38.6262 INFO Bearer was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'. 
+2025-05-14 15:06:38.6262 INFO Executing endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:06:38.6262 INFO Route matched with {action = "SaveBeneficiaryBank", controller = "Beneficiary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveBeneficiaryBank(System.Text.Json.JsonElement) on controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions). 
+2025-05-14 15:06:38.6262 DEBUG Execution plan of authorization filters (in the following order): None 
+2025-05-14 15:06:38.6262 DEBUG Execution plan of resource filters (in the following order): None 
+2025-05-14 15:06:38.6262 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-14 15:06:38.6262 DEBUG Execution plan of exception filters (in the following order): None 
+2025-05-14 15:06:38.6262 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-14 15:06:38.6262 DEBUG Executing controller factory for controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions) 
+2025-05-14 15:06:38.6262 DEBUG Executed controller factory for controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions) 
+2025-05-14 15:06:38.6262 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 15:06:38.6262 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' using the name '' in request data ... 
+2025-05-14 15:06:38.6262 DEBUG Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-05-14 15:06:38.6262 DEBUG Connection id "0HNCIP92QJ0B8", Request id "0HNCIP92QJ0B8:00000002": started reading request body. 
+2025-05-14 15:06:38.6262 DEBUG Connection id "0HNCIP92QJ0B8", Request id "0HNCIP92QJ0B8:00000002": done reading request body. 
+2025-05-14 15:06:38.6262 DEBUG JSON input formatter succeeded, deserializing to type 'System.Text.Json.JsonElement' 
+2025-05-14 15:06:38.6262 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:06:38.6262 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:06:38.6262 DEBUG Attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 15:06:38.6262 DEBUG Done attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:06:38.6262 DEBUG Session loaded; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:a12ff4e9-d588-a68e-8316-40a576f2bace, Count:1 
+2025-05-14 15:08:41.1541 DEBUG Connection id "0HNCIP92QJ0B1" received FIN. 
+2025-05-14 15:08:41.1584 INFO Executed action Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions) in 122529.1588ms 
+2025-05-14 15:08:41.1584 DEBUG Connection id "0HNCIP92QJ0B1" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 15:08:41.1584 DEBUG Connection id "0HNCIP92QJ0B0" received FIN. 
+2025-05-14 15:08:41.1584 DEBUG Connection id "0HNCIP92QJ0B1" disconnecting. 
+2025-05-14 15:08:41.1584 DEBUG Connection id "0HNCIP92QJ0B0" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 15:08:41.1584 DEBUG Connection id "0HNCIP92QJ0B0" disconnecting. 
+2025-05-14 15:08:41.1584 DEBUG Connection id "0HNCIP92QJ0B0" stopped. 
+2025-05-14 15:08:41.1584 DEBUG Connection id "0HNCIP92QJ0B2" received FIN. 
+2025-05-14 15:08:41.1584 DEBUG Connection id "0HNCIP92QJ0B2" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 15:08:41.1584 DEBUG Connection id "0HNCIP92QJ0B2" disconnecting. 
+2025-05-14 15:08:41.1737 DEBUG Connection id "0HNCIP92QJ0B2" stopped. 
+2025-05-14 15:08:41.1737 DEBUG Connection id "0HNCIP92QJ0B1" stopped. 
+2025-05-14 15:08:41.1737 INFO Executed endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:08:41.1737 INFO Session started; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:a12ff4e9-d588-a68e-8316-40a576f2bace 
+2025-05-14 15:08:41.1737 DEBUG Session stored; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:a12ff4e9-d588-a68e-8316-40a576f2bace, Count:1 
+2025-05-14 15:08:41.1737 ERROR An unhandled exception has occurred while executing the request. Newtonsoft.Json.JsonReaderException: Could not convert string to DateTime: 14-05-2025 00:00:00. Path 'RecordDate', line 1, position 426.
+   at Newtonsoft.Json.JsonReader.ReadDateTimeString(String s)
+   at Newtonsoft.Json.JsonTextReader.FinishReadQuotedStringValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadStringValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadAsDateTime()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank(JsonElement obj) in G:\calyx-api\MTS-Web-API\Calyx Solutions\Controllers\BeneficiaryController.cs:line 5246
+   at lambda_method6(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2025-05-14 15:08:41.1737 ERROR An unhandled exception occurred. 
+2025-05-14 15:08:41.1737 DEBUG Connection id "0HNCIP92QJ0B8" completed keep alive response. 
+2025-05-14 15:08:41.1885 INFO Request finished HTTP/1.1 POST http://localhost:5233/api/beneficiary/savebeneficiarybank application/json 536 - 500 - - 122561.7189ms 
+2025-05-14 15:08:43.9407 DEBUG Connection id "0HNCIP92QJ0B9" accepted. 
+2025-05-14 15:08:43.9407 DEBUG Connection id "0HNCIP92QJ0B9" started. 
+2025-05-14 15:08:43.9407 DEBUG Connection id "0HNCIP92QJ0B9" received FIN. 
+2025-05-14 15:08:43.9407 DEBUG Connection id "0HNCIP92QJ0B9" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-14 15:08:43.9407 DEBUG Connection id "0HNCIP92QJ0BA" accepted. 
+2025-05-14 15:08:43.9407 DEBUG Connection id "0HNCIP92QJ0B9" disconnecting. 
+2025-05-14 15:08:43.9407 DEBUG Connection id "0HNCIP92QJ0BA" started. 
+2025-05-14 15:08:43.9407 DEBUG Connection id "0HNCIP92QJ0B9" stopped. 
+2025-05-14 15:08:43.9407 INFO Request starting HTTP/1.1 POST http://localhost:5233/api/beneficiary/savebeneficiarybank application/json 536 
+2025-05-14 15:08:43.9407 DEBUG 1 candidate(s) found for the request path '/api/beneficiary/savebeneficiarybank' 
+2025-05-14 15:08:43.9407 DEBUG Endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' with route pattern 'api/Beneficiary/savebeneficiarybank' is valid for the request path '/api/beneficiary/savebeneficiarybank' 
+2025-05-14 15:08:43.9407 DEBUG Request matched endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:08:43.9407 DEBUG Static files was skipped as the request already matched an endpoint. 
+2025-05-14 15:08:43.9407 INFO Failed to validate the token. Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-05-14 15:08:43.9407 INFO Bearer was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'. 
+2025-05-14 15:08:43.9407 INFO Executing endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:08:43.9407 INFO Route matched with {action = "SaveBeneficiaryBank", controller = "Beneficiary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveBeneficiaryBank(System.Text.Json.JsonElement) on controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions). 
+2025-05-14 15:08:43.9407 DEBUG Execution plan of authorization filters (in the following order): None 
+2025-05-14 15:08:43.9407 DEBUG Execution plan of resource filters (in the following order): None 
+2025-05-14 15:08:43.9407 DEBUG Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-05-14 15:08:43.9407 DEBUG Execution plan of exception filters (in the following order): None 
+2025-05-14 15:08:43.9407 DEBUG Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-05-14 15:08:43.9407 DEBUG Executing controller factory for controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions) 
+2025-05-14 15:08:43.9407 DEBUG Executed controller factory for controller Calyx_Solutions.Controllers.BeneficiaryController (Calyx Solutions) 
+2025-05-14 15:08:43.9407 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 15:08:43.9407 DEBUG Attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement' using the name '' in request data ... 
+2025-05-14 15:08:43.9407 DEBUG Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-05-14 15:08:43.9407 DEBUG Connection id "0HNCIP92QJ0BA", Request id "0HNCIP92QJ0BA:00000002": started reading request body. 
+2025-05-14 15:08:43.9407 DEBUG Connection id "0HNCIP92QJ0BA", Request id "0HNCIP92QJ0BA:00000002": done reading request body. 
+2025-05-14 15:08:43.9407 DEBUG JSON input formatter succeeded, deserializing to type 'System.Text.Json.JsonElement' 
+2025-05-14 15:08:43.9407 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:08:43.9407 DEBUG Done attempting to bind parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:08:43.9407 DEBUG Attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement' ... 
+2025-05-14 15:08:43.9407 DEBUG Done attempting to validate the bound parameter 'obj' of type 'System.Text.Json.JsonElement'. 
+2025-05-14 15:08:43.9564 DEBUG Session loaded; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:a12ff4e9-d588-a68e-8316-40a576f2bace, Count:1 
+2025-05-14 15:08:50.3609 INFO Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-05-14 15:08:50.3616 INFO Executed action Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions) in 6414.2617ms 
+2025-05-14 15:08:50.3616 INFO Executed endpoint 'Calyx_Solutions.Controllers.BeneficiaryController.SaveBeneficiaryBank (Calyx Solutions)' 
+2025-05-14 15:08:50.3616 DEBUG Session stored; Key:e7ea9fe5-1e9d-eeba-6081-38b0c0e4e3cb, Id:a12ff4e9-d588-a68e-8316-40a576f2bace, Count:1 
+2025-05-14 15:08:50.3616 DEBUG Connection id "0HNCIP92QJ0BA" completed keep alive response. 
+2025-05-14 15:08:50.3616 INFO Request finished HTTP/1.1 POST http://localhost:5233/api/beneficiary/savebeneficiarybank application/json 536 - 200 - application/json;+charset=utf-8 6416.8515ms 

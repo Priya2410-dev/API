@@ -1,0 +1,3734 @@
+[
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.AddressController",
+    "Method": "AddressInfo",
+    "RelativePath": "api/Address/addressinfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.BankController",
+    "Method": "banklist",
+    "RelativePath": "api/Bank/banklist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.BankbalanceController",
+    "Method": "BankAccountDetails",
+    "RelativePath": "api/Bankbalance/bankaccountdetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.BankdetailsController",
+    "Method": "BankAccountDetails",
+    "RelativePath": "api/Bankdetails/bankaccountdetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.BeneficiaryController",
+    "Method": "saveBeneficiary",
+    "RelativePath": "api/Beneficiary/beneficiaryadd",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.BeneficiaryController",
+    "Method": "beneficiaryconfiguration",
+    "RelativePath": "api/Beneficiary/configuration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.BeneficiaryController",
+    "Method": "Delete_Beneficiary",
+    "RelativePath": "api/Beneficiary/deletebeneficiary",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj1",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.BeneficiaryController",
+    "Method": "BeneficiaryInfo",
+    "RelativePath": "api/Beneficiary/getbeneficiarydetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.BeneficiaryController",
+    "Method": "getIDInfo",
+    "RelativePath": "api/Beneficiary/getidinfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj1",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.BonusAmountController",
+    "Method": "GetRewardAmountCustomerprofile",
+    "RelativePath": "api/BonusAmount/rewardamount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj1",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.BonusAmountController",
+    "Method": "TotalSendAmount",
+    "RelativePath": "api/BonusAmount/totalsendamount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.CheckratesListCountryController",
+    "Method": "basecurrencylist",
+    "RelativePath": "api/CheckratesListCountry/basecurrencylist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.CheckratesListCountryController",
+    "Method": "checkListCountry",
+    "RelativePath": "api/CheckratesListCountry/checklistcountry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "RestSharp.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.CheckratesListCountryController",
+    "Method": "checkratesListCountry",
+    "RelativePath": "api/CheckratesListCountry/checkrateslistcountry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj1",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.CityController",
+    "Method": "citylist",
+    "RelativePath": "api/City/citylist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.CollectionController",
+    "Method": "Getcollectiontype",
+    "RelativePath": "api/Collection/getcollectiontype",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.collectionTypeController",
+    "Method": "collectiontypelist",
+    "RelativePath": "api/collectionType/collectiontypelist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.CompanydetailsController",
+    "Method": "Companydetails",
+    "RelativePath": "api/Companydetails/getcompanydetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.ComplaintController",
+    "Method": "InsertComplaintForm",
+    "RelativePath": "api/Complaint/insertcomplaintform",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.CountryController",
+    "Method": "countrycodemaster",
+    "RelativePath": "api/Country/basecountrycodemaster",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clientID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.CountryController",
+    "Method": "countrylist",
+    "RelativePath": "api/Country/countrylist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.CurrencyController",
+    "Method": "CheckListCurrency",
+    "RelativePath": "api/Currency/currencylist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.customer.CustomerController",
+    "Method": "createCustomer",
+    "RelativePath": "api/Customer/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.customer.CustomerController",
+    "Method": "customerconfiguration",
+    "RelativePath": "api/Customer/customerconfiguration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.customer.CustomerController",
+    "Method": "heardFrom",
+    "RelativePath": "api/Customer/heard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clientID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.customer.CustomerController",
+    "Method": "customerUpdate",
+    "RelativePath": "api/Customer/update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.DeliveryTypeController",
+    "Method": "Getdeliverytype",
+    "RelativePath": "api/DeliveryType/getdeliverytype",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.EmployeeController",
+    "Method": "EmployeeStatus",
+    "RelativePath": "api/Employee/employeestatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.EmployeeStatusController",
+    "Method": "EmployeeStatus",
+    "RelativePath": "api/EmployeeStatus/employeestatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.ForgotPasswordController",
+    "Method": "IsValidEmail",
+    "RelativePath": "api/ForgotPassword/isvalidemail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.ForgotPasswordController",
+    "Method": "ResendMail",
+    "RelativePath": "api/ForgotPassword/resendmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.ForgotPasswordController",
+    "Method": "UpdateForgotPassword",
+    "RelativePath": "api/ForgotPassword/updateforgotpassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.ForgotPasswordController",
+    "Method": "UpdatePassword",
+    "RelativePath": "api/ForgotPassword/updatepassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.IDController",
+    "Method": "GetGBGperm",
+    "RelativePath": "api/ID/getgbgperm",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.IDController",
+    "Method": "GetIDDetails",
+    "RelativePath": "api/ID/getiddetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.IDController",
+    "Method": "GetIDTypenameDetails",
+    "RelativePath": "api/ID/getidtypename",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.IDController",
+    "Method": "GetJourney",
+    "RelativePath": "api/ID/getjourney",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.IDController",
+    "Method": "StartOnBoard",
+    "RelativePath": "api/ID/startonboard",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.IDController",
+    "Method": "Upload",
+    "RelativePath": "api/ID/Upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DocumentName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "contains_file",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "contains_backfile",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "documentname",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Comments",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "comments",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Sender_DateOfBirth",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "senderdateofbirth",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IDName_ID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "idnameID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IDType_ID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "idtypeID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SenderNameOnID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sendernameonid",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SenderID_Number",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "senderidnumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SenderID_ExpiryDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "senderidexpirydate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer_ID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "customerid",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shufti_status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "background_checks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Collection_type",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "JourneyID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Country_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "countryID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Beneficiary_ID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Issue_date",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "issuedate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Client_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "clientID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Branch_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "branchID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SenderID_ID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ID_Type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ID_Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Verified_By",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Verified_Date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "SenderID_PlaceOfIssue",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "senderidplaceofissue",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Record_Insert_DateTime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileNameWithExt",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "secondaryFileNameWithExt",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Path",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RecordDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Delete_Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "User_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MRZ_number",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExistId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Message",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Permission_status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ShuftiId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_face",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_frontdoc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_backdoc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_document_proof_dob",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_document_proof_gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_document_proof_full_name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_document_first_name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_document_middle_name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_document_last_name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_document_proof_document_country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_document_proof_document_number",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_document_proof_document_country_code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_document_proof_document_official_name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_doc_age",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_doc_full_address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_doc_gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_doc_selected_type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_doc_face_match_confidence",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_doc_issue_date",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_doc_expiry_date",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_face_on_document_matched",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_face_available",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_frontdoc_available",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "shuftipro_frontdoc_expired",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Custmer_Ref",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.MobileProviderController",
+    "Method": "mobileproviderlist",
+    "RelativePath": "api/MobileProvider/providerlist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.NationalityController",
+    "Method": "Nationality",
+    "RelativePath": "api/Nationality/nationalitylist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.NotificationController",
+    "Method": "Viewnotifications",
+    "RelativePath": "api/Notification/notification",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.NotificationController",
+    "Method": "NotificationModule",
+    "RelativePath": "api/Notification/notificationmodule",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.NotificationController",
+    "Method": "Update_Notification_config",
+    "RelativePath": "api/Notification/updatenotificationmodule",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.PaymentTypeController",
+    "Method": "GetPayTypes",
+    "RelativePath": "api/PaymentType/getpaytypes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.PreferencesController",
+    "Method": "SelectPreferences",
+    "RelativePath": "api/Preferences/selectpreferences",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.PreferencesController",
+    "Method": "UpdatePreferences",
+    "RelativePath": "api/Preferences/updatepreferences",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.ProfessionController",
+    "Method": "EmployeeProfession",
+    "RelativePath": "api/Profession/professionlist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.RateController",
+    "Method": "Get_BKLBranchList",
+    "RelativePath": "api/Rate/apicollectionlist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.RateController",
+    "Method": "CollectionPoints",
+    "RelativePath": "api/Rate/collectionpointlist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.RateController",
+    "Method": "dashboardrates",
+    "RelativePath": "api/Rate/dashboardrates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.RateController",
+    "Method": "GetPurposes",
+    "RelativePath": "api/Rate/getpurposeslist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.RateController",
+    "Method": "GetData",
+    "RelativePath": "api/Rate/sendmoneyratecalculator",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.RelationController",
+    "Method": "SelectRelations",
+    "RelativePath": "api/Relation/relationlist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.RewardController",
+    "Method": "GetInfo",
+    "RelativePath": "api/Reward/getdiscountdetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.RewardController",
+    "Method": "GetRewardDetails",
+    "RelativePath": "api/Reward/getrewarddetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.RewardController",
+    "Method": "GetWalletDetailsActivity",
+    "RelativePath": "api/Reward/GetWalletDetailsActivity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.SendController",
+    "Method": "CheckLimit",
+    "RelativePath": "api/Send/checklimit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.SendController",
+    "Method": "CheckMinMax",
+    "RelativePath": "api/Send/checkminmax",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.SendController",
+    "Method": "InsertOnlineTransaction",
+    "RelativePath": "api/Send/insertonlinetransaction",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.SendController",
+    "Method": "InsertTemp",
+    "RelativePath": "api/Send/inserttemptransaction",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.SendController",
+    "Method": "InsertTransaction",
+    "RelativePath": "api/Send/inserttransaction",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.SendController",
+    "Method": "saveaudit",
+    "RelativePath": "api/Send/saveaudit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.SendController",
+    "Method": "SendMoneyDetails",
+    "RelativePath": "api/Send/sendmoneydetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.TestController",
+    "Method": "Get",
+    "RelativePath": "api/Test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.TestController",
+    "Method": "Post",
+    "RelativePath": "api/Test",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.TestController",
+    "Method": "Get",
+    "RelativePath": "api/Test/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.TestController",
+    "Method": "Put",
+    "RelativePath": "api/Test/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "value",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.TestController",
+    "Method": "Delete",
+    "RelativePath": "api/Test/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.TestController",
+    "Method": "vv",
+    "RelativePath": "api/Test/vv",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.TitleController",
+    "Method": "Select_Gender",
+    "RelativePath": "api/Title/Gender",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.TitleController",
+    "Method": "Select_Title",
+    "RelativePath": "api/Title/title",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.TransactionController",
+    "Method": "GetTrackingDetails",
+    "RelativePath": "api/Transaction/trackingdetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.TransactionController",
+    "Method": "GetTrackingNames",
+    "RelativePath": "api/Transaction/trackingnames",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.TransactionController",
+    "Method": "ViewTransfer",
+    "RelativePath": "api/Transaction/viewtransfer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.TransactionController",
+    "Method": "configuration",
+    "RelativePath": "api/Transaction/viewtransferconfiguration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objd",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.UserLoginController",
+    "Method": "CheckLogin",
+    "RelativePath": "api/UserLogin/CheckLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objdata",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.WalletBalanceController",
+    "Method": "GetWalletDetails",
+    "RelativePath": "api/WalletBalance/walletdetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj1",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.DashboardWalletBalanceController",
+    "Method": "DashboardWalletBlnce",
+    "RelativePath": "DashboardWalletBlnce",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj1",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Controllers.EmployeeProfessionController",
+    "Method": "EmployeeProfession",
+    "RelativePath": "EmployeeProfession",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sanction_responce_bene_aml",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sanction_responce_bene_kyc",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sanction_responce_cust_aml",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sanction_responce_cust_kyc",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "new_agent_id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "new_agent_branch",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "bankGateway",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "count",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Comment",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NameOnCard",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Till_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BranchListAPI_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "APIBranch_Details",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "City_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Perm_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "scheme_type_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "referrer_maxnoofreferee",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "multiples_of",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "referrer_perk_type",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "referee_perk_type",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "referrer_discount_type",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "referee_discount_type",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "referrer_value",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "referee_value",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "referee_mintransferamount",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Resend_otp",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.New_Agent_Branch",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Agent_branch",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Captcha",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Base_Currency_code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Agent_User_ID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.date",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.APIUser_ID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.APIAccess_Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.WireTransferRefNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer_ID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Client_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Branch_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.SecurityKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Agent_branch",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.New_Agent_Branch",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Referrer_Flag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Referred_By_Agent",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Agent_User_ID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.RatingsArray",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.basecur_Amount",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.basecur_purpose",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.ErrorFlag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.checkparam",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.chk_promo_mail",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.base_currency_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.base_currency_code",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Phone_number_code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Mobile_number_code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.chk_changed",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Perm_status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Birth_Date",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Employement_Status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.AllCustomer_Flag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.OTP",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Delete_Status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.cashcollection_flag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Record_Insert_DateTime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.newpassword",
+        "Type": "System.Object",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.oldpassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Client_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Branch_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.TitleId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Middle_Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Full_Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.PostCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.MobileNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.SecurityQuestionId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.SecurityQuestionAnswer",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.DeleteStatus",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.block_login_flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.provience_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.professionId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.professionName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.cityId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.RegularCustomerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.HouseNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Street",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.AddressLine2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.birthPlace",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.AgentMappingId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Nationality",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Nationality_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.WireTransfer_ReferanceNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.WireTransferRefNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.SendMoneyFlag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.VerificationFlag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.ExceededAmount",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.InactivateDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.CompanyName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.CustLimit",
+        "Type": "System.Single",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.HeardFromId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.HeardFromEvent",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.SourseOfRegistration",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Comment",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.CommentUserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.RemindMeFlag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Remind_Date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.RecordDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.HeardFrom",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.DocumentUploadCount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.ExistMobile",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.ExistEmail",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.IncompleteRegistrationId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.SecurityKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.APIAccess_Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.APIUser_ID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.per_status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.per_status_verifyMob",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Id1",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Message",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.whereclause",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.refcode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Customer_ID",
+        "Type": "System.Object",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Uppercase",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Lowercase",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Digit",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Maxpass_Length",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Minpass_length",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Special_char",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Isspecial_Char",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.User_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Retry_Cnt",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Mobile_Verification_flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Country_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Currency_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Currency_Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Country_Flag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Currency_Sign",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Customer.Country_Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.DocUploadCount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.FullName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.User_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Location",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.IP_Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Login_DateTime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Login_Time",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Mobile_Verification_flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Currency_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Currency_Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Country_Flag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Currency_Sign",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Country_Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.Country_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.OTP",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.tokenValue",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.tokenRequest",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login.userAgent",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Agent_branch",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.New_Agent_Branch",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Referrer_Flag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Referred_By_Agent",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Agent_User_ID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.RatingsArray",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.basecur_Amount",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.basecur_purpose",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.ErrorFlag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.checkparam",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.chk_promo_mail",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.base_currency_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.base_currency_code",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Phone_number_code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Mobile_number_code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.chk_changed",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Perm_status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Birth_Date",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Employement_Status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.AllCustomer_Flag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.OTP",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Delete_Status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.cashcollection_flag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Record_Insert_DateTime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.newpassword",
+        "Type": "System.Object",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.oldpassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Client_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Branch_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.TitleId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Middle_Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Full_Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.PostCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.MobileNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.SecurityQuestionId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.SecurityQuestionAnswer",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.DeleteStatus",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.block_login_flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.provience_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.professionId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.professionName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.cityId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.RegularCustomerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.HouseNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Street",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.AddressLine2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.birthPlace",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.AgentMappingId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Nationality",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Nationality_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.WireTransfer_ReferanceNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.WireTransferRefNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.SendMoneyFlag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.VerificationFlag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.ExceededAmount",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.InactivateDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.CompanyName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.CustLimit",
+        "Type": "System.Single",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.HeardFromId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.HeardFromEvent",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.SourseOfRegistration",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Comment",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.CommentUserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.RemindMeFlag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Remind_Date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.RecordDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.HeardFrom",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.DocumentUploadCount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.ExistMobile",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.ExistEmail",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.IncompleteRegistrationId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.SecurityKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.APIAccess_Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.APIUser_ID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.per_status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.per_status_verifyMob",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Id1",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Message",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.whereclause",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.refcode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Customer_ID",
+        "Type": "System.Object",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Uppercase",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Lowercase",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Digit",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Maxpass_Length",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Minpass_length",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Special_char",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Isspecial_Char",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.User_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Retry_Cnt",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Mobile_Verification_flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Country_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Currency_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Currency_Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Country_Flag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Currency_Sign",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer.Country_Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Transaction_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer_ID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Beneficiary_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Beneficiary_Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TransactionType_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PaymentType_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TransactionStatus_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "AmountInGBP",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromCurrency_Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Currency_Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Exchange_Rate",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "AmountInPKR",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Purpose_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SourceOfFunds",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Transfer_Fees",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Credit_Status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Record_Insert_DateTime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Delete_Status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CollectionPoint_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CollectionPoint",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Agent_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PaymentDepositType_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CB_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Branch_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Is_App",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReferenceNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PaymentReceived_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "User_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TransactionThrough_ID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Agent_MappingID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SpotOnApp_SendMoneyFlag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MadeThisTransfer_Flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Country_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Currency_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Proceed_Reason",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Transaction_From_Flag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RemainingPartial_Amount",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "DepositePartial_Amount",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "PartialDeposit_Flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "auth_code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeliveryType_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Basecurr_Country_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Actual_ExchangeRate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ManualRateChangedFlag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "RateUpdateReason_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MsgToAgent",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Flag_for_cancellation",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note_From_Cashier_for_TxCancellation_Flag",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cancellation_flag_By_UserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "GCCTransactionNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GCCPayoutBranch_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "GCCRate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GCCAmountInGBP",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GCCAmountInPKR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PartPay_Flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "GCCFees",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GCCCustomerRate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CustGCCAmountInGBP",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CustGCCAmountInPKR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Transaction_Source",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Other_Purpose",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HDelivery_Flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "HDelivery_Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Worldpay_Response",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Client_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SourceComment_Flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SourceComment",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PayByCard_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PaymentGateway_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Wallet_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Wallet_Amount",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Discount_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Discount_Amount",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ForeignAmount",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "offset_flag",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TransferAmount",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TransferForeignAmount",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PType_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TransferTypeFlag",
+        "Type": "System.Object",
+        "IsRequired": false
+      },
+      {
+        "Name": "Purpose",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "transfer_type",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "paytype",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "exchangerate",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "fee",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "newwalletbalance",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "oldwalletbalance",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Transfer_Cost",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Wallet_Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Wallet_Currency",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DiscountType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Discount_Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SOFID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PaymentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TransferType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Discount_Perm",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Wallet_Perm",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MadeThisTransfer_Label",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReceiptNameWithExt",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CallBackURL",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "payvyne_trans_id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TotalAmount",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Customer_Reference",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GuavapayRefNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GuavapayorderId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userAgent",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "referenceNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "customerReferenceNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "transactionID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "gccPinNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "payWithBankGatewayId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Calyx_Solutions.Web_Contollers.ContactUsController",
+    "Method": "Save_ContactDetails",
+    "RelativePath": "webapi/ContactUs/savecontactdetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "Calyx_Solutions.Model.Customer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\wwwroot\\uploads\\1000090236.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1000090236.jpg"
+    },
+    {
+      "Id": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\wwwroot\\uploads\\1000090237.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1000090237.jpg"
+    },
+    {
+      "Id": "G:\\calyx-api\\MTS-Web-API\\Calyx Solutions\\wwwroot\\uploads\\Image_20240105_152727_207.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\Image_20240105_152727_207.jpeg"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.Calyx Solutions.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.Calyx Solutions.props",
+      "PackagePath": "build\\Calyx Solutions.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Calyx Solutions.props",
+      "PackagePath": "buildMultiTargeting\\Calyx Solutions.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.Calyx Solutions.props",
+      "PackagePath": "buildTransitive\\Calyx Solutions.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

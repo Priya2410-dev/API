@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Calyx Solutions.props" />
+</Project>

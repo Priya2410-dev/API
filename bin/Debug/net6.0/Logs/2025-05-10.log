@@ -1,0 +1,92 @@
+2025-05-10 15:59:39.9266 DEBUG Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2025-05-10 15:59:40.1413 DEBUG Hosting starting 
+2025-05-10 15:59:40.1739 INFO User profile is available. Using 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2025-05-10 15:59:40.1785 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-0bf881db-1369-442d-a02e-0ead21594d9e.xml'. 
+2025-05-10 15:59:40.1785 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-4a947aa7-3357-4223-bb35-7ea3ed5e7e79.xml'. 
+2025-05-10 15:59:40.1785 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-717c74c0-1060-4427-a9d9-182861a01a05.xml'. 
+2025-05-10 15:59:40.1785 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-735fade6-aa8a-474a-9efd-32bb20aff617.xml'. 
+2025-05-10 15:59:40.1785 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-81cebca2-fe54-44d1-9088-c635f75e300d.xml'. 
+2025-05-10 15:59:40.1785 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-dad14520-ce8a-4798-a091-64c23a11c6e5.xml'. 
+2025-05-10 15:59:40.1785 DEBUG Reading data from file 'C:\Users\CALYX\AppData\Local\ASP.NET\DataProtection-Keys\key-f8885a70-e6c1-42d8-8dd1-af0efebb8645.xml'. 
+2025-05-10 15:59:40.1785 DEBUG Found key {0bf881db-1369-442d-a02e-0ead21594d9e}. 
+2025-05-10 15:59:40.1939 DEBUG Found key {4a947aa7-3357-4223-bb35-7ea3ed5e7e79}. 
+2025-05-10 15:59:40.1939 DEBUG Found key {717c74c0-1060-4427-a9d9-182861a01a05}. 
+2025-05-10 15:59:40.1939 DEBUG Found key {735fade6-aa8a-474a-9efd-32bb20aff617}. 
+2025-05-10 15:59:40.1939 DEBUG Found key {81cebca2-fe54-44d1-9088-c635f75e300d}. 
+2025-05-10 15:59:40.1939 DEBUG Found key {dad14520-ce8a-4798-a091-64c23a11c6e5}. 
+2025-05-10 15:59:40.1939 DEBUG Found key {f8885a70-e6c1-42d8-8dd1-af0efebb8645}. 
+2025-05-10 15:59:40.1939 DEBUG Considering key {735fade6-aa8a-474a-9efd-32bb20aff617} with expiration date 2025-06-10 09:15:18Z as default key. 
+2025-05-10 15:59:40.1939 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-05-10 15:59:40.1939 DEBUG Decrypting secret element using Windows DPAPI. 
+2025-05-10 15:59:40.1939 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-05-10 15:59:40.2102 DEBUG Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2025-05-10 15:59:40.2102 DEBUG Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2025-05-10 15:59:40.2102 DEBUG Using key {735fade6-aa8a-474a-9efd-32bb20aff617} as the default key. 
+2025-05-10 15:59:40.2102 DEBUG Key ring with default key {735fade6-aa8a-474a-9efd-32bb20aff617} was loaded during application startup. 
+2025-05-10 15:59:40.3423 INFO Now listening on: http://localhost:5233 
+2025-05-10 15:59:40.3423 DEBUG Loaded hosting startup assembly Calyx Solutions 
+2025-05-10 15:59:40.3423 DEBUG Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2025-05-10 15:59:40.3423 DEBUG Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2025-05-10 15:59:40.3423 INFO Application started. Press Ctrl+C to shut down. 
+2025-05-10 15:59:40.3423 INFO Hosting environment: Development 
+2025-05-10 15:59:40.3423 INFO Content root path: G:\calyx-api\MTS-Web-API\Calyx Solutions\ 
+2025-05-10 15:59:40.3423 DEBUG Hosting started 
+2025-05-10 15:59:40.5111 DEBUG Connection id "0HNCFLM96M58C" accepted. 
+2025-05-10 15:59:40.5111 DEBUG Connection id "0HNCFLM96M58D" accepted. 
+2025-05-10 15:59:40.5111 DEBUG Connection id "0HNCFLM96M58C" started. 
+2025-05-10 15:59:40.5111 DEBUG Connection id "0HNCFLM96M58D" started. 
+2025-05-10 15:59:40.5245 DEBUG Connection id "0HNCFLM96M58C" received FIN. 
+2025-05-10 15:59:40.5245 DEBUG Connection id "0HNCFLM96M58D" received FIN. 
+2025-05-10 15:59:40.5372 DEBUG Connection id "0HNCFLM96M58C" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-10 15:59:40.5372 DEBUG Connection id "0HNCFLM96M58D" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-05-10 15:59:40.5372 DEBUG Connection id "0HNCFLM96M58D" disconnecting. 
+2025-05-10 15:59:40.5372 DEBUG Connection id "0HNCFLM96M58C" disconnecting. 
+2025-05-10 15:59:40.5372 DEBUG Connection id "0HNCFLM96M58D" stopped. 
+2025-05-10 15:59:40.5372 DEBUG Connection id "0HNCFLM96M58C" stopped. 
+2025-05-10 15:59:40.6819 DEBUG Connection id "0HNCFLM96M58E" accepted. 
+2025-05-10 15:59:40.6819 DEBUG Connection id "0HNCFLM96M58E" started. 
+2025-05-10 15:59:40.6819 DEBUG Connection id "0HNCFLM96M58F" accepted. 
+2025-05-10 15:59:40.6819 DEBUG Connection id "0HNCFLM96M58F" started. 
+2025-05-10 15:59:40.7170 INFO Request starting HTTP/1.1 GET http://localhost:5233/swagger/index.html - - 
+2025-05-10 15:59:40.7542 DEBUG Wildcard detected, all requests with hosts will be allowed. 
+2025-05-10 15:59:40.8019 DEBUG No candidates found for the request path '/swagger/index.html' 
+2025-05-10 15:59:40.8019 DEBUG Request did not match any endpoints 
+2025-05-10 15:59:40.9158 DEBUG Response markup is scheduled to include browser refresh script injection. 
+2025-05-10 15:59:41.0637 DEBUG Connection id "0HNCFLM96M58G" accepted. 
+2025-05-10 15:59:41.0637 DEBUG Connection id "0HNCFLM96M58G" started. 
+2025-05-10 15:59:41.0637 INFO Request starting HTTP/1.1 GET http://localhost:5233/_vs/browserLink - - 
+2025-05-10 15:59:41.0637 INFO Request starting HTTP/1.1 GET http://localhost:5233/_framework/aspnetcore-browser-refresh.js - - 
+2025-05-10 15:59:41.0727 DEBUG Connection id "0HNCFLM96M58F" completed keep alive response. 
+2025-05-10 15:59:41.0727 INFO Request finished HTTP/1.1 GET http://localhost:5233/_framework/aspnetcore-browser-refresh.js - - - 200 12000 application/javascript;+charset=utf-8 9.0203ms 
+2025-05-10 15:59:41.0875 DEBUG Response markup was updated to include browser refresh script injection. 
+2025-05-10 15:59:41.0875 DEBUG Connection id "0HNCFLM96M58E" completed keep alive response. 
+2025-05-10 15:59:41.0875 INFO Request finished HTTP/1.1 GET http://localhost:5233/swagger/index.html - - - 200 - text/html;charset=utf-8 374.5932ms 
+2025-05-10 15:59:41.1358 DEBUG Connection id "0HNCFLM96M58G" completed keep alive response. 
+2025-05-10 15:59:41.1358 INFO Request finished HTTP/1.1 GET http://localhost:5233/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 70.9682ms 
+2025-05-10 15:59:42.0854 INFO Request starting HTTP/1.1 GET http://localhost:5233/swagger/v1/swagger.json - - 
+2025-05-10 15:59:42.0854 DEBUG No candidates found for the request path '/swagger/v1/swagger.json' 
+2025-05-10 15:59:42.0854 DEBUG Request did not match any endpoints 
+2025-05-10 15:59:42.1045 INFO Request starting HTTP/1.1 GET http://localhost:5233/swagger/favicon-32x32.png - - 
+2025-05-10 15:59:42.1045 DEBUG No candidates found for the request path '/swagger/favicon-32x32.png' 
+2025-05-10 15:59:42.1045 DEBUG Request did not match any endpoints 
+2025-05-10 15:59:42.1045 INFO Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2025-05-10 15:59:42.1045 DEBUG Connection id "0HNCFLM96M58E" completed keep alive response. 
+2025-05-10 15:59:42.1045 INFO Request finished HTTP/1.1 GET http://localhost:5233/swagger/favicon-32x32.png - - - 200 628 image/png 8.7647ms 
+2025-05-10 15:59:42.2548 ERROR An unhandled exception has occurred while executing the request. Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - Calyx_Solutions.Controllers.IDController.Upload (Calyx Solutions). See inner exception
+ ---> System.ArgumentException: An item with the same key has already been added. Key: ContentType
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchemaFromFormParameters(IEnumerable`1 formParameters, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBodyFromFormParameters(ApiDescription apiDescription, SchemaRepository schemaRepository, IEnumerable`1 formParameters)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBody(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2025-05-10 15:59:42.3093 ERROR An unhandled exception occurred. 
+2025-05-10 15:59:42.3093 DEBUG Connection id "0HNCFLM96M58G" completed keep alive response. 
+2025-05-10 15:59:42.3093 INFO Request finished HTTP/1.1 GET http://localhost:5233/swagger/v1/swagger.json - - - 500 - - 224.6390ms 

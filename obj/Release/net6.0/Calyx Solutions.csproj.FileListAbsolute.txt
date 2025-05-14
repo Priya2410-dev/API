@@ -1,0 +1,276 @@
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\appsettings.Development.json
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\appsettings.json
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.exe
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.deps.json
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.runtimeconfig.json
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.pdb
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Auth0.Core.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Auth0.ManagementApi.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Microsoft.OpenApi.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\MySqlConnector.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Newtonsoft.Json.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Antlr3.Runtime.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\EntityFramework.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\FirebaseAdmin.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Google.Api.Gax.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Google.Api.Gax.Rest.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Google.Apis.Auth.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Google.Apis.Core.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Google.Apis.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\gudusoft.gsqlparser.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\gudusoft.gsqlparser.yyrec.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\itextsharp.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\ListToDataTable.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Microsoft.AI.Agent.Intercept.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Microsoft.AI.DependencyCollector.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Microsoft.AI.PerfCounterCollector.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Microsoft.AI.ServerTelemetryChannel.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\MySql.Data.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Owin.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\RestSharp.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Net.Http.Formatting.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Net.Http.WebRequest.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Spatial.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Web.Cors.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Web.DynamicData.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Web.Extensions.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Web.Helpers.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Web.Http.Cors.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Web.Http.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Web.Http.OData.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Web.Http.WebHost.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Web.Razor.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\WebGrease.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.csproj.AssemblyReference.cache
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.GeneratedMSBuildEditorConfig.editorconfig
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.AssemblyInfoInputs.cache
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.AssemblyInfo.cs
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.csproj.CoreCompileInputs.cache
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.MvcApplicationPartsAssemblyInfo.cs
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.MvcApplicationPartsAssemblyInfo.cache
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\staticwebassets\msbuild.Calyx Solutions.Microsoft.AspNetCore.StaticWebAssets.props
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\staticwebassets\msbuild.build.Calyx Solutions.props
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.Calyx Solutions.props
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.Calyx Solutions.props
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\staticwebassets.pack.json
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\staticwebassets.build.json
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\staticwebassets.development.json
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\scopedcss\bundle\Calyx Solutions.styles.css
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.csproj.CopyComplete
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\refint\Calyx Solutions.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.pdb
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.genruntimeconfig.cache
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\obj\Release\net6.0\ref\Calyx Solutions.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.staticwebassets.runtime.json
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\System.Drawing.Common.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\UAParser.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\AjaxMin.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\EPPlus.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\OfficeOpenXml.Core.ExcelPackage.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Serilog.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Serilog.Sinks.Console.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Serilog.Sinks.File.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\NLog.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\NLog.Extensions.Logging.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\NLog.Web.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Google.Protobuf.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\JsonSubTypes.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\BouncyCastle.Crypto.dll
+F:\Yogesh\Yash\Calyx Solutions\Calyx Solutions\bin\Release\net6.0\Yoti.Auth.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\appsettings.Development.json
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\appsettings.json
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.staticwebassets.runtime.json
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.exe
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.deps.json
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.runtimeconfig.json
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.pdb
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\AjaxMin.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Auth0.Core.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Auth0.ManagementApi.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Google.Protobuf.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\JsonSubTypes.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Razor.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Net.Http.Formatting.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Http.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Http.WebHost.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.OpenApi.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\MySqlConnector.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Newtonsoft.Json.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\NLog.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\NLog.Extensions.Logging.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\NLog.Web.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\BouncyCastle.Crypto.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\UAParser.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Yoti.Auth.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Antlr3.Runtime.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\EntityFramework.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\EPPlus.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\FirebaseAdmin.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Google.Api.Gax.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Google.Api.Gax.Rest.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Google.Apis.Auth.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Google.Apis.Core.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Google.Apis.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\gudusoft.gsqlparser.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\gudusoft.gsqlparser.yyrec.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\itextsharp.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\ListToDataTable.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.AI.Agent.Intercept.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.AI.DependencyCollector.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.AI.PerfCounterCollector.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.AI.ServerTelemetryChannel.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\MySql.Data.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\OfficeOpenXml.Core.ExcelPackage.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Owin.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\RestSharp.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Serilog.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Serilog.Sinks.Console.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Serilog.Sinks.File.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Drawing.Common.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Net.Http.WebRequest.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Spatial.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Cors.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.DynamicData.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Extensions.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Helpers.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Http.Cors.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Http.OData.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\WebGrease.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.csproj.AssemblyReference.cache
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.GeneratedMSBuildEditorConfig.editorconfig
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.AssemblyInfoInputs.cache
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.AssemblyInfo.cs
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.csproj.CoreCompileInputs.cache
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.MvcApplicationPartsAssemblyInfo.cs
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.MvcApplicationPartsAssemblyInfo.cache
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets\msbuild.Calyx Solutions.Microsoft.AspNetCore.StaticWebAssets.props
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets\msbuild.build.Calyx Solutions.props
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.Calyx Solutions.props
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.Calyx Solutions.props
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets.pack.json
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets.build.json
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets.development.json
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\scopedcss\bundle\Calyx Solutions.styles.css
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.csproj.CopyComplete
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\refint\Calyx Solutions.dll
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.pdb
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.genruntimeconfig.cache
+G:\calyx-solution-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\ref\Calyx Solutions.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\appsettings.Development.json
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\appsettings.json
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.staticwebassets.runtime.json
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.exe
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.deps.json
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.runtimeconfig.json
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Calyx Solutions.pdb
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\AjaxMin.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Auth0.Core.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Auth0.ManagementApi.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Google.Protobuf.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\JsonSubTypes.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Razor.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Net.Http.Formatting.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Http.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Http.WebHost.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.OpenApi.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\MySqlConnector.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Newtonsoft.Json.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\NLog.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\NLog.Extensions.Logging.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\NLog.Web.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\BouncyCastle.Crypto.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\UAParser.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Yoti.Auth.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Antlr3.Runtime.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\EntityFramework.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\EPPlus.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\FirebaseAdmin.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Google.Api.Gax.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Google.Api.Gax.Rest.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Google.Apis.Auth.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Google.Apis.Core.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Google.Apis.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\gudusoft.gsqlparser.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\gudusoft.gsqlparser.yyrec.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\itextsharp.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\ListToDataTable.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.AI.Agent.Intercept.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.AI.DependencyCollector.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.AI.PerfCounterCollector.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Microsoft.AI.ServerTelemetryChannel.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\MySql.Data.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\OfficeOpenXml.Core.ExcelPackage.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Owin.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\RestSharp.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Serilog.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Serilog.Sinks.Console.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\Serilog.Sinks.File.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Drawing.Common.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Net.Http.WebRequest.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Spatial.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Cors.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.DynamicData.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Extensions.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Helpers.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Http.Cors.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\System.Web.Http.OData.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\bin\Release\net6.0\WebGrease.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.csproj.AssemblyReference.cache
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.GeneratedMSBuildEditorConfig.editorconfig
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.AssemblyInfoInputs.cache
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.AssemblyInfo.cs
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.csproj.CoreCompileInputs.cache
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.MvcApplicationPartsAssemblyInfo.cs
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.MvcApplicationPartsAssemblyInfo.cache
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets\msbuild.Calyx Solutions.Microsoft.AspNetCore.StaticWebAssets.props
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets\msbuild.build.Calyx Solutions.props
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.Calyx Solutions.props
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.Calyx Solutions.props
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets.pack.json
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets.build.json
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\staticwebassets.development.json
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\scopedcss\bundle\Calyx Solutions.styles.css
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.csproj.CopyComplete
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\refint\Calyx Solutions.dll
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.pdb
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\Calyx Solutions.genruntimeconfig.cache
+G:\calyx-api\MTS-Web-API\Calyx Solutions\obj\Release\net6.0\ref\Calyx Solutions.dll
