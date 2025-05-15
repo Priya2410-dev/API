@@ -1036,7 +1036,9 @@ namespace Calyx_Solutions.Controllers
                     CompanyInfo.InsertActivityLogDetails("Mail send successfully", 0, 0, 0, 0, "IsValidEmail", Obj.Client_ID, Obj.Branch_ID, "", context);
                     return new JsonResult(validateJsonData);
                 }
-                validateJsonData = new { response = false, responseCode = "02", responseMessage = "Invalid email address." };
+                //Commented by Parth and updated alert message when user enters non existing email id for forgot password
+                //validateJsonData = new { response = false, responseCode = "02", responseMessage = "Invalid email address." };
+                validateJsonData = new { response = false, responseCode = "02", responseMessage = "This Email is not registered with us or something went wrong. Please try again later." };
                 return new JsonResult(validateJsonData);
             }
             catch (Exception ex)
