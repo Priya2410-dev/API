@@ -2436,7 +2436,7 @@ namespace Calyx_Solutions.Controllers
                 //Beneficiary obj = JsonConvert.DeserializeObject<Beneficiary>(jsonData);
                 Beneficiary obj = new Beneficiary();
                 obj.Collection_type_Id = data.paymentCollectionTypeID;
-                obj.Country_Code = data.Country_Code;
+                
                 obj.Client_ID = data.clientID;
                 obj.Branch_ID = data.branchID;
                 obj.Country_ID = data.countryID;
@@ -2762,9 +2762,20 @@ namespace Calyx_Solutions.Controllers
                 }
                 catch (Exception eg) { testingpurpose = 0; }
 
-                if (obj.Beneficiary_Mobile != "" && 1 == 2 )
+                if (obj.Beneficiary_Mobile != "")
                 {
-
+                    if (string.IsNullOrEmpty(obj.Country_Code))
+                    {
+                        //obj.Country_Code = data.Country_Code;
+                        MySqlConnector.MySqlCommand cmd = new MySqlConnector.MySqlCommand("GetCountryNameByID");
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("_countryId", obj.Country_ID);
+                        DataTable _dt = db_connection.ExecuteQueryDataTableProcedure(cmd);
+                        if (_dt.Rows.Count > 0)
+                        {
+                            obj.Country_Code = _dt.Rows[0]["Country_Code"]?.ToString();
+                        }
+                    }
                     Service.srvBeneficiary srv3 = new Service.srvBeneficiary(HttpContext);
                     DataTable li1 = srv3.get_benf_mobile_count(obj);
 
@@ -3856,7 +3867,7 @@ namespace Calyx_Solutions.Controllers
                 obj1.Beneficiary_Name = data.beneficiaryName;
                 obj1.Beneficiary_Country_ID = Convert.ToInt32(data.beneficiaryCountryID);
                 obj1.Sending_Flag = data.sendingFlag;
-                try { obj1.Benf_BankDetails_ID = data.Benf_BankDetails_ID; } catch { obj1.Benf_BankDetails_ID = 0; }
+                
                
                 if (Convert.ToString(data.beneficiaryID).Trim() == "")
                     data.beneficiaryID = 0;
@@ -3873,15 +3884,7 @@ namespace Calyx_Solutions.Controllers
                 DataTable dtperm = (DataTable)CompanyInfo.getEmailPermission(obj1.Client_ID, 47);
                 DataTable dtperm_hideBenficiary = (DataTable)CompanyInfo.getEmailPermission(obj1.Client_ID, 151);
                 string sp_name = string.Empty;
-                if(obj1.Benf_BankDetails_ID > 0)
-                {
-                    sp_name = "Beneficiary_Search_Details";
-                }
-                else
-                {
-                    sp_name = "Beneficiary_Search";
-                }
-                MySqlConnector.MySqlCommand _cmd = new MySqlConnector.MySqlCommand(sp_name);
+                MySqlConnector.MySqlCommand _cmd = new MySqlConnector.MySqlCommand("Beneficiary_Search");
                 _cmd.CommandType = CommandType.StoredProcedure;
                 string whereclause = " ";
                 if (obj1.Beneficiary_ID > 0)
@@ -3935,18 +3938,7 @@ namespace Calyx_Solutions.Controllers
                 {
                     whereclause = whereclause + " and dd.Sending_Flag=" + obj1.Sending_Flag + "";
                 }
-                if (obj1.Benf_BankDetails_ID != 0)
-                {
-                    if (obj1.Benf_BankDetails_ID != 0) //vyankatesh 25-11-24
-                    {
-                        whereclause = whereclause + " and ee.BBDetails_ID='" + obj1.Benf_BankDetails_ID + "'";
-                        _cmd.Parameters.AddWithValue("_conditionclause", "");
-                    }
-                    else
-                    {
-                        _cmd.Parameters.AddWithValue("_conditionclause", " and ee.BBDetails_ID=tmm.Benf_BankDetails_ID");
-                    }
-                }
+                
 
                 whereclause = whereclause + " and bb.Client_ID=" + obj1.Client_ID + "";
 
@@ -4012,11 +4004,7 @@ namespace Calyx_Solutions.Controllers
                     dt.Columns["BIC_Code"].ColumnName = "bicCode";
                     dt.Columns["BackID_Document"].ColumnName = "backIdDocument";
                     dt.Columns["BankCode"].ColumnName = "bankCode";
-                    try
-                    {
-                        dt.Columns["BenfBankCode"].ColumnName = "benfbankCode";
-                    }
-                    catch (Exception ex) { }
+                    dt.Columns["BenfBankCode"].ColumnName = "benfbankCode";
                     try { dt.Columns["BankBranch_ID"].ColumnName = "bankBranchID"; } catch (Exception ex) {}
                     dt.Columns["Bank_Name"].ColumnName = "bankName";
                     dt.Columns["Beneficiary_Address"].ColumnName = "beneficiaryAddress";
@@ -6406,15 +6394,157 @@ obj.Beneficiary_Country_ID = data.beneficiaryCountryID;
                 obj = JsonConvert.DeserializeObject<Beneficiary>(json);
                 Service.srvBeneficiary srv = new Service.srvBeneficiary(HttpContext);
                 response = new Model.response.WebResponse(Model.response.WebResponse.RESPONSE_STATUS_TYPE_SUCCESS);
-                DataTable li1 = srv.GetInfo(obj, context);
+                DataTable dt = srv.GetInfo(obj, context);
 
-                if (li1.Rows.Count != 0 && li1 != null)
+                if (dt.Rows.Count != 0 && dt != null)
                 {
-                    var relationshipData = li1.Rows.OfType<DataRow>()
-              .Select(row => li1.Columns.OfType<DataColumn>()
-                  .ToDictionary(col => col.ColumnName, c => row[c].ToString()));
-                    validateJsonData = new { response = true, responseCode = "00", data = relationshipData };
-                    return new JsonResult(validateJsonData);
+                    if (dt != null && dt.Rows.Count > 0)
+                    {
+
+                        DataRow[] rowsToDelete = dt.Select("Sending_Flag = 1");
+                        Array.ForEach(rowsToDelete, row => row.Delete());
+                        dt.AcceptChanges();
+
+                        dt.Columns["AccountHolderName"].ColumnName = "accountHolderName";
+                        dt.Columns["Account_Number"].ColumnName = "accountNumber";
+                        dt.Columns["BBank_ID"].ColumnName = "bbankID";
+                        dt.Columns["BIC_Code"].ColumnName = "bicCode";
+                        dt.Columns["BackID_Document"].ColumnName = "backIdDocument";
+                        dt.Columns["BankCode"].ColumnName = "bankCode";
+                        try{dt.Columns["BenfBankCode"].ColumnName = "benfbankCode";}catch (Exception ex) { }
+                        try { dt.Columns["BankBranch_ID"].ColumnName = "bankBranchID"; } catch (Exception ex) { }
+                        dt.Columns["Bank_Name"].ColumnName = "bankName";
+                        dt.Columns["Beneficiary_Address"].ColumnName = "beneficiaryAddress";
+                        dt.Columns["Beneficiary_City_ID"].ColumnName = "beneficiaryCityID";
+                        dt.Columns["Beneficiary_Country_ID"].ColumnName = "beneficiaryCountryID";
+                        dt.Columns["Beneficiary_ID"].ColumnName = "beneficiaryID";
+                        dt.Columns["Beneficiary_ID1"].ColumnName = "beneficiaryID1";
+                        dt.Columns["Beneficiary_Mobile"].ColumnName = "beneficiaryMobile";
+                        dt.Columns["Beneficiary_Name"].ColumnName = "beneficiaryName";
+                        dt.Columns["Beneficiary_Telephone"].ColumnName = "beneficiaryTelephone";
+                        dt.Columns["Black_Listed"].ColumnName = "blackListed";
+                        dt.Columns["Branch"].ColumnName = "branch";
+                        dt.Columns["BranchCode"].ColumnName = "branchCode";
+                        dt.Columns["City_Name"].ColumnName = "cityName";
+                        dt.Columns["Collection_type_Id"].ColumnName = "collectionTypeID";
+                        dt.Columns["Country_Name"].ColumnName = "countryName";
+                        dt.Columns["Customer_ID"].ColumnName = "customerID";
+                        //dt.Columns["DateOf_Birth"].ColumnName = "dateOfBirth";
+                        dt.Columns["Delete_Status"].ColumnName = "deleteStatus";
+                        dt.Columns["Deposite_Type_Country_ID"].ColumnName = "depositeTypeCountryID";
+                        dt.Columns["Deposite_Type_Status"].ColumnName = "depositeTypeStatus";
+                        dt.Columns["EditPerm"].ColumnName = "editPerm";
+                        dt.Columns["FileNameWithExt"].ColumnName = "fileNameWithExt";
+                        dt.Columns["Full_name"].ColumnName = "fullName";
+                        dt.Columns["Iban_ID"].ColumnName = "ibanID";
+                        dt.Columns["Ifsc_Code"].ColumnName = "ifscCode";
+                        dt.Columns["Issue_Date"].ColumnName = "issueDate";
+                        dt.Columns["Mobile_provider"].ColumnName = "mobileProvider";
+                        dt.Columns["Provider_name"].ColumnName = "providerName";
+                        dt.Columns["Relation"].ColumnName = "relation";
+                        dt.Columns["Relation_ID"].ColumnName = "relationID";
+                        dt.Columns["SenderID_ExpiryDate"].ColumnName = "senderIDExpiryDate";
+                        dt.Columns["SenderID_ID"].ColumnName = "senderidID";
+                        dt.Columns["SenderID_Number"].ColumnName = "senderidNumber";
+                        dt.Columns["SenderID_PlaceOfIssue"].ColumnName = "senderIdPlaceOfIssue";
+                        dt.Columns["Sender_DateOfBirth"].ColumnName = "senderDateOfBirth";
+                        dt.Columns["Sending_Flag"].ColumnName = "sendingFlag";
+                        dt.Columns["ShowOnCustSide"].ColumnName = "showOnCustSide";
+                        dt.Columns["TransCount"].ColumnName = "transCount";
+                        dt.Columns["TransCount_scam"].ColumnName = "transCountScam";
+                        dt.Columns["TransferTypeFlag"].ColumnName = "transferTypeFlag";
+                        dt.Columns["Type_Name"].ColumnName = "typeName";
+                        dt.Columns["Wallet_Id"].ColumnName = "walletID";
+                        dt.Columns["Wallet_Id1"].ColumnName = "walletID_ID";
+                        dt.Columns["Wallet_provider"].ColumnName = "walletProvider";
+                        dt.Columns["WireTransfer_ReferanceNo"].ColumnName = "wireTransferReferanceNo";
+                        dt.Columns["cashcollection_flag"].ColumnName = "cashcollectionFlag";
+                        dt.Columns["collection_type_status"].ColumnName = "collectionTypeStatus";
+                        dt.Columns["comments"].ColumnName = "comments";
+                        dt.Columns["country_status"].ColumnName = "countryStatus";
+
+
+                        var relationshipData = dt.Rows.OfType<DataRow>()
+                   .Select(row => dt.Columns.OfType<DataColumn>()
+                       .ToDictionary(col => col.ColumnName, c => row[c].ToString()));
+                        validateJsonData = new { response = true, responseCode = "00", data = relationshipData };
+                        return new JsonResult(validateJsonData);
+
+
+                        List<Dictionary<string, object>> beneficiary = new List<Dictionary<string, object>>();
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            if (Convert.ToInt64(dr["Sending_Flag"]) == 1) { continue; }
+
+                            Dictionary<string, object> beneficiary_details = new Dictionary<string, object>();
+                            beneficiary_details["accountHolderName"] = (dr["AccountHolderName"] == DBNull.Value) ? "" : dr["AccountHolderName"];
+                            beneficiary_details["accountNumber"] = dr["Account_Number"];
+                            beneficiary_details["bbankID"] = dr["BBank_ID"];
+                            beneficiary_details["bicCode"] = dr["BIC_Code"];
+                            beneficiary_details["backIdDocument"] = dr["BackID_Document"];
+                            beneficiary_details["bankCode"] = dr["BankCode"];
+                            beneficiary_details["bankName"] = dr["Bank_Name"];
+                            beneficiary_details["beneficiaryAddress"] = dr["Beneficiary_Address"];
+                            beneficiary_details["beneficiaryCityID"] = dr["Beneficiary_City_ID"];
+                            beneficiary_details["beneficiaryCountryID"] = dr["Beneficiary_Country_ID"];
+                            beneficiary_details["beneficiaryID"] = dr["Beneficiary_ID"];
+                            beneficiary_details["beneficiaryID1"] = dr["Beneficiary_ID1"];
+                            beneficiary_details["beneficiaryMobile"] = dr["Beneficiary_Mobile"];
+                            beneficiary_details["beneficiaryName"] = dr["Beneficiary_Name"];
+                            beneficiary_details["beneficiaryTelephone"] = dr["Beneficiary_Telephone"];
+                            beneficiary_details["blackListed"] = dr["Black_Listed"];
+                            beneficiary_details["branch"] = dr["Branch"];
+                            beneficiary_details["branchCode"] = dr["BranchCode"];
+                            beneficiary_details["cityName"] = dr["City_Name"];
+                            beneficiary_details["collectionTypeID"] = dr["Collection_type_Id"];
+                            beneficiary_details["countryName"] = dr["Country_Name"];
+                            beneficiary_details["customerID"] = dr["Customer_ID"];
+                            beneficiary_details["dateOfBirth"] = dr["DateOf_Birth"];
+                            beneficiary_details["deleteStatus"] = dr["Delete_Status"];
+                            beneficiary_details["depositeTypeCountryID"] = dr["Deposite_Type_Country_ID"];
+                            beneficiary_details["depositeTypeStatus"] = dr["Deposite_Type_Status"];
+                            beneficiary_details["editPerm"] = dr["EditPerm"];
+                            beneficiary_details["fileNameWithExt"] = dr["FileNameWithExt"];
+                            beneficiary_details["fullName"] = dr["Full_name"];
+                            beneficiary_details["ibanID"] = dr["Iban_ID"];
+                            beneficiary_details["ifscCode"] = dr["Ifsc_Code"];
+                            beneficiary_details["issueDate"] = dr["Issue_Date"];
+
+                            beneficiary_details["mobileProvider"] = dr["Mobile_provider"];
+                            beneficiary_details["providerName"] = dr["Provider_name"];
+                            beneficiary_details["relation"] = dr["Relation"];
+                            beneficiary_details["relationID"] = dr["Relation_ID"];
+                            beneficiary_details["senderIDExpiryDate"] = dr["SenderID_ExpiryDate"];
+                            beneficiary_details["senderidID"] = (dr["SenderID_ID"] == DBNull.Value) ? "" : dr["SenderID_ID"];
+                            beneficiary_details["senderidNumber"] = dr["SenderID_Number"];
+                            beneficiary_details["senderIdPlaceOfIssue"] = dr["SenderID_PlaceOfIssue"];
+                            beneficiary_details["senderDateOfBirth"] = dr["Sender_DateOfBirth"];
+                            beneficiary_details["sendingFlag"] = dr["Sending_Flag"];
+
+                            beneficiary_details["showOnCustSide"] = dr["ShowOnCustSide"];
+                            beneficiary_details["transCount"] = dr["TransCount"];
+                            beneficiary_details["transCountScam"] = dr["TransCount_scam"];
+                            beneficiary_details["transferTypeFlag"] = dr["TransferTypeFlag"];
+                            beneficiary_details["typeName"] = dr["Type_Name"];
+                            beneficiary_details["walletID"] = dr["Wallet_Id"];
+                            beneficiary_details["walletID_ID"] = dr["Wallet_Id1"];
+                            beneficiary_details["walletProvider"] = dr["Wallet_provider"];
+                            beneficiary_details["wireTransferReferanceNo"] = dr["WireTransfer_ReferanceNo"];
+                            beneficiary_details["cashcollectionFlag"] = dr["cashcollection_flag"];
+                            beneficiary_details["collectionTypeStatus"] = dr["collection_type_status"];
+                            beneficiary_details["comments"] = dr["comments"];
+                            beneficiary_details["countryStatus"] = dr["country_status"];
+                            beneficiary.Add(beneficiary_details);
+                        }
+
+                        validateJsonData = new { response = true, responseCode = "00", data = beneficiary };
+                        return new JsonResult(validateJsonData);
+                    }
+                    else
+                    {
+                        validateJsonData = new { response = false, responseCode = "02", data = "No Records Found." };
+                        return new JsonResult(validateJsonData);
+                    }
 
                 }
                 else
