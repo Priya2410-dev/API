@@ -5,7 +5,7 @@ using Calyx_Solutions.Service;
 using Microsoft.Ajax.Utilities;
 using Microsoft.VisualBasic;
 using MySql.Data.MySqlClient;
-using MySql.Data.MySqlClient.Memcached;
+using MySql.Data.MySqlClient.Memcached ;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Data;
@@ -3856,6 +3856,7 @@ namespace Calyx_Solutions.Controllers
                 obj1.Beneficiary_Name = data.beneficiaryName;
                 obj1.Beneficiary_Country_ID = Convert.ToInt32(data.beneficiaryCountryID);
                 obj1.Sending_Flag = data.sendingFlag;
+                try { obj1.Benf_BankDetails_ID = data.Benf_BankDetails_ID; } catch { obj1.Benf_BankDetails_ID = 0; }
                
                 if (Convert.ToString(data.beneficiaryID).Trim() == "")
                     data.beneficiaryID = 0;
@@ -3871,7 +3872,16 @@ namespace Calyx_Solutions.Controllers
                 List<Model.Beneficiary> _lst = new List<Model.Beneficiary>();
                 DataTable dtperm = (DataTable)CompanyInfo.getEmailPermission(obj1.Client_ID, 47);
                 DataTable dtperm_hideBenficiary = (DataTable)CompanyInfo.getEmailPermission(obj1.Client_ID, 151);
-                MySqlConnector.MySqlCommand _cmd = new MySqlConnector.MySqlCommand("Beneficiary_Search");
+                string sp_name = string.Empty;
+                if(obj1.Benf_BankDetails_ID > 0)
+                {
+                    sp_name = "Beneficiary_Search_Details";
+                }
+                else
+                {
+                    sp_name = "Beneficiary_Search";
+                }
+                MySqlConnector.MySqlCommand _cmd = new MySqlConnector.MySqlCommand(sp_name);
                 _cmd.CommandType = CommandType.StoredProcedure;
                 string whereclause = " ";
                 if (obj1.Beneficiary_ID > 0)
@@ -3925,17 +3935,28 @@ namespace Calyx_Solutions.Controllers
                 {
                     whereclause = whereclause + " and dd.Sending_Flag=" + obj1.Sending_Flag + "";
                 }
-               
-                else
+                if (obj1.Benf_BankDetails_ID != 0)
                 {
-                    _cmd.Parameters.AddWithValue("_conditionclause", " and ee.BBDetails_ID=tmm.Benf_BankDetails_ID");
+                    if (obj1.Benf_BankDetails_ID != 0) //vyankatesh 25-11-24
+                    {
+                        whereclause = whereclause + " and ee.BBDetails_ID='" + obj1.Benf_BankDetails_ID + "'";
+                        _cmd.Parameters.AddWithValue("_conditionclause", "");
+                    }
+                    else
+                    {
+                        _cmd.Parameters.AddWithValue("_conditionclause", " and ee.BBDetails_ID=tmm.Benf_BankDetails_ID");
+                    }
                 }
 
                 whereclause = whereclause + " and bb.Client_ID=" + obj1.Client_ID + "";
 
                 _cmd.Parameters.AddWithValue("_whereclause", whereclause);
+                
 
                 dt = db_connection.ExecuteQueryDataTableProcedure(_cmd);
+
+
+                
 
                 try
                 {
@@ -3991,7 +4012,11 @@ namespace Calyx_Solutions.Controllers
                     dt.Columns["BIC_Code"].ColumnName = "bicCode";
                     dt.Columns["BackID_Document"].ColumnName = "backIdDocument";
                     dt.Columns["BankCode"].ColumnName = "bankCode";
-                    dt.Columns["BenfBankCode"].ColumnName = "benfbankCode";
+                    try
+                    {
+                        dt.Columns["BenfBankCode"].ColumnName = "benfbankCode";
+                    }
+                    catch (Exception ex) { }
                     try { dt.Columns["BankBranch_ID"].ColumnName = "bankBranchID"; } catch (Exception ex) {}
                     dt.Columns["Bank_Name"].ColumnName = "bankName";
                     dt.Columns["Beneficiary_Address"].ColumnName = "beneficiaryAddress";
@@ -5328,15 +5353,15 @@ obj.Beneficiary_Country_ID = data.beneficiaryCountryID;
             string json = System.Text.Json.JsonSerializer.Serialize(obj);
             dynamic data = JObject.Parse(json); string Status = string.Empty;
             var claimsIdentity = User.Identity as ClaimsIdentity;//sanket
-            var authHeader = "";
-            try { authHeader = HttpContext.Request.Headers["Authorization"].ToString(); } catch (Exception egx) { authHeader = ""; }
+            //var authHeader = "";
+            //try { authHeader = HttpContext.Request.Headers["Authorization"].ToString(); } catch (Exception egx) { authHeader = ""; }
 
-            bool auth = AuthController.checkAuth(claimsIdentity, obj, Convert.ToString(authHeader));
-            if (!auth)
-            {
-                var errorResponse = new { response = false, responseCode = "403", data = "Access Forbidden" };
-                return new JsonResult(errorResponse) { StatusCode = (int)HttpStatusCode.Forbidden };
-            }
+            //bool auth = AuthController.checkAuth(claimsIdentity, obj, Convert.ToString(authHeader));
+            //if (!auth)
+            //{
+            //    var errorResponse = new { response = false, responseCode = "403", data = "Access Forbidden" };
+            //    return new JsonResult(errorResponse) { StatusCode = (int)HttpStatusCode.Forbidden };
+            //}
             CompanyInfo.InsertrequestLogTracker("updatebeneficiarybank full request body: " + JObject.Parse(json), 0, 0, 0, 0, "updatebeneficiarybank", Convert.ToInt32(0), Convert.ToInt32(0), "", HttpContext);
             Model.response.WebResponse response = null;
 
