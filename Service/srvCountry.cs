@@ -95,6 +95,10 @@ namespace Calyx_Solutions.Service
             List<Model.Country> _lst = new List<Model.Country>();
 
             MySqlCommand _cmd = new MySqlCommand("sp_select_base_country");
+            if(obj.From_Send_Money == 1)//sanket 010525
+            {
+                _cmd = new MySqlCommand("sp_select_base_country_send_money");
+            }
             _cmd.CommandType = CommandType.StoredProcedure;
             _cmd.Parameters.AddWithValue("_ClientId", obj.Client_ID);
             _cmd.Parameters.AddWithValue("_basecountry", obj.base_country);
@@ -138,6 +142,18 @@ namespace Calyx_Solutions.Service
                     if (row["base_currency_id"] != DBNull.Value)
                     {
                         _obj.base_currency_id = Convert.ToInt32(row["base_currency_id"].ToString());
+                    }
+                    if (row["Country_Flag"] != DBNull.Value)
+                    {
+                        _obj.Country_Flag = (row["Country_Flag"].ToString());
+                    }
+                    if (row["flag"] != DBNull.Value)
+                    {
+                        _obj.flag = (row["flag"].ToString());
+                    }
+                    if (dt.Columns.Contains("Currency_Sign") && row["Currency_Sign"] != DBNull.Value)//sanket 010525
+                    {
+                        _obj.Currency.Sign = (row["Currency_Sign"].ToString());
                     }
                     _lst.Add(_obj);
                 }

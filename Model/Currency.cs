@@ -26,6 +26,7 @@ namespace Calyx_Solutions.Model
         public int PType_ID { get; set; }
         public int Amount { get; set; }
         public string? Currency_Code { get; set; }
+        public string? Sign { set; get; }//sanket 150525
     }
 
 }
