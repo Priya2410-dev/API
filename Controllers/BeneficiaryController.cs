@@ -6440,6 +6440,99 @@ obj.Beneficiary_Country_ID = data.beneficiaryCountryID;
 
         }
 
+
+
+        [HttpPost]
+        [Authorize]
+        [Route("selectCollectiomType")]
+
+        public IActionResult SelectCollectiomType([FromBody] JsonElement obj1)
+        {
+            HttpContext context = HttpContext;
+            string json = System.Text.Json.JsonSerializer.Serialize(obj1);
+            var claimsIdentity = User.Identity as ClaimsIdentity;//sanket
+            var authHeader = "";
+            try { authHeader = HttpContext.Request.Headers["Authorization"].ToString(); } catch (Exception egx) { authHeader = ""; }
+
+            bool auth = AuthController.checkAuth(claimsIdentity, obj1, Convert.ToString(authHeader));
+            if (!auth)
+            {
+                var errorResponse = new { response = false, responseCode = "403", data = "Access Forbidden" };
+                return new JsonResult(errorResponse) { StatusCode = (int)HttpStatusCode.Forbidden };
+            }
+            CompanyInfo.InsertrequestLogTracker("selectCollectiomType full request body: " + JObject.Parse(json), 0, 0, 0, 0, "BenfBankInfo", Convert.ToInt32(0), Convert.ToInt32(0), "", HttpContext);
+            dynamic data = JObject.Parse(json); string Status = string.Empty;
+            Model.response.WebResponse response = null;
+
+            Transaction obj = new Transaction();
+            var validateJsonData = (dynamic)null;
+            // var cm = li.SingleOrDefault();
+
+            int number;
+            if (!int.TryParse(Convert.ToString(data.Client_ID), out number))
+            {
+                validateJsonData = new { response = false, responseCode = "02", data = "Invalid ClientID." };
+                return new JsonResult(validateJsonData);
+            }
+            if (data.Beneficiary_ID == "" || data.Beneficiary_ID == null)
+            {
+                validateJsonData = new { response = false, responseCode = "02", data = "Invalid BeneficiaryID." };
+                return new JsonResult(validateJsonData);
+            }
+            if (data.Customer_ID == "" || data.Customer_ID == null)
+            {
+                validateJsonData = new { response = false, responseCode = "02", data = "Invalid CustomerID." };
+                return new JsonResult(validateJsonData);
+            }
+
+            try
+            {
+                obj = JsonConvert.DeserializeObject<Transaction>(json);
+                Service.srvPaymentDepositType srv3 = new Service.srvPaymentDepositType();
+                DataTable li1 = new DataTable();
+
+                if (obj.Mapping_Data == 1)
+                {
+                    li1 = srv3.GetBenf_CollType_Mapping_Details(obj);
+                }
+                else
+                {
+                    li1 = srv3.GetPayDepositTypes(obj);
+                }
+
+                if (li1.Rows.Count != 0 && li1 != null)
+                {
+                    var relationshipData = li1.Rows.OfType<DataRow>()
+                .Select(row => li1.Columns.OfType<DataColumn>()
+                    .ToDictionary(col => col.ColumnName, c => row[c].ToString()));
+
+                    validateJsonData = new { response = true, responseCode = "00", data = relationshipData };
+                    return new JsonResult(validateJsonData);
+
+                }
+                else
+                {
+                    validateJsonData = new { response = false, responseCode = "02", data = "No Records found." };
+                    return new JsonResult(validateJsonData);
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                string Activity = "Api selectCollectiomType: " + ex.ToString() + " ";
+                validateJsonData = new { response = false, responseCode = "01", data = "Invalid Request" };
+                CompanyInfo.InsertErrorLogTracker(Activity.ToString(), 0, 0, 0, 0, "selectCollectiomType", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "", context);
+                return new JsonResult(validateJsonData);
+            }
+
+            return new JsonResult(validateJsonData);
+
+
+        }
+
     }
 
 
