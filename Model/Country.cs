@@ -27,5 +27,8 @@ namespace Calyx_Solutions.Model
 
         public int base_currency_id { get; set; }
         public int base_currency_code { get; set; }
+
+        public int Show_on_Send_Money { get; set; }//sanket 010525
+        public int From_Send_Money { get; set; }//sanket 010525
     }
 }
