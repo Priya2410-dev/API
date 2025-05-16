@@ -20301,11 +20301,17 @@ namespace Calyx_Solutions.Service
                                     }
                                     else
                                     {
-                                        if (uploadSOF != 2)
+                                        MySqlCommand cmd_sof = new MySqlCommand("active_Sof_Count");
+                                        cmd_sof.CommandType = CommandType.StoredProcedure;
+                                        cmd_sof.Parameters.AddWithValue("_Customer_ID", Customer_ID);
+                                        cmd_sof.Parameters.AddWithValue("_Id", t.Client_ID);
+                                        cmd_sof.Parameters.AddWithValue("_Record_Insert_Datetime", t.Record_Insert_DateTime);
+                                        DataTable dt_sof = db_connection.ExecuteQueryDataTableProcedure(cmd_sof);
+                                        if (Convert.ToInt32(dt_sof.Rows[0]["SOf_Count"]) <= 3)
                                         {
                                             uploadSOF = 0;
                                             dailylimit = 1;
-                                            dailylimitmsg = "Your Daily Limit is exceeded for " + PaymentTypeName + ". " + msg + "";
+                                            dailylimitmsg = "Your Daily Limit is exceeded. " + msg + "";
                                             TotalCustAmount = total;
                                             SOFdocupload = "ON"; TransactionStartdate = dateTime;
                                             ds.Rows.Add(0, "", count, Blacklistemsg, sof, exceedAmt, monlimit, monthlylimitmsg, SOFDaysCount, SOFDaysCount_Msg, amllimit, amlmsg, SourceOfFunds_Limit,
@@ -20314,7 +20320,55 @@ namespace Calyx_Solutions.Service
                                          transfer_count_days, paywithwallet, PrimaryIdmsg);
 
                                             return ds;
+
                                         }
+                                        else
+                                        {
+                                            TotalCustAmount = total;
+                                            dailylimit = 2;//complaince alert
+                                            dailylimitmsg = "Your Daily Limit is exceeded. For any further transfers please contact our team. They will help you to initiate your future transfers.";
+                                            try
+                                            {
+                                                DataTable dt_notif = CompanyInfo.set_notification_data(68); //Daily Limit Exceed
+                                                if (dt_notif.Rows.Count > 0)
+                                                {
+                                                    int SMS = Convert.ToInt32(dt_notif.Rows[0]["SMS"]);
+                                                    int Email = Convert.ToInt32(dt_notif.Rows[0]["Email"]);
+                                                    int Notif_status = Convert.ToInt32(dt_notif.Rows[0]["Notification"]);
+                                                    string notification_msg = Convert.ToString(dt_notif.Rows[0]["notification_msg"]);
+                                                    
+
+                                                    int i = CompanyInfo.check_notification_perm(Convert.ToString(Customer_ID), t.Client_ID, t.Branch_ID, 3, 68, Convert.ToDateTime(t.Record_Insert_DateTime), 1, SMS, Email, Notif_status, "App - Daily Limit Notification - 68", notification_msg,context);
+                                                }
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                            }
+                                           
+                                            ds.Rows.Add(0, "", count, Blacklistemsg, sof, exceedAmt, monlimit, monthlylimitmsg, SOFDaysCount, SOFDaysCount_Msg, amllimit, amlmsg, SourceOfFunds_Limit,
+                                         PrimaryID_Limit, SecondaryID_Limit, custlimit, custlimitmsg, daily_transfer_count, daily_transfer_msg, dailylimit, dailylimitmsg, TotalCustAmount, 0,
+                                         0, 0, 0, IsValidID, IDUploadmsg, AllowProceedFlag, AllowProceedFlag_Msg, 0, 0, 0,
+                                         transfer_count_days, paywithwallet, PrimaryIdmsg);
+
+                                            return ds;
+
+
+                                        }
+
+                                        //if (uploadSOF != 2)
+                                        //{
+                                        //    uploadSOF = 0;
+                                        //    dailylimit = 1;
+                                        //    dailylimitmsg = "Your Daily Limit is exceeded for " + PaymentTypeName + ". " + msg + "";
+                                        //    TotalCustAmount = total;
+                                        //    SOFdocupload = "ON"; TransactionStartdate = dateTime;
+                                        //    ds.Rows.Add(0, "", count, Blacklistemsg, sof, exceedAmt, monlimit, monthlylimitmsg, SOFDaysCount, SOFDaysCount_Msg, amllimit, amlmsg, SourceOfFunds_Limit,
+                                        // PrimaryID_Limit, SecondaryID_Limit, custlimit, custlimitmsg, daily_transfer_count, daily_transfer_msg, dailylimit, dailylimitmsg, TotalCustAmount, 0,
+                                        // 0, 0, 0, IsValidID, IDUploadmsg, AllowProceedFlag, AllowProceedFlag_Msg, 0, 0, 0,
+                                        // transfer_count_days, paywithwallet, PrimaryIdmsg);
+
+                                        //    return ds;
+                                        //}
 
                                     }
                                 }
@@ -22306,7 +22360,13 @@ namespace Calyx_Solutions.Service
                             }
                             else
                             {
-                                if (uploadSOF != 2)
+                                MySqlCommand cmd_sof = new MySqlCommand("active_Sof_Count");
+                                cmd_sof.CommandType = CommandType.StoredProcedure;
+                                cmd_sof.Parameters.AddWithValue("_Customer_ID", Customer_ID);
+                                cmd_sof.Parameters.AddWithValue("_Id", t.Client_ID);
+                                cmd_sof.Parameters.AddWithValue("_Record_Insert_Datetime", t.Record_Insert_DateTime);
+                                DataTable dt_sof = db_connection.ExecuteQueryDataTableProcedure(cmd_sof);
+                                if (Convert.ToInt32(dt_sof.Rows[0]["SOf_Count"]) <= 3)
                                 {
                                     uploadSOF = 0;
                                     dailylimit = 1;
@@ -22319,7 +22379,54 @@ namespace Calyx_Solutions.Service
                                  transfer_count_days, paywithwallet, PrimaryIdmsg);
 
                                     return ds;
+
                                 }
+                                else
+                                {
+                                    TotalCustAmount = total;
+                                    dailylimit = 2;//complaince alert
+                                    dailylimitmsg = "Your Daily Limit is exceeded. For any further transfers please contact our team. They will help you to initiate your future transfers.";
+                                    try
+                                    {
+                                        DataTable dt_notif = CompanyInfo.set_notification_data(68); //Daily Limit Exceed
+                                        if (dt_notif.Rows.Count > 0)
+                                        {
+                                            int SMS = Convert.ToInt32(dt_notif.Rows[0]["SMS"]);
+                                            int Email = Convert.ToInt32(dt_notif.Rows[0]["Email"]);
+                                            int Notif_status = Convert.ToInt32(dt_notif.Rows[0]["Notification"]);
+                                            string notification_msg = Convert.ToString(dt_notif.Rows[0]["notification_msg"]);
+                                            
+
+                                            int i = CompanyInfo.check_notification_perm(Convert.ToString(Customer_ID), t.Client_ID, t.Branch_ID, 3, 68, Convert.ToDateTime(t.Record_Insert_DateTime), 1, SMS, Email, Notif_status, "App - Daily Limit Notification - 68", notification_msg,context);
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                    }
+                                    ds.Rows.Add(0, "", count, Blacklistemsg, sof, exceedAmt, monlimit, monthlylimitmsg, SOFDaysCount, SOFDaysCount_Msg, amllimit, amlmsg, SourceOfFunds_Limit,
+                                 PrimaryID_Limit, SecondaryID_Limit, custlimit, custlimitmsg, daily_transfer_count, daily_transfer_msg, dailylimit, dailylimitmsg, TotalCustAmount, 0,
+                                 0, 0, 0, IsValidID, IDUploadmsg, AllowProceedFlag, AllowProceedFlag_Msg, 0, 0, 0,
+                                 transfer_count_days, paywithwallet, PrimaryIdmsg);
+
+                                    return ds;
+
+
+                                }
+
+                                //if (uploadSOF != 2)
+                                //{
+                                //    uploadSOF = 0;
+                                //    dailylimit = 1;
+                                //    dailylimitmsg = "Your Daily Limit is exceeded. " + msg + "";
+                                //    TotalCustAmount = total;
+                                //    SOFdocupload = "ON"; TransactionStartdate = dateTime;
+                                //    ds.Rows.Add(0, "", count, Blacklistemsg, sof, exceedAmt, monlimit, monthlylimitmsg, SOFDaysCount, SOFDaysCount_Msg, amllimit, amlmsg, SourceOfFunds_Limit,
+                                // PrimaryID_Limit, SecondaryID_Limit, custlimit, custlimitmsg, daily_transfer_count, daily_transfer_msg, dailylimit, dailylimitmsg, TotalCustAmount, 0,
+                                // 0, 0, 0, IsValidID, IDUploadmsg, AllowProceedFlag, AllowProceedFlag_Msg, 0, 0, 0,
+                                // transfer_count_days, paywithwallet, PrimaryIdmsg);
+
+                                //    return ds;
+                                //}
                             }
                         }
                     }
