@@ -2255,7 +2255,7 @@ namespace Calyx_Solutions.Controllers
             catch (Exception ex)
             {
                 string Activity = "Api SearchBeneficiaryHolderName: " + ex.ToString() + " ";
-                validateJsonData = new { response = false, responseCode = "01", data = "Invalid Request" };
+                validateJsonData = new { response = false, responseCode = "02", data = "" };
                 CompanyInfo.InsertErrorLogTracker(Activity.ToString(), 0, 0, 0, 0, "SearchBeneficiaryHolderName", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "", context);
                 return new JsonResult(validateJsonData);
             }
