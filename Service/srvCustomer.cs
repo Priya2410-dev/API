@@ -5357,6 +5357,9 @@ namespace Calyx_Solutions.Service
                                 // Convert to string if it's meant to be textual data
                                 string termsConditionText = Encoding.UTF8.GetString(blobData);
 
+                                // Added by Parth on 16/05/2025 To Replace all occurrences of /' with '
+                                termsConditionText = termsConditionText.Replace("/'", "'");
+
                                 termsList.Add(new Model.TermsAndConditions
                                 {
                                     Term_ID = reader.GetInt32("Term_ID"),

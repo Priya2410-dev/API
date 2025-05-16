@@ -206,7 +206,12 @@ namespace Calyx_Solutions.Controllers
                                 }
                             }
                             catch { }
-
+                            //extraFees added on 15/05/2025 by parth for showing in response, also done changes (aa.Extra_fees) in sp --> Transaction_Search
+                            try { Transactioncount["extraFees"] = dr["Extra_fees"].ToString(); }
+                            catch (Exception ex)
+                            {
+                                _ = Task.Run(() => CompanyInfo.InsertErrorLogTracker(ex.ToString(), 0, 0, 0, 0, "ViewTransfer --> added extraFees in response exception", Convert.ToInt32(obj1.Branch_ID), Convert.ToInt32(obj1.Client_ID), "", context));
+                            }
                             Transactioncount["apiTransactionID"] = dr["APITransaction_ID"];
                             Transactioncount["apiBranchDetails"] = dr["API_BranchDetails"]+" " +localAgentAddressDetails;
                             Transactioncount["reciever"] = dr["Reciever"];

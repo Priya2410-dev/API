@@ -3293,7 +3293,16 @@ namespace Calyx_Solutions.Service
 												 body = body.Replace("[amtingbp]", obj.AmountInGBP.ToString("N2"));
                                                 body = body.Replace("[amtinforeign]", obj.AmountInPKR.ToString("N2"));
                                                 body = body.Replace("[transferfees]", obj.Transfer_Fees.ToString("N2"));
-												//Changes commented by Parth 120525
+                                                //Added by Parth on 16/05/2025 for showing extra fees in email for user (also added in email template)
+                                                try
+                                                {
+                                                    body = body.Replace("[ExtraFees]", obj.ExtraTransfer_Fees.ToString("N2"));
+                                                }
+                                                catch (Exception ex)
+                                                {
+                                                    CompanyInfo.InsertErrorLogTracker("Insert Transaction New mail Errror full   body: " + ex.ToString(), 0, 0, 0, 0, "added extra fees for showing to user", Convert.ToInt32(0), Convert.ToInt32(0), "", _srvTransactionContext);
+                                                }
+                                                //Changes commented by Parth 120525
                                                 //body = body.Replace("[amtingbp]", obj.AmountInGBP.ToString("F2"));
                                                 //body = body.Replace("[amtinforeign]", obj.AmountInPKR.ToString("F2"));
                                                 //body = body.Replace("[transferfees]", obj.Transfer_Fees.ToString("F2"));
