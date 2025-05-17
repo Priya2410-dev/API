@@ -3386,14 +3386,14 @@ namespace Calyx_Solutions.Service
                                                 //Start Added by Parth on 17/05/2025 for showing extra fees in email for user (also added in email template)
                                                 try
                                                 {
-                                                    DataTable dtperm_status = new DataTable();
-                                                    MySqlConnector.MySqlCommand cmd_captcha = new MySqlConnector.MySqlCommand("GetPermissions");
-                                                    cmd_captcha.CommandType = CommandType.StoredProcedure;
+                                                    DataTable dtsplitperm = new DataTable();
+                                                    MySqlConnector.MySqlCommand cmd_splitperm = new MySqlConnector.MySqlCommand("GetPermissions");
+                                                    cmd_splitperm.CommandType = CommandType.StoredProcedure;
                                                     int per168 = 1;
-                                                    cmd_captcha.Parameters.AddWithValue("_Client_ID", obj.Client_ID);
-                                                    cmd_captcha.Parameters.AddWithValue("_whereclause", " and PID = 168");
-                                                    dtperm_status = db_connection.ExecuteQueryDataTableProcedure(cmd_captcha);
-                                                    per168 = Convert.ToInt32(dtperm_status.Rows[0]["Status_ForCustomer"]);
+                                                    cmd_splitperm.Parameters.AddWithValue("_Client_ID", obj.Client_ID);
+                                                    cmd_splitperm.Parameters.AddWithValue("_whereclause", " and PID = 168");
+                                                    dtsplitperm = db_connection.ExecuteQueryDataTableProcedure(cmd_splitperm);
+                                                    per168 = Convert.ToInt32(dtsplitperm.Rows[0]["Status_ForCustomer"]);
                                                     if (obj.ExtraTransfer_Fees > 0 && per168 == 0)
                                                     {
                                                         body = body.Replace("[ExtraFees]", obj.ExtraTransfer_Fees.ToString("N2"));
@@ -3402,6 +3402,7 @@ namespace Calyx_Solutions.Service
                                                     {
                                                         // Remove the ExtraFees row if condition is not met
                                                         body = Regex.Replace(body, @"<tr id=""extraFeesCell"">.*?</tr>", string.Empty, RegexOptions.Singleline);
+                                                        body = body.Replace("[ExtraFees]", string.Empty);
                                                     }
                                                 }
                                                 catch (Exception ex)
