@@ -3400,46 +3400,8 @@ namespace Calyx_Solutions.Service
                                                     }
                                                     else
                                                     {
-                                                        // Replace the Extra Fees column with Total to Pay column
-                                                        string replacementTotaltopay = $@"
-                                                        <th class='column-top' width='280'>
-                                                            <table width='100%' border='0' cellspacing='0' cellpadding='0'>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div style='color: #7d7d7d; font-size: 14px;'>Total to Pay</div>
-                                                                        <div style='font-weight:600; color: #000; font-size: 16px;'>{obj.FromCurrency_Code} {newtotamount1.ToString("N2")}</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </th>";
-
-                                                        body = Regex.Replace(
-                                                            body,
-                                                            @"<th id=""extraFeesCell""[^>]*>.*?</th>",
-                                                            replacementTotaltopay,
-                                                            RegexOptions.Singleline
-                                                        );
-                                                        // Replace the Total to pay column with Transfer type column
-                                                        string replacementTransfertype = $@"
-                                                        <th class='column-top' width='280'>
-                                                            <table width='100%' border='0' cellspacing='0' cellpadding='0'>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div style='color: #7d7d7d; font-size: 14px;'>Transfer Type</div>
-                                                                        <div style='font-weight:600; color: #000; font-size: 16px;'>{obj.TransferType}</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </th>";
-
-                                                        body = Regex.Replace(
-                                                            body,
-                                                            @"<th id=""totToPayCell""[^>]*>.*?</th>",
-                                                            replacementTransfertype,
-                                                            RegexOptions.Singleline
-                                                        );
-                                                        // Remove the Transfertype row if condition is not met
-                                                        body = Regex.Replace(body, @"<tr id=""transferTypeRow"">.*?</tr>", string.Empty, RegexOptions.Singleline);
+                                                        // Remove the ExtraFees row if condition is not met
+                                                        body = Regex.Replace(body, @"<tr id=""extraFeesCell"">.*?</tr>", string.Empty, RegexOptions.Singleline);
                                                     }
                                                 }
                                                 catch (Exception ex)
