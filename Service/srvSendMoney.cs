@@ -3434,7 +3434,7 @@ namespace Calyx_Solutions.Service
 
                                                         body = Regex.Replace(
                                                             body,
-                                                            @"<th id=""extraFeesCell""[^>]*>.*?</th>",
+                                                            @"<th id=""totToPayCell""[^>]*>.*?</th>",
                                                             replacementTransfertype,
                                                             RegexOptions.Singleline
                                                         );
