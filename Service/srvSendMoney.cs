@@ -3293,15 +3293,6 @@ namespace Calyx_Solutions.Service
 												 body = body.Replace("[amtingbp]", obj.AmountInGBP.ToString("N2"));
                                                 body = body.Replace("[amtinforeign]", obj.AmountInPKR.ToString("N2"));
                                                 body = body.Replace("[transferfees]", obj.Transfer_Fees.ToString("N2"));
-                                                //Added by Parth on 16/05/2025 for showing extra fees in email for user (also added in email template)
-                                                try
-                                                {
-                                                    body = body.Replace("[ExtraFees]", obj.ExtraTransfer_Fees.ToString("N2"));
-                                                }
-                                                catch (Exception ex)
-                                                {
-                                                    CompanyInfo.InsertErrorLogTracker("Insert Transaction New mail Errror full   body: " + ex.ToString(), 0, 0, 0, 0, "added extra fees for showing to user", Convert.ToInt32(0), Convert.ToInt32(0), "", _srvTransactionContext);
-                                                }
                                                 //Changes commented by Parth 120525
                                                 //body = body.Replace("[amtingbp]", obj.AmountInGBP.ToString("F2"));
                                                 //body = body.Replace("[amtinforeign]", obj.AmountInPKR.ToString("F2"));
@@ -3392,6 +3383,70 @@ namespace Calyx_Solutions.Service
                                                 }
                                                 //double newtotamount1 = newtotamount - rewardamount; //siddhi
                                                 body = body.Replace("[totAmt]", newtotamount1.ToString("N2"));
+                                                //Start Added by Parth on 17/05/2025 for showing extra fees in email for user (also added in email template)
+                                                try
+                                                {
+                                                    DataTable dtperm_status = new DataTable();
+                                                    MySqlConnector.MySqlCommand cmd_captcha = new MySqlConnector.MySqlCommand("GetPermissions");
+                                                    cmd_captcha.CommandType = CommandType.StoredProcedure;
+                                                    int per168 = 1;
+                                                    cmd_captcha.Parameters.AddWithValue("_Client_ID", obj.Client_ID);
+                                                    cmd_captcha.Parameters.AddWithValue("_whereclause", " and PID = 168");
+                                                    dtperm_status = db_connection.ExecuteQueryDataTableProcedure(cmd_captcha);
+                                                    per168 = Convert.ToInt32(dtperm_status.Rows[0]["Status_ForCustomer"]);
+                                                    if (obj.ExtraTransfer_Fees > 0 && per168 == 0)
+                                                    {
+                                                        body = body.Replace("[ExtraFees]", obj.ExtraTransfer_Fees.ToString("N2"));
+                                                    }
+                                                    else
+                                                    {
+                                                        // Replace the Extra Fees column with Total to Pay column
+                                                        string replacementTotaltopay = $@"
+                                                        <th class='column-top' width='280'>
+                                                            <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div style='color: #7d7d7d; font-size: 14px;'>Total to Pay</div>
+                                                                        <div style='font-weight:600; color: #000; font-size: 16px;'>{obj.FromCurrency_Code} {newtotamount1.ToString("N2")}</div>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </th>";
+
+                                                        body = Regex.Replace(
+                                                            body,
+                                                            @"<th id=""extraFeesCell""[^>]*>.*?</th>",
+                                                            replacementTotaltopay,
+                                                            RegexOptions.Singleline
+                                                        );
+                                                        // Replace the Total to pay column with Transfer type column
+                                                        string replacementTransfertype = $@"
+                                                        <th class='column-top' width='280'>
+                                                            <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div style='color: #7d7d7d; font-size: 14px;'>Transfer Type</div>
+                                                                        <div style='font-weight:600; color: #000; font-size: 16px;'>{obj.TransferType}</div>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </th>";
+
+                                                        body = Regex.Replace(
+                                                            body,
+                                                            @"<th id=""totToPayCell""[^>]*>.*?</th>",
+                                                            replacementTransfertype,
+                                                            RegexOptions.Singleline
+                                                        );
+                                                        // Remove the Transfertype row if condition is not met
+                                                        body = Regex.Replace(body, @"<tr id=""transferTypeRow"">.*?</tr>", string.Empty, RegexOptions.Singleline);
+                                                    }
+                                                }
+                                                catch (Exception ex)
+                                                {
+                                                    _ = Task.Run(() => CompanyInfo.InsertErrorLogTracker("Insert Transaction New mail Errror full   body: " + ex.ToString(), 0, 0, 0, 0, "added extra fees for showing to user", Convert.ToInt32(0), Convert.ToInt32(0), "", _srvTransactionContext));
+                                                }
+                                                //End Added by Parth on 17/05/2025 for showing extra fees in email for user (also added in email template)
                                                 if (rewardamount > 0)
                                                 {
                                                     //body = body.Replace("[transaction_amount]", "<h3>Total Transaction Amount:&nbsp;<label class='orange'>" + obj.FromCurrency_Code + " " + newtotamount.ToString("0.00") + "</label></h3>");
