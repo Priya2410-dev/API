@@ -207,8 +207,10 @@ namespace Calyx_Solutions.Controllers
                                company["bankSortCode"] = dr["Sort_ID"];
                                company["bankIBAN"] = dr["IBAN"];
                                company["expiryMonth"] = dr["ExpiryMonths"];
-                               company["apiurl"] = "";
-                            try { company["image"] = dr["Image"]; } catch (Exception ex) { company["image"] = ""; }
+                            try { company["apiurl"] = dr["apibaseurl"]; }
+                            catch (Exception ex)
+                            { company["apiurl"] = ""; }
+                                try { company["image"] = dr["Image"]; } catch (Exception ex) { company["image"] = ""; }
 
                             companies.Add(company);
                            }
