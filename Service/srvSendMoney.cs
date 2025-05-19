@@ -2513,7 +2513,31 @@ namespace Calyx_Solutions.Service
                                             cust_Comment += "Hold Reason: First daily pay by card transaction should be on hold <br/>";
                                         }
                                     }
-
+                                    //Start Parth added for holding transaction if pay with bank and permission 265 is on
+                                    #region Holding transaction if pay with bank and permission 265 is on
+                                    try
+                                    {
+                                        DataTable dtperm265 = new DataTable();
+                                        MySqlConnector.MySqlCommand cmd_perm265 = new MySqlConnector.MySqlCommand("GetPermissions");
+                                        cmd_perm265.CommandType = CommandType.StoredProcedure;
+                                        int per265 = 1;
+                                        cmd_perm265.Parameters.AddWithValue("_Client_ID", obj.Client_ID);
+                                        cmd_perm265.Parameters.AddWithValue("_whereclause", " and PID = 265");
+                                        dtperm265 = db_connection.ExecuteQueryDataTableProcedure(cmd_perm265);
+                                        per265 = Convert.ToInt32(dtperm265.Rows[0]["Status_ForCustomer"]);
+                                        if (obj.PaymentType_ID == 6 && per265 == 0)
+                                        {
+                                            obj.TransactionStatus_ID = 6;
+                                            cust_Comment += "Hold Reason: Pay With Bank Transaction should be on hold <br/>";
+                                            cnt++;
+                                        }
+                                    }
+                                    catch(Exception ex)
+                                    {
+                                        _ = Task.Run(() => CompanyInfo.InsertErrorLogTracker(ex.ToString() + " ", obj.User_ID, obj.Transaction_ID, obj.User_ID, Customer_ID, "Hold pay with bank if permission is on for 265", obj.CB_ID, obj.Client_ID, "", _srvTransactionContext));
+                                    }
+                                    #endregion
+                                    //End Parth added for holding transaction if pay with bank and permission 265 is on
 
                                     bbd = Convert.ToString( Existtran3);
                                    
