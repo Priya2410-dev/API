@@ -1960,7 +1960,7 @@ namespace Calyx_Solutions.Service
                                                         {
                                                             subject = reader.ReadLine();
                                                         }
-                                                        string newsubject = company_name + " - " + subject + " - " + Convert.ToString("");
+                                                        string newsubject = company_name + " - " + subject + Convert.ToString("");
                                                         string msg = (string)CompanyInfo.Send_Mail(dtc, objLogin.UserName, body, newsubject, obj.Client_ID, obj.Branch_ID, "", "", "", context);
                                                     }
                                                 }
@@ -4762,7 +4762,7 @@ namespace Calyx_Solutions.Service
                                             {
                                                 subject = reader.ReadLine();
                                             }
-                                            string newsubject = company_name + " - " + subject + " - " + Convert.ToString("");
+                                            string newsubject = company_name + " - " + subject + Convert.ToString("");
                                             string msg = (string)CompanyInfo.Send_Mail(dtc, objLogin.UserName, body, newsubject, obj.Client_ID, obj.Branch_ID, "", "", "", context);
                                             obj.Message = "success";
                                         }
@@ -4991,7 +4991,7 @@ namespace Calyx_Solutions.Service
                                                         //    subject = reader.ReadLine();
                                                         //}
                                                         subject = "Edit Address Request";
-                                                        string newsubject = company_name + " - " + subject + " - " + Convert.ToString("");
+                                                        string newsubject = company_name + " - " + subject + Convert.ToString("");
                                                         string msg = (string)CompanyInfo.Send_Mail(dtc, obj.UserName, body, newsubject, obj.Client_ID, obj.Branch_ID, "", "", "", context);
                                                     }
                                                 }
@@ -5189,7 +5189,7 @@ namespace Calyx_Solutions.Service
                                                 body = body.Replace("[msg]", "Edit contact details request sent successfully.");
 
                                                 subject = "Edit Contact Details Request";
-                                                string newsubject = company_name + " - " + subject + " - " + Convert.ToString("");
+                                                string newsubject = company_name + " - " + subject + Convert.ToString("");
                                                 string msg = (string)CompanyInfo.Send_Mail(dtc, obj.UserName, body, newsubject, obj.Client_ID, obj.Branch_ID, "", "", "", context);
 
                                             }
@@ -5569,7 +5569,7 @@ namespace Calyx_Solutions.Service
                                             {
                                                 subject = reader.ReadLine();
                                             }
-                                            string newsubject = company_name + " - " + subject + " - " + Convert.ToString("");
+                                            string newsubject = company_name + " - " + subject + Convert.ToString("");
                                             string msg = (string)CompanyInfo.Send_Mail(dtc, objLogin.UserName, body, newsubject, obj.Client_ID, obj.Branch_ID, "", "", "", context);
                                             obj.Message = "success";
                                             obj.Comment = "Record updated.";
@@ -5733,7 +5733,7 @@ namespace Calyx_Solutions.Service
                                                 //    subject = reader.ReadLine();
                                                 //}
                                                 subject = "Edit Contact Details Request";
-                                                string newsubject = company_name + " - " + subject + " - " + Convert.ToString("");
+                                                string newsubject = company_name + " - " + subject + Convert.ToString("");
                                                 string msg = (string)CompanyInfo.Send_Mail(dtc, obj.UserName, body, newsubject, obj.Client_ID, obj.Branch_ID, "", "", "", context);
 
                                             }

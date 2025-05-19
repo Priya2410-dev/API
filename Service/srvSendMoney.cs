@@ -911,7 +911,7 @@ namespace Calyx_Solutions.Service
                     return false;
                 }
 
-
+                double extraFees = Convert.ToDouble(obj.ExtraTransfer_Fees);
 
                 #region Discount Code Use
                 // Discount Type Values

@@ -245,7 +245,7 @@ namespace Calyx_Solutions.Controllers
                                     {
                                         subject = reader.ReadLine();
                                     }
-                                    string newsubject = company_name + " - " + subject + " - " + Convert.ToString("");
+                                    string newsubject = company_name + " - " + subject + Convert.ToString("");
                                     string msg = (string)CompanyInfo.Send_Mail(dtc, obj.Email, body, newsubject, obj.Client_ID, 2, "", "", "", HttpContext);
                                     obj.Message = "success";
                                 }
