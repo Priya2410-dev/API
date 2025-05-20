@@ -1122,7 +1122,7 @@ namespace Calyx_Solutions.Service
                         }
                     }
 
-                    CompanyInfo.InsertrequestLogTracker("Fetched systemTransferFees :" + systemTransferFees + " and systemFeeType: " + systemFeeType+ " and systemRate: "+ systemRate+ " and systemofferRateFlag:"+ systemofferRateFlag+ " and systemImprovedRateType: "+ systemImprovedRateType, 0, 0, 0, 0, "checkValidTransactionCase", Convert.ToInt32(0), Convert.ToInt32(0), "", context);
+                    CompanyInfo.InsertrequestLogTracker("Fetched systemTransferFees  :" + systemTransferFees + " and systemFeeType: " + systemFeeType+ " and systemRate: "+ systemRate+ " and systemofferRateFlag:"+ systemofferRateFlag+ " and systemImprovedRateType: "+ systemImprovedRateType, 0, 0, 0, 0, "checkValidTransactionCase", Convert.ToInt32(0), Convert.ToInt32(0), "", context);
 
                     if (systemFeeType == 1)
                     {   // Amount

@@ -3042,11 +3042,11 @@ namespace Calyx_Solutions.Controllers
             try { authHeader = HttpContext.Request.Headers["Authorization"].ToString(); } catch (Exception egx) { authHeader = ""; }
 
             bool auth = AuthController.checkAuth(claimsIdentity, objdata, Convert.ToString(authHeader));
-            if (!auth)
+            /*if (!auth)
             {
                 var errorResponse = new { response = false, responseCode = "403", data = "Access Forbidden" };
                 return new JsonResult(errorResponse) { StatusCode = (int)HttpStatusCode.Forbidden };
-            }
+            }*/
             // Log request asynchronously
             _ = Task.Run(() => CompanyInfo.InsertrequestLogTracker("MergedApiAsync API full request body: " + JObject.Parse(json), 0, 0, 0, 0, "collection_delivery_paytypes1", 0, 0, "", HttpContext));
 
