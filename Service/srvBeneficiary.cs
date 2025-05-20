@@ -14,7 +14,7 @@ using Calyx_Solutions.Service;
 using RestSharp;
 using System.Web.Razor.Tokenizer;
 using Microsoft.Net.Http.Headers;
- 
+
 using System.Data.Common;
 using Auth0.ManagementApi.Models;
 using MySqlConnector;
@@ -1011,8 +1011,8 @@ namespace Calyx_Solutions.Service
                                                     }
                                                     else
                                                     {
-                                                    #endregion restricting to send email if location is null or empty
-                                                    //End Parth added for restricting to send email if location is null or empty
+                                                        #endregion restricting to send email if location is null or empty
+                                                        //End Parth added for restricting to send email if location is null or empty
                                                         try
                                                         {
                                                             DataTable dt_notif = CompanyInfo.set_notification_data(27);
@@ -1030,49 +1030,54 @@ namespace Calyx_Solutions.Service
                                                                 int i = CompanyInfo.check_notification_perm(Convert.ToString(Customer_ID), obj.Client_ID, obj.Branch_ID, 2, 27, Convert.ToDateTime(obj.RecordDate), 1, SMS, Email, Notif_status, "App - Beneficiary Added from new location Notification - 27", notification_msg, context);
                                                             }
                                                         }
+
+
+
+                                                        catch (Exception ex) { }
+
+
+
+                                                        string body = string.Empty, subject = string.Empty;
+                                                        string body1 = string.Empty;
+                                                        HttpWebRequest httpRequest = null, httpRequest1 = null;
+                                                        DataTable d2 = (DataTable)CompanyInfo.getCustomerDetails(obj.Client_ID, Customer_ID);
+                                                        string sendmsg1 = "Beneficiary Added From New Location";
+                                                        string company_name = Convert.ToString(dtc.Rows[0]["Company_Name"]);
+                                                        string URL = Convert.ToString(dtc.Rows[0]["Company_URL_Admin"]);
+                                                        string cust_url = Convert.ToString(dtc.Rows[0]["Company_URL_Customer"]);
+                                                        httpRequest = (HttpWebRequest)WebRequest.Create(URL + "Email/new-login.html");
+                                                        httpRequest.UserAgent = "Code Sample Web Client";
+                                                        HttpWebResponse webResponse = (HttpWebResponse)httpRequest.GetResponse();
+                                                        using (StreamReader reader = new StreamReader(webResponse.GetResponseStream()))
+                                                        {
+                                                            body = reader.ReadToEnd();
+                                                        }
+                                                        body = body.Replace("[name]", Convert.ToString(d2.Rows[0]["First_Name"]));
+                                                        string enc_ref = CompanyInfo.Encrypt(Convert.ToString(d2.Rows[0]["WireTransfer_ReferanceNo"]), true);
+                                                        string link = cust_url + "/secure-account-verfiy?reference=" + enc_ref;
+                                                        body = body.Replace("[link]", link);
+                                                        body = body.Replace("[New_Login_Detected]", "Beneficiary Added From New Location ");
+                                                        body = body.Replace("[country]", country_log);
+                                                        body = body.Replace("[time]", (Convert.ToDateTime(CompanyInfo.gettime(obj.Client_ID, context))).ToString("dddd, dd MMMM yyyy HH:mm:ss"));
+                                                        body = body.Replace("[location_msg]", "We noticed a new beneficiary upload to your account from new location that we don't recognise. If this wasn't you, we'll help you secure your account.");
+                                                        body = body.Replace("[device]", device_ty);
+
+
+
+
+                                                        string EmailID = "";
+                                                        EmailID = Convert.ToString(d2.Rows[0]["Email_ID"]);
+
+
+                                                        subject = company_name + " - Beneficiary Added From New Location - Alert " + d2.Rows[0]["WireTransfer_ReferanceNo"];
+                                                        string send_mail = (string)CompanyInfo.Send_Mail(dtc, EmailID, body, subject, obj.Client_ID, obj.Branch_ID, "", "", "", context);
+
+                                                        //Notification
+                                                        notification_icon = "beneficiary.jpg";
+                                                        notification_message = "<span class='cls-admin'>Beneficiary <strong class='cls-new-benf'>Added From New Location </strong></span>";
+                                                        CompanyInfo.save_notification_compliance(notification_message, notification_icon, Convert.ToString(Customer_ID), Convert.ToDateTime(obj.Record_Insert_DateTime), obj.Client_ID, 1, 0, obj.Branch_ID, 0, 1, 1, 0, context);
+
                                                     }
-                                                    catch (Exception ex)
-                                                    {
-                                                    }
-                                                    string body = string.Empty, subject = string.Empty;
-                                                    string body1 = string.Empty;
-                                                    HttpWebRequest httpRequest = null, httpRequest1 = null;
-                                                    DataTable d2 = (DataTable)CompanyInfo.getCustomerDetails(obj.Client_ID, Customer_ID);
-                                                    string sendmsg1 = "Beneficiary Added From New Location";
-                                                    string company_name = Convert.ToString(dtc.Rows[0]["Company_Name"]);
-                                                    string URL = Convert.ToString(dtc.Rows[0]["Company_URL_Admin"]);
-                                                    string cust_url = Convert.ToString(dtc.Rows[0]["Company_URL_Customer"]);
-                                                    httpRequest = (HttpWebRequest)WebRequest.Create(URL + "Email/new-login.html");
-                                                    httpRequest.UserAgent = "Code Sample Web Client";
-                                                    HttpWebResponse webResponse = (HttpWebResponse)httpRequest.GetResponse();
-                                                    using (StreamReader reader = new StreamReader(webResponse.GetResponseStream()))
-                                                    {
-                                                        body = reader.ReadToEnd();
-                                                    }
-                                                    body = body.Replace("[name]", Convert.ToString(d2.Rows[0]["First_Name"]));
-                                                    string enc_ref = CompanyInfo.Encrypt(Convert.ToString(d2.Rows[0]["WireTransfer_ReferanceNo"]), true);
-                                                    string link = cust_url + "/secure-account-verfiy?reference=" + enc_ref;
-                                                    body = body.Replace("[link]", link);
-                                                    body = body.Replace("[New_Login_Detected]", "Beneficiary Added From New Location ");
-                                                    body = body.Replace("[country]", country_log);
-                                                    body = body.Replace("[time]", (Convert.ToDateTime(CompanyInfo.gettime(obj.Client_ID, context))).ToString("dddd, dd MMMM yyyy HH:mm:ss"));
-                                                    body = body.Replace("[location_msg]", "We noticed a new beneficiary upload to your account from new location that we don't recognise. If this wasn't you, we'll help you secure your account.");
-                                                    body = body.Replace("[device]", device_ty);
-
-
-
-
-                                                    string EmailID = "";
-                                                    EmailID = Convert.ToString(d2.Rows[0]["Email_ID"]);
-
-
-                                                    subject = company_name + " - Beneficiary Added From New Location - Alert " + d2.Rows[0]["WireTransfer_ReferanceNo"];
-                                                    string send_mail = (string)CompanyInfo.Send_Mail(dtc, EmailID, body, subject, obj.Client_ID, obj.Branch_ID, "", "", "", context);
-
-                                                    //Notification
-                                                    notification_icon = "beneficiary.jpg";
-                                                    notification_message = "<span class='cls-admin'>Beneficiary <strong class='cls-new-benf'>Added From New Location </strong></span>";
-                                                    CompanyInfo.save_notification_compliance(notification_message, notification_icon, Convert.ToString(Customer_ID), Convert.ToDateTime(obj.Record_Insert_DateTime), obj.Client_ID, 1, 0, obj.Branch_ID, 0, 1, 1, 0, context);
                                                 }
                                             }
                                             catch
@@ -1920,7 +1925,7 @@ namespace Calyx_Solutions.Service
                         {
                             bankCode = Convert.ToString(dtofKMOBankCode.Rows[0]["bank_code"]);
                             string beneficiary_bank_id = "0";
-                           
+
                             var client = new RestClient(apiurl + "getbanks");
                             client.Timeout = -1;
                             var request = new RestRequest(Method.GET);
@@ -3178,9 +3183,9 @@ namespace Calyx_Solutions.Service
                                 sanction_flag_aml_nrf = 1;
                             }
                         }
-                        catch(Exception ex)
+                        catch (Exception ex)
                         {
-                            _ = Task.Run (() => CompanyInfo.InsertActivityLogDetails("Check_sanction_config_customer Error :<br>:" + ex.ToString(), 0, 0, 0, 0, "Get", 0, 0, "Check_sanction_config_customer", context));
+                            _ = Task.Run(() => CompanyInfo.InsertActivityLogDetails("Check_sanction_config_customer Error :<br>:" + ex.ToString(), 0, 0, 0, 0, "Get", 0, 0, "Check_sanction_config_customer", context));
                         }
                     }
                     string status_check_kyc = "4";
@@ -3266,9 +3271,9 @@ namespace Calyx_Solutions.Service
                             status_check_aml = CompanyInfo.CheckPepSanction(obj.Client_ID, Convert.ToInt32(CompanyInfo.Decrypt(Convert.ToString(obj.Customer_ID), true)), Convert.ToInt32(obj.Branch_ID), 0, sanction_flag_aml, Days_Timeframe_aml, 2, sanction_flag_aml_nrf, context);
                         }
                     }
-                        //status_check_aml = "2";
-                        // HttpContext.Current.Session["sanction_responce_cust_aml"] = status_check_aml;
-                        ds.Rows.Add(mand_flag, status_check_aml);
+                    //status_check_aml = "2";
+                    // HttpContext.Current.Session["sanction_responce_cust_aml"] = status_check_aml;
+                    ds.Rows.Add(mand_flag, status_check_aml);
                 }
                 return ds;
             }
@@ -4528,7 +4533,7 @@ namespace Calyx_Solutions.Service
                                     }
 
 
-                                    
+
                                 }
                                 else
                                 {
@@ -7644,11 +7649,11 @@ namespace Calyx_Solutions.Service
             return dt;
         }
 
-        public DataTable GetInfo(Model.Beneficiary obj , HttpContext context) //vyankatesh 11-12-24
+        public DataTable GetInfo(Model.Beneficiary obj, HttpContext context) //vyankatesh 11-12-24
         {
             int Customer_ID = Convert.ToInt32(CompanyInfo.Decrypt(obj.Customer_ID, true));
             string Activity = string.Empty; string[] Alert_Msg = new string[7]; string sendmsg = string.Empty; string notification_icon = ""; string notification_message = "";
-           // var context = System.Web.HttpContext.Current;
+            // var context = System.Web.HttpContext.Current;
             string Username = "Calyx-api";
             string error_invalid_data = "";
             string error_msg = "";
@@ -7762,7 +7767,7 @@ namespace Calyx_Solutions.Service
             else
             {
                 string msg = "Validation Error Client_ID_regex- +" + Client_ID_regex + "Beneficiary_ID_regex- " + Beneficiary_ID_regex + " Delete_Status_regex- +" + Delete_Status_regex + " +Customer_ID_regex- " + Customer_ID_regex + "Beneficiary_Country_ID_regex- " + Beneficiary_Country_ID_regex + "Sending_Flag_regex-" + Sending_Flag_regex;
-                int stattus = (int)CompanyInfo.InsertActivityLogDetailsSecurity(msg, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), 1, "srvDiscount", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "create", 0,context);
+                int stattus = (int)CompanyInfo.InsertActivityLogDetailsSecurity(msg, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), 1, "srvDiscount", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "create", 0, context);
             }
             return dt;
         }

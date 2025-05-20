@@ -13,7 +13,7 @@
         public string? senderdateofbirth { get; set; }
         public int? IDName_ID { get; set; }
         public int? nameID { get; set; }
-
+        public string country_code { get; set; }
         public int? IDType_ID { get; set; }
         public int? typeID { get; set; }
 
