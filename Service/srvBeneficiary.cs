@@ -4509,11 +4509,12 @@ namespace Calyx_Solutions.Service
                                         catch (Exception ex)
                                         {
                                         }
-
+                                        //Parth moved success message in else cond'n to forward exist_Beneficiary message to return
+                                        obj.Message = "success";
                                     }
 
 
-                                    obj.Message = "success";
+                                    
                                 }
                                 else
                                 {
