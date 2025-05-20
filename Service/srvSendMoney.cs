@@ -27,6 +27,7 @@ using System.Security.Cryptography.Xml;
  
 using System.Web.Helpers;
 using Calyx_Solutions.Model;
+using System.Text.RegularExpressions;
 
 namespace Calyx_Solutions.Service
 {
@@ -911,7 +912,7 @@ namespace Calyx_Solutions.Service
                     return false;
                 }
 
-
+                double extraFees = Convert.ToDouble(obj.ExtraTransfer_Fees);
 
                 #region Discount Code Use
                 // Discount Type Values
@@ -1076,6 +1077,36 @@ namespace Calyx_Solutions.Service
                     double systemRate = Math.Round(Convert.ToDouble(li1.Rows[0]["Rate"]),4);
                     int systemofferRateFlag = Convert.ToInt32(li1.Rows[0]["offer_rate_flag"]);
                     int systemImprovedRateType = Convert.ToInt32(li1.Rows[0]["Improved_rate_type"]);
+
+                    int systemextraFeeType = Convert.ToInt32(li1.Rows[0]["Extra_Fee_Type"]); 
+                    double systemextraFee = Math.Round(Convert.ToDouble(li1.Rows[0]["Extra_Fees"]), 4);
+
+                    CompanyInfo.InsertrequestLogTracker("Extra Fees values are systemextraFee=" + systemextraFee + " and extraFees=" + extraFees, 0, 0, 0, 0, "checkValidTransactionCase", Convert.ToInt32(0), Convert.ToInt32(0), "", context);
+
+                    if (systemextraFee > 0)
+                    {
+                        if (systemextraFeeType == 1)
+                        {   // Amount
+                            // No need to write any code. Its straight code
+                            if (Math.Round(systemextraFee, 1) != Math.Round(extraFees, 1))
+                            {
+                                CompanyInfo.InsertrequestLogTracker("Extra Fees Difference systemextraFee=" + systemextraFee + " and extraFees=" + extraFees, 0, 0, 0, 0, "checkValidTransactionCase", Convert.ToInt32(0), Convert.ToInt32(0), "", context);
+                                return false;
+                            }
+                        }
+                        else
+                        {   // Percentage
+                            systemextraFee = Math.Round((systemextraFee / 100) * amountgbp, 4);
+
+                            if(Math.Round(systemextraFee, 1 ) != Math.Round(extraFees, 1))
+                            {
+                                CompanyInfo.InsertrequestLogTracker("Extra Fees Difference systemextraFee="+ systemextraFee + " and extraFees="+ extraFees, 0, 0, 0, 0, "checkValidTransactionCase", Convert.ToInt32(0), Convert.ToInt32(0), "", context);
+                                return false;
+                            }
+                        }
+                    }
+
+
 
                     if (improved_rate_flag == 1 && obj.improved_rate_used_flag == 0)
                     {
