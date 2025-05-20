@@ -1083,7 +1083,7 @@ namespace Calyx_Solutions.Service
 
                     CompanyInfo.InsertrequestLogTracker("Extra Fees values are systemextraFee=" + systemextraFee + " and extraFees=" + extraFees, 0, 0, 0, 0, "checkValidTransactionCase", Convert.ToInt32(0), Convert.ToInt32(0), "", context);
 
-                    if (extraFees > 0)
+                    if (systemextraFee > 0)
                     {
                         if (systemextraFeeType == 1)
                         {   // Amount
