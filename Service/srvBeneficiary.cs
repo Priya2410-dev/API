@@ -999,22 +999,36 @@ namespace Calyx_Solutions.Service
                                                 }
                                                 if (!chkLocation)
                                                 {
+                                                    //Start Parth added for restricting to send email if location is null or empty
+                                                    #region restricting to send email if location is null or empty
 
-                                                    try
+                                                    _ = Task.Run(() => CompanyInfo.InsertActivityLogDetails(country_log, 0, 0, 0, 0, "SaveBeneficiary: Restrict email for Location", 0, 1, "", context));
+
+                                                    if (string.IsNullOrWhiteSpace(country_log) || country_log.ToLower().Contains("null") ||
+                                                        country_log.Replace("<br /><strong>Network</strong>", "").Replace(",", "").Trim().Length == 0)
                                                     {
-                                                        DataTable dt_notif = CompanyInfo.set_notification_data(27);
-                                                        if (dt_notif.Rows.Count > 0)
+                                                        act = act + " | Skipped email: No valid location data.";
+                                                    }
+                                                    else
+                                                    {
+                                                    #endregion restricting to send email if location is null or empty
+                                                    //End Parth added for restricting to send email if location is null or empty
+                                                        try
                                                         {
-                                                            int SMS = Convert.ToInt32(dt_notif.Rows[0]["SMS"]);
-                                                            int Email = Convert.ToInt32(dt_notif.Rows[0]["Email"]);
-                                                            int Notif_status = Convert.ToInt32(dt_notif.Rows[0]["Notification"]);
-                                                            string notification_msg = Convert.ToString(dt_notif.Rows[0]["notification_msg"]);
-                                                            if (notification_msg.Contains("[Benf_name]") == true)
+                                                            DataTable dt_notif = CompanyInfo.set_notification_data(27);
+                                                            if (dt_notif.Rows.Count > 0)
                                                             {
-                                                                notification_msg = notification_msg.Replace("[Benf_name]", Convert.ToString(obj.Beneficiary_Name));
-                                                            }
+                                                                int SMS = Convert.ToInt32(dt_notif.Rows[0]["SMS"]);
+                                                                int Email = Convert.ToInt32(dt_notif.Rows[0]["Email"]);
+                                                                int Notif_status = Convert.ToInt32(dt_notif.Rows[0]["Notification"]);
+                                                                string notification_msg = Convert.ToString(dt_notif.Rows[0]["notification_msg"]);
+                                                                if (notification_msg.Contains("[Benf_name]") == true)
+                                                                {
+                                                                    notification_msg = notification_msg.Replace("[Benf_name]", Convert.ToString(obj.Beneficiary_Name));
+                                                                }
 
-                                                            int i = CompanyInfo.check_notification_perm(Convert.ToString(Customer_ID), obj.Client_ID, obj.Branch_ID, 2, 27, Convert.ToDateTime(obj.RecordDate), 1, SMS, Email, Notif_status, "App - Beneficiary Added from new location Notification - 27", notification_msg, context);
+                                                                int i = CompanyInfo.check_notification_perm(Convert.ToString(Customer_ID), obj.Client_ID, obj.Branch_ID, 2, 27, Convert.ToDateTime(obj.RecordDate), 1, SMS, Email, Notif_status, "App - Beneficiary Added from new location Notification - 27", notification_msg, context);
+                                                            }
                                                         }
                                                     }
                                                     catch (Exception ex)
@@ -4509,11 +4523,12 @@ namespace Calyx_Solutions.Service
                                         catch (Exception ex)
                                         {
                                         }
-
+                                        //Parth moved success message in else cond'n to forward exist_Beneficiary message to return
+                                        obj.Message = "success";
                                     }
 
 
-                                    obj.Message = "success";
+                                    
                                 }
                                 else
                                 {

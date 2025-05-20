@@ -5311,6 +5311,16 @@ obj.Beneficiary_Country_ID = data.beneficiaryCountryID;
 
 
                 }
+                //Parth Added for displaying exist_Beneficiary message when beneficiary already existed  for same A/c no. or Iban no.
+                else if (_ObjCustomer.Message == "exist_Beneficiary")
+                {
+                    response = new Model.response.WebResponse(Model.response.WebResponse.RESPONSE_STATUS_TYPE_SUCCESS);
+                    response.ObjData = _ObjCustomer;
+                    response.ResponseCode = 0;
+                    validateJsonData = new { response = true, responseCode = "00", data = _ObjCustomer.Message };
+
+
+                }
                 else if (_ObjCustomer.Message == "Notsucess")
                 {
                     response = new Model.response.WebResponse(Model.response.WebResponse.RESPONSE_STATUS_TYPE_SUCCESS);
