@@ -7503,6 +7503,8 @@ namespace Calyx_Solutions.Service
                             if (obj.IDType_ID == 1)//Primary
                             {
                                 CheckCreditSafe(obj, dt_cust, "ID Upload", context);
+                                int custid = Convert.ToInt32(obj.Customer_ID);
+                                CHECK_AML(obj, custid, "ID Upload",context);
                             }
                             ds.Rows.Add(obj.SenderID_ID);
                             //   ds.Rows.Add("0");
@@ -10917,8 +10919,1399 @@ namespace Calyx_Solutions.Service
             return response;
         }
 
+        public string[] CHECK_AML(Model.Doc obj, int Customer_ID, string CallFrom, HttpContext context)  // Complience  Assist AMl Check Rushikesh.
+        {
+            int Status = 1;
+            string Bandtext = "";
+            int Client_ID = obj.Client_ID;
+            string BaseCurrency_Code = string.Empty;
+            string BaseCurrency_TimeZone = string.Empty;
+            string BaseCurrency_Sign = string.Empty;
+            string Cancel_Transaction_Hours = string.Empty;
+            string Company_Name = string.Empty;
+            string CustomerURL = string.Empty;
+            string EmailUrl = string.Empty;
+            string BaseCountry_ID = string.Empty;
+            string BaseCurrency_Country = string.Empty;
+            string RootURL = string.Empty;
+            DataTable ds1 = CompanyInfo.get(Client_ID, context);
+            int stattus12 = (int)CompanyInfo.InsertActivityLogDetails("Inside CHECK_AML" + Customer_ID, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload",context);
+            try
+            {
+
+                string mail_send = string.Empty;
+
+                string RefNum = "";
+                string Addressline_2 = "";
+                string Gender = "";
+                string formattedDateOfBirth = "";
+                int flag1 = 0, flag2 = 0, flag4 = 0, flag5 = 0, flag6 = 0, flag7 = 0;
+                int flag = 0;
+                string requestStatus = "";
+                string status = "";
+                int apiRequestId = 0;
+                DateTime dateTime = new DateTime();
+                long requestId = 0;
+                string requestReference = "";
+                long subjectId = 0;
+                string subjectReference = "";
+                JArray matchStatusesArr = new JArray();
+                string First_Name = "";
+                string Middle_Name = "";
+                string Last_Name = "";
+                string Country = "";
+                string House_Number = "";
+                string Street = "";
+                string City = "";
+                string Post_Code = "";
+                string Record_Insert_DateTime = "";
+                string SenderID_ExpiryDate = "";
+                string WireTransfer_ReferanceNo = "";
+                DateTime dateOfBirth = new DateTime();
+                string SenderID_Number = "";
+                int IDName_ID = 0;
+                int SenderID_ID = 0;
+                string monitorCommand = "";
 
 
+
+
+                string Remark = "";
+                try
+                {
+                    MySqlCommand cmdupdate1 = new MySqlCommand("Get_Permissions");
+                    cmdupdate1.CommandType = CommandType.StoredProcedure;
+                    cmdupdate1.Parameters.AddWithValue("Per_ID", 32);
+                    cmdupdate1.Parameters.AddWithValue("ClientID", obj.Client_ID);
+                    DataTable pm = db_connection.ExecuteQueryDataTableProcedure(cmdupdate1);
+                    if (pm.Rows.Count > 0)
+                    {
+                        if (Convert.ToString(pm.Rows[0]["Status_ForCustomer"]) == "0")
+                        {
+
+                            obj.Customer_ID = Customer_ID.ToString();
+                            int API_ID = 10;
+                            
+
+                            MySqlCommand cmdp_active = new MySqlCommand("active_thirdparti_aml_api");
+                            cmdp_active.CommandType = CommandType.StoredProcedure;
+                            string whereclause = "API_ID =" + 10;
+                            cmdp_active.Parameters.AddWithValue("_whereclause", whereclause);
+
+                            DataTable dtApi = db_connection.ExecuteQueryDataTableProcedure(cmdp_active);
+
+
+                            if (dtApi.Rows.Count > 0)
+                            {
+                                stattus12 = (int)CompanyInfo.InsertActivityLogDetails("Inside active_thirdparti_aml_api" + Customer_ID, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload", context);
+                                string StateDistrict = "";
+                                //get Customer details
+                                MySqlCommand getcust = new MySqlCommand("GetCustomer_all_details"); //  chnages by rushikesh
+                                getcust.CommandType = CommandType.StoredProcedure;
+                                whereclause = "and cr.Customer_ID=" + Customer_ID + " and cr.Client_ID=" + Client_ID;
+                                getcust.Parameters.AddWithValue("_whereclause", whereclause);
+
+                                DataTable dc = db_connection.ExecuteQueryDataTableProcedure(getcust);
+                                if (dc.Rows.Count > 0)
+                                {
+                                    try
+                                    {
+                                        stattus12 = (int)CompanyInfo.InsertActivityLogDetails("Inside GetCustomer_all_details" + whereclause, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload", context);
+                                        WireTransfer_ReferanceNo = Convert.ToString(dc.Rows[0]["WireTransfer_ReferanceNo"]);
+                                        First_Name = Convert.ToString(dc.Rows[0]["First_Name"]).Replace("&", "AND");
+                                        Middle_Name = Convert.ToString(dc.Rows[0]["Middle_Name"]).Replace("&", "AND");
+                                        Last_Name = Convert.ToString(dc.Rows[0]["Last_Name"]);
+                                        Country = Convert.ToString(dc.Rows[0]["Country_Name"]).ToLower();
+                                        House_Number = Convert.ToString(dc.Rows[0]["House_Number"]).Replace("&", "AND");
+                                        Street = Convert.ToString(dc.Rows[0]["Street"]).Replace("&", "AND");
+                                        City = Convert.ToString(dc.Rows[0]["City_Name"]).Replace("&", "AND");
+                                        Post_Code = Convert.ToString(dc.Rows[0]["Post_Code"]).Replace("&", "AND");
+                                        Record_Insert_DateTime = CompanyInfo.gettime(Client_ID, context);
+                                        //SenderID_ExpiryDate = Convert.ToString(dc.Rows[0]["SenderID_ExpiryDate"]);
+                                        dateOfBirth = Convert.ToDateTime(dc.Rows[0]["DateOf_Birth"]);
+                                        try { formattedDateOfBirth = dateOfBirth.ToString("yyyy-MM-dd"); } catch { }
+                                        //SenderID_Number = Convert.ToString(dc.Rows[0]["SenderID_Number"]);
+                                        //IDName_ID = Convert.ToInt32(dc.Rows[0]["IDName_ID"]);
+                                        SenderID_ID = Convert.ToInt32(dc.Rows[0]["SenderID_ID"]);
+                                        //StateDistrict = Convert.ToString(dc.Rows[0]["code"]);
+                                        RefNum = Convert.ToString(dc.Rows[0]["WireTransfer_ReferanceNo"]);
+                                        Addressline_2 = Convert.ToString(dc.Rows[0]["Addressline_2"]);
+                                        Gender = Convert.ToString(dc.Rows[0]["Gender"]).ToUpper();
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        string stattus = (string)CompanyInfo.InsertErrorLogDetails("Error in accessing values from GetCustomer_all_details" + ex.ToString().Replace("\'", "\\'"), 0, "CHECK_AML", obj.Branch_ID, obj.Client_ID);
+                                    }
+
+
+                                    var _url = ""; //Convert.ToString(dtApi.Rows[0]["API_URL"]);
+                                    var UserName = "";//Convert.ToString(dtApi.Rows[0]["UserName"]);
+                                    var Password = "";// Convert.ToString(dtApi.Rows[0]["Password"]);
+                                                      //var ProfileID = Convert.ToString(dtApi.Rows[0]["ProfileID"]);
+                                    var _action = "http://www.id3global.com/ID3gWS/2013/04/IGlobalAuthenticate/AuthenticateSP";
+                                    var ProfileID = "";
+                                    var tokenurl = "";
+                                    var Encryption_Key = "";
+                                    var Request_Type_Code_Benef = "";
+                                    var Request_Type_Code_Cust = "";
+                                    string status3 = "";
+                                    if (dtApi.Rows.Count > 0)
+                                    {
+                                        _url = Convert.ToString(dtApi.Rows[0]["API_URL"]);
+                                        UserName = Convert.ToString(dtApi.Rows[0]["UserName"]);
+                                        Password = Convert.ToString(dtApi.Rows[0]["Password"]);
+
+                                        ProfileID = Convert.ToString(dtApi.Rows[0]["ProfileID"]);
+                                        if (ProfileID != "" && ProfileID != null)
+                                        {
+                                            Newtonsoft.Json.Linq.JObject objj = Newtonsoft.Json.Linq.JObject.Parse(ProfileID);
+                                            tokenurl = Convert.ToString(objj["tokenurl"]);
+                                            Encryption_Key = Convert.ToString(objj["Encryption_Key"]);
+                                            Request_Type_Code_Benef = Convert.ToString(objj["Request_Type_Code_Benef"]);
+                                            Request_Type_Code_Cust = Convert.ToString(objj["Request_Type_Code_Cust"]);
+
+                                        }
+                                    }
+                                    XmlDocument soapEnvelopeXml = new XmlDocument();
+                                    var iddoc = "";
+
+                                    string passdoc = "", passid = "", endid = "";
+
+                                    if (Country == "united kingdom" || Country == "uk") { Country = "UK"; }
+                                    else if (Country == "new zealand") { Country = "NewZealand"; }
+                                    else if (Country == "us" || Country == "united states") { Country = "US"; }
+                                    else if (Country == "china" || Country == "india" || Country == "canada" || Country == "mexico" || Country == "brazil" || Country == "spain" || Country == "argentina")
+                                    {
+                                        Country = obj.country_code;
+                                    }
+                                    else { Country = ""; }
+                                    string province = "";
+                                    if (Country == "canada")
+                                    {
+                                        province = "<ns:StateDistrict>" + StateDistrict + @"</ns:StateDistrict>" +
+                                                    "<ns:Region>" + StateDistrict + @"</ns:Region>";
+                                    }
+
+                                    string passexpiry = "";
+                                    string expiry = Convert.ToString(SenderID_ExpiryDate);
+                                    if (expiry != "" && expiry != null)
+                                    {
+                                        try
+                                        {
+                                            DateTime d = Convert.ToDateTime(expiry);
+                                            var day = d.Day;
+                                            var month = d.Month;
+                                            var year = d.Year;
+                                            passexpiry = "<ns:ExpiryDay>" + day + @"</ns:ExpiryDay>" +
+                                                      "<ns:ExpiryMonth>" + month + @"</ns:ExpiryMonth>" +
+                                                      "<ns:ExpiryYear>" + year + @"</ns:ExpiryYear>";
+                                        }
+                                        catch { }
+                                    }
+
+                                    if (IDName_ID == 1)// if Passport
+                                    {
+                                        passdoc += "<ns:IdentityDocuments><ns:InternationalPassport>";
+                                        passdoc += "<ns:Number>" + SenderID_Number + @"</ns:Number> " + passexpiry + "";
+                                        if (Country != "") { passdoc += "<ns:CountryOfOrigin>" + Country + @"</ns:CountryOfOrigin>"; }
+                                        passdoc += "</ns:InternationalPassport></ns:IdentityDocuments>";
+
+                                    }
+                                    else if (IDName_ID == 2 && Country != "")//if Driving licence
+                                    {
+                                        passdoc += "<ns:IdentityDocuments><ns:" + Country + @"><ns:DrivingLicence>";
+                                        passdoc += "<ns:Number>" + SenderID_Number + @"</ns:Number> " + passexpiry + "";
+                                        passdoc += "</ns:DrivingLicence></ns:" + Country + @"></ns:IdentityDocuments>";
+                                    }
+                                    else if (IDName_ID == 3)//EU Nationality Card
+                                    {
+                                        passdoc += "<ns:IdentityDocuments><ns:IdentityCard>";
+                                        passdoc += "<ns:Number>" + SenderID_Number + @"</ns:Number>";
+                                        if (Country != "") { passdoc += "<ns:Country>" + Country + @"</ns:Country>"; }
+                                        passdoc += "</ns:IdentityCard></ns:IdentityDocuments>";
+                                    }
+
+                                    string passdob = "";
+
+                                    string strmiddlename = "";
+                                    if (Middle_Name != "" && Middle_Name != null)
+                                    {
+                                        strmiddlename = "<ns:MiddleName>" + Middle_Name + @"</ns:MiddleName>";
+                                    }
+                                    // Complience API CAll
+                                    DataTable dtb = CompanyInfo.get(Client_ID, context);
+                                    string rooturl = "";
+                                    if (dtb.Rows.Count > 0)
+                                    {
+                                        //CURL = Convert.ToString(dtb.Rows[0]["RootURL"]);
+                                        //Company_Name = Convert.ToString(dtb.Rows[0]["Company_Name"]);
+
+                                        rooturl = Convert.ToString(dtb.Rows[0]["RootURL"]);
+                                    }
+
+
+
+
+
+                                    try
+                                    {
+                                        stattus12 = (int)CompanyInfo.InsertActivityLogDetails("befor tokenurl" + Customer_ID, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload", context);
+
+
+                                        string url = tokenurl;// "https://auth-u.complianceassist.co.uk";
+                                        string clientId = UserName;///"4i37l17880j149sin1gpqid8r2";
+                                        string clientSecret = Password;//"1lih0ev0bo7jvd2fl9emvl9k0b0dm2ulji7qe0naq9gf3g9mu3op";
+
+                                        string[] scopes = {
+                                 "uat/requesttypes.read",
+                                 "uat/requests.read",
+                                 "uat/requests.write",
+                                 "uat/subjects.read",
+                                 "uat/subjects.write"
+                                 };
+
+                                        string scope = string.Join(" ", scopes);
+
+
+
+
+
+                                        // Other code remains the same
+                                        var client = new RestClient(url + "/oauth2/token");
+                                        client.Timeout = -1;
+                                        var request = new RestRequest(Method.POST);
+                                        string authHeaderValue = Convert.ToBase64String(Encoding.UTF8.GetBytes(clientId + ":" + clientSecret));
+                                        request.AddHeader("Authorization", "Basic " + authHeaderValue);
+                                        request.AddHeader("Accept", "application/json");
+                                        request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
+                                        request.AddParameter("grant_type", "client_credentials");
+                                        request.AddParameter("scope", scope);
+
+                                        IRestResponse response1 = client.Execute(request);
+
+                                        JObject jsonResponse = JObject.Parse(response1.Content);
+
+                                        stattus12 = (int)CompanyInfo.InsertActivityLogDetails("after tokenurl" + response1.Content, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload", context);
+
+
+                                        string accessToken = jsonResponse["access_token"].ToString();
+
+
+
+                                        // Assuming you have already obtained the accessToken variable from the previous step
+
+                                        url = _url;//"https://web-u.complianceassist.co.uk/api/v2_0/";
+
+
+                                        if (RefNum == "")
+                                        {
+                                            RefNum = WireTransfer_ReferanceNo;
+                                            stattus12 = (int)CompanyInfo.InsertActivityLogDetails("Reference number =" + RefNum, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload", context);
+                                        }
+                                        try
+                                        {
+                                            stattus12 = (int)CompanyInfo.InsertActivityLogDetails("before subjects?reference=", Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload", context);
+
+                                            client = new RestClient(url + "subjects?reference=" + RefNum + "&details=true");
+                                            client.Timeout = -1;
+                                            request = new RestRequest(Method.GET);
+                                            request.AddHeader("Authorization", "Bearer " + accessToken);
+                                            request.AddHeader("Accept", "application/json");
+
+                                            response1 = client.Execute(request);
+
+
+                                            // Parse the JSON response
+                                            jsonResponse = JObject.Parse(response1.Content);
+                                            stattus12 = (int)CompanyInfo.InsertActivityLogDetails("after subjects?reference=" + response1.Content, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload", context);
+
+
+                                            status3 = (string)jsonResponse["status"];
+                                            int apiRequestId3 = (int)jsonResponse["apiRequestId"];
+                                            DateTime dateTime3 = (DateTime)jsonResponse["dateTime"];
+
+                                            JArray subjects = (JArray)jsonResponse["subjects"];
+
+                                            if (subjects != null)
+                                            {
+                                                foreach (var subject in subjects)
+                                                {
+                                                    JObject subjectObject = (JObject)subject;
+                                                    int subjectId3 = (int)subjectObject["subjectId"];
+                                                    string subjectReference3 = (string)subjectObject["subjectReference"];
+                                                    string subjectIdentifier = (string)subjectObject["subjectIdentifier"];
+                                                    string subjectType = (string)subjectObject["subjectType"];
+                                                    string subjectStatus = (string)subjectObject["subjectStatus"];
+                                                    bool isMonitored = (bool)subjectObject["isMonitored"];
+                                                    string monitoredRequestType = (string)subjectObject["monitoredRequestType"];
+                                                    string riskRating = (string)subjectObject["riskRating"];
+                                                    if (riskRating == "Low")
+                                                    {
+                                                        requestStatus = "Completed";
+                                                        Remark = "0";
+                                                    }
+                                                    else
+                                                    {
+                                                        requestStatus = "Processing";
+                                                        Remark = "1";
+                                                    }
+
+                                                }
+                                            }
+                                            if (status3 == "success")
+                                            {
+
+                                                stattus12 = (int)CompanyInfo.InsertActivityLogDetails("inside  monitorCommand = CHANGE", Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload", context);
+
+                                                monitorCommand = "CHANGE";
+
+                                            }
+                                            else
+                                            {
+                                                stattus12 = (int)CompanyInfo.InsertActivityLogDetails("inside  monitorCommand = ADD", Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload", context);
+
+                                                monitorCommand = "ADD";
+                                            }
+
+                                        }
+
+                                        catch (Exception ex)
+                                        {
+                                            string stattus = (string)CompanyInfo.InsertErrorLogDetails(ex.Message.Replace("\'", "\\'"), 0, "Complience Assist AMl Check - 4th api call (Subject Information)  ", obj.Branch_ID, obj.Client_ID);
+
+                                        }
+
+
+                                        if (status3 != "success" || status3 == "success")
+                                        {
+                                            stattus12 = (int)CompanyInfo.InsertActivityLogDetails("befor body" + response1.Content, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload", context);
+
+                                            string bodyJson = @"
+{
+    ""requestType"": """ + Request_Type_Code_Cust + @""",
+    ""subjectType"": ""INDIVIDUAL"",
+    ""subjectReference"": """ + RefNum + @""",
+    ""requestReference"": ""Onboarding " + RefNum + @""",
+    ""subjectDetails"": {
+        ""firstName"": """ + First_Name + @""",
+        ""surname"": """ + Last_Name + @""",
+        ""dateOfBirth"": """ + formattedDateOfBirth + @""",
+        ""gender"": """ + Gender + @""",
+        ""houseNumber"": """ + House_Number + @""",
+        ""addressLine1"":""" + Addressline_2 + @""",
+        ""addressLine2"": """ + Addressline_2 + @""",
+        ""city"":""" + City + @""",
+        ""postcode"": """ + Post_Code + @""",
+        ""country"": """ + Country + @"""
+    },
+    ""notes"": ""Onboarded under project Alpha."",
+    ""monitorCommand"": """ + monitorCommand + @""",
+    ""callbackUrl"": """"
+}
+";
+
+                                            try
+                                            {
+
+                                                client = new RestClient(url + "requests");
+                                                client.Timeout = -1;
+                                                request = new RestRequest(Method.POST);
+                                                request.AddHeader("Authorization", "Bearer " + accessToken);
+                                                request.AddHeader("Accept", "application/json");
+                                                request.AddHeader("Content-Type", "application/json");
+                                                request.AddParameter("application/json", bodyJson, ParameterType.RequestBody);
+
+                                                response1 = client.Execute(request);
+
+                                                // Parse the JSON response
+                                                jsonResponse = JObject.Parse(response1.Content);
+
+                                                stattus12 = (int)CompanyInfo.InsertActivityLogDetails("after create customer" + response1.Content, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload", context);
+
+
+                                                status = (string)jsonResponse["status"];
+                                                apiRequestId = (int)jsonResponse["apiRequestId"];
+                                                dateTime = (DateTime)jsonResponse["dateTime"];
+                                                requestId = (long)jsonResponse["requestId"];
+                                                requestReference = (string)jsonResponse["requestReference"];
+                                                subjectId = (long)jsonResponse["subjectId"];
+                                                subjectReference = (string)jsonResponse["subjectReference"];
+                                                requestStatus = (string)jsonResponse["requestStatus"];
+                                                Bandtext = requestStatus;
+
+
+                                                // Extract nested properties under "results"
+                                                JObject resultsObj = (JObject)jsonResponse["results"];
+                                                JObject watchlistsResultsObj = (JObject)resultsObj["watchlistsResults"];
+                                                int totalNumberOfMatches = (int)watchlistsResultsObj["totalNumberOfMatches"];
+
+                                                // Extract array values under "matchStatuses"
+                                                matchStatusesArr = (JArray)watchlistsResultsObj["matchStatuses"];
+                                                if (matchStatusesArr != null)
+                                                {
+                                                    // Iterate through each item in the "matchStatuses" array
+                                                    foreach (JObject matchStatusObj in matchStatusesArr)
+                                                    {
+                                                        string matchStatus = (string)matchStatusObj["matchStatus"];
+                                                        int numberOfMatches = (int)matchStatusObj["numberOfMatches"];
+
+                                                        // Extract nested properties under "matchTypes"
+                                                        JObject matchTypesObj = (JObject)matchStatusObj["matchTypes"];
+                                                        bool isSan = (bool)matchTypesObj["san"];   // Indicates if there are sanction matches
+
+
+                                                        bool isAdv = (bool)matchTypesObj["adv"];   //Indicates if there are adverse media matches
+
+
+                                                        bool isPep = (bool)matchTypesObj["pep"];   //Indicates if there are PEP (politically exposed persons) matches
+
+
+                                                        bool isRca = (bool)matchTypesObj["rca"];   //Indicates if there are RCA (relatives or close associates) matches
+
+
+                                                        bool isSoc = (bool)matchTypesObj["soc"];   //Indicates if there are SOC (state owned companies) matches
+
+
+                                                        bool isOther = (bool)matchTypesObj["other"]; //Indicates if there are other types of matches
+
+
+
+
+
+                                                        if (isPep == true)
+                                                        {
+                                                            flag1 = 1; // set flag 1
+                                                            flag = 1;
+                                                        }
+                                                        else if (isSan == true)
+                                                        {
+                                                            flag2 = 2; // set flag 2
+                                                            flag = 2;
+                                                        }
+                                                        else if (isAdv == true)
+                                                        {
+                                                            flag4 = 4; // set flag 2
+                                                            flag = 4;
+                                                        }
+                                                        else if (isRca == true)
+                                                        {
+                                                            flag5 = 5; // set flag 2
+                                                            flag = 5;
+                                                        }
+                                                        else if (isSoc == true)
+                                                        {
+                                                            flag6 = 6; // set flag 2
+                                                            flag = 6;
+                                                        }
+                                                        else if (isOther == true)
+                                                        {
+                                                            flag7 = 7; // set flag 2
+                                                            flag = 7;
+                                                        }
+                                                        if (flag1 > 0 && flag2 > 0)
+                                                        {
+                                                            flag = 3; // Set flag 3
+                                                        }
+
+
+                                                    }
+                                                }
+                                                int remark = 0;
+                                                if (flag == 0)
+                                                {
+                                                    remark = 0;
+                                                    Remark = "0";
+                                                }
+                                                else
+                                                {
+                                                    remark = 1;
+                                                    Remark = "1";
+                                                }
+
+                                                string request3 = url + "requests" + bodyJson;
+
+                                                try
+                                                {
+                                                    MySqlCommand _cmd = new MySqlCommand("SaveAPIRequestResponce");
+                                                    _cmd.CommandType = CommandType.StoredProcedure;
+                                                    _cmd.Parameters.AddWithValue("_API_ID", 10);
+                                                    _cmd.Parameters.AddWithValue("_Client_ID", Client_ID);
+                                                    _cmd.Parameters.AddWithValue("_Customer_ID", Customer_ID);
+                                                    _cmd.Parameters.AddWithValue("_status", 0);
+                                                    _cmd.Parameters.AddWithValue("_Function_name", CallFrom);
+                                                    _cmd.Parameters.AddWithValue("_Remark", remark.ToString());
+                                                    _cmd.Parameters.AddWithValue("_comments", request3);
+                                                    _cmd.Parameters.AddWithValue("_Record_Insert_DateTime", Record_Insert_DateTime);
+                                                    _cmd.Parameters.AddWithValue("_Branch_ID", obj.Branch_ID);
+                                                    int msg1 = db_connection.ExecuteNonQueryProcedure(_cmd);
+                                                }
+                                                catch (Exception ex)
+                                                {
+                                                    string error = ex.ToString().Replace("\'", "\\'");
+                                                    MySqlCommand _cmd = new MySqlCommand("SaveException");
+                                                    _cmd.CommandType = CommandType.StoredProcedure;
+                                                    _cmd.Parameters.AddWithValue("_Record_Insert_DateTime", Record_Insert_DateTime);
+                                                    _cmd.Parameters.AddWithValue("_error", error);
+                                                    _cmd.Parameters.AddWithValue("_Client_ID", Client_ID);
+                                                    int msg1 = db_connection.ExecuteNonQueryProcedure(_cmd);
+                                                }
+
+
+                                                // string request = url + "requests" + bodyJson;
+
+                                                try
+                                                {
+                                                    MySqlCommand _cmd = new MySqlCommand("SaveAPIRequestResponce");
+                                                    _cmd.CommandType = CommandType.StoredProcedure;
+                                                    _cmd.Parameters.AddWithValue("_API_ID", API_ID);
+                                                    _cmd.Parameters.AddWithValue("_Client_ID", obj.Client_ID);
+                                                    _cmd.Parameters.AddWithValue("_Customer_ID", Customer_ID);
+                                                    _cmd.Parameters.AddWithValue("_status", 1);
+                                                    _cmd.Parameters.AddWithValue("_Function_name", CallFrom);
+                                                    _cmd.Parameters.AddWithValue("_Remark", remark);
+                                                    _cmd.Parameters.AddWithValue("_comments", jsonResponse);
+                                                    _cmd.Parameters.AddWithValue("_Record_Insert_DateTime", Record_Insert_DateTime);
+                                                    _cmd.Parameters.AddWithValue("_Branch_ID", obj.Branch_ID);
+                                                    int msg1 = db_connection.ExecuteNonQueryProcedure(_cmd);
+                                                }
+                                                catch (Exception ex)
+                                                {
+                                                    string error = ex.ToString().Replace("\'", "\\'");
+                                                    MySqlCommand _cmd = new MySqlCommand("SaveException");
+                                                    _cmd.CommandType = CommandType.StoredProcedure;
+                                                    _cmd.Parameters.AddWithValue("_Record_Insert_DateTime", Record_Insert_DateTime);
+                                                    _cmd.Parameters.AddWithValue("_error", error);
+                                                    _cmd.Parameters.AddWithValue("_Client_ID", obj.Client_ID);
+                                                    int msg1 = db_connection.ExecuteNonQueryProcedure(_cmd);
+                                                }
+
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                                string stattus = (string)CompanyInfo.InsertErrorLogDetails(ex.Message.Replace("\'", "\\'"), 0, "Complience Assist AMl Check - 1st api call ", obj.Branch_ID, obj.Client_ID);
+
+                                            }
+                                        }
+                                        ///""WGMG001"",
+
+                                        if (requestId != 0)
+                                        {
+
+                                            try
+                                            {
+
+                                                //ServicePointManager.Expect100Continue = true;
+                                                //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls
+                                                //       | SecurityProtocolType.Tls11
+                                                //       | SecurityProtocolType.Tls12
+                                                //       | SecurityProtocolType.Ssl3;
+                                                client = new RestClient(url + "requests/" + requestId);
+                                                client.Timeout = 3000; // Set a timeout of 3 seconds
+                                                request = new RestRequest(Method.GET);
+                                                request.AddHeader("Authorization", "Bearer " + accessToken);
+                                                request.AddHeader("Accept", "application/pdf");
+                                                request.AddHeader("Content-Type", "application/json"); // Add Content-Type header
+                                                response1 = client.Execute(request);
+
+                                                if (response1.StatusCode == HttpStatusCode.OK)
+                                                {
+                                                    byte[] pdfData = response1.RawBytes;
+
+                                                    // Write the PDF data to a file
+
+
+                                                    if (pdfData != null && pdfData.Length > 0)
+                                                    {
+                                                        // Write the PDF data to a file
+                                                        string filePath = "assets/Other_Docs/" + "PDF-" + RefNum + "-" + Record_Insert_DateTime.Replace(":", "") + ".pdf";
+                                                        string URL = rooturl + filePath;
+                                                        try
+                                                        {
+                                                            File.WriteAllBytes(URL, pdfData);
+                                                            Console.WriteLine("PDF saved successfully at: " + filePath);
+
+                                                            string pdfdownload = "0";
+
+                                                            string func_name = "Save_compliance_pdf";
+                                                            filePath = filePath + "=" + requestId;
+                                                            try
+                                                            {
+                                                                MySqlCommand _cmd5 = new MySqlCommand("Insert_PDF_Data");
+                                                                _cmd5.CommandType = CommandType.StoredProcedure;
+                                                                _cmd5.Parameters.AddWithValue("_API_ID", API_ID);
+                                                                _cmd5.Parameters.AddWithValue("_Client_ID", Client_ID);
+                                                                _cmd5.Parameters.AddWithValue("_Customer_ID", Customer_ID);
+                                                                _cmd5.Parameters.AddWithValue("_status", 1);
+                                                                _cmd5.Parameters.AddWithValue("_Function_name", func_name);
+                                                                _cmd5.Parameters.AddWithValue("_Remark", Remark);
+                                                                _cmd5.Parameters.AddWithValue("_comments", filePath);
+                                                                _cmd5.Parameters.AddWithValue("_Record_Insert_DateTime", Record_Insert_DateTime);
+                                                                _cmd5.Parameters.AddWithValue("_Branch_ID", obj.Branch_ID);
+                                                                int msg5 = db_connection.ExecuteNonQueryProcedure(_cmd5);
+                                                            }
+                                                            catch (Exception ex)
+                                                            {
+                                                                string error = ex.ToString().Replace("\'", "\\'");
+                                                                MySqlCommand _cmd5 = new MySqlCommand("SaveException");
+                                                                _cmd5.CommandType = CommandType.StoredProcedure;
+                                                                _cmd5.Parameters.AddWithValue("_Record_Insert_DateTime", Record_Insert_DateTime);
+                                                                _cmd5.Parameters.AddWithValue("_error", error);
+                                                                _cmd5.Parameters.AddWithValue("_Client_ID", Client_ID);
+                                                                int msg5 = db_connection.ExecuteNonQueryProcedure(_cmd5);
+                                                            }
+
+
+
+                                                        }
+                                                        catch (Exception ex)
+                                                        {
+                                                            Console.WriteLine("Error saving PDF: " + ex.Message);
+                                                        }
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    // Handle the case where the request fails or returns an error
+                                                    Console.WriteLine("Error: " + response1.StatusCode);
+                                                }
+
+                                            }
+
+                                            catch (Exception ex)
+                                            {
+                                                string stattus = (string)CompanyInfo.InsertErrorLogDetails(ex.Message.Replace("\'", "\\'"), 0, "Complience Assist AMl Check - 2st api call (PDF download)  ", obj.Branch_ID, obj.Client_ID);
+
+                                            }
+
+
+                                        }
+
+
+
+
+                                        try
+                                        {
+
+                                            client = new RestClient(url + "requestTypes/WGMG001");
+                                            client.Timeout = -1;
+                                            request = new RestRequest(Method.GET);
+                                            request.AddHeader("Authorization", "Bearer " + accessToken);
+                                            request.AddHeader("Accept", "application/json");
+
+
+                                            response1 = client.Execute(request);
+
+
+                                            //Parse the JSON response
+                                            jsonResponse = JObject.Parse(response1.Content);
+
+                                            string status2 = (string)jsonResponse["status"];
+                                            int apiRequestId2 = (int)jsonResponse["apiRequestId"];
+                                            DateTime dateTime2 = (DateTime)jsonResponse["dateTime"];
+                                            string shortCode = (string)jsonResponse["shortCode"];
+
+                                            JArray subjectTypes = (JArray)jsonResponse["subjectTypes"];
+                                            JArray requestFields = (JArray)jsonResponse["requestFields"];
+                                            JArray responseElements = (JArray)jsonResponse["responseElements"];
+
+                                            foreach (var subjectType in subjectTypes)
+                                            {
+                                                Console.WriteLine("Subject Type: " + subjectType);
+                                            }
+
+                                            foreach (var requestField in requestFields)
+                                            {
+                                                JObject fieldObject = (JObject)requestField;
+                                                string subjectType = (string)fieldObject["subjectType"];
+                                                Console.WriteLine("Subject Type: " + subjectType);
+                                                JArray fields = (JArray)fieldObject["fields"];
+                                                foreach (var field in fields)
+                                                {
+                                                    JObject fieldDetails = (JObject)field;
+                                                    string fieldName = (string)fieldDetails["fieldName"];
+                                                    string displayName = (string)fieldDetails["displayName"];
+                                                    bool mandatory = (bool)fieldDetails["mandatory"];
+                                                    Console.WriteLine("Field Name: " + fieldName + ", Display Name: " + displayName + ", Mandatory: " + mandatory);
+                                                }
+                                            }
+
+                                            foreach (var responseElement in responseElements)
+                                            {
+                                                Console.WriteLine("Response Element: " + responseElement);
+                                            }
+
+                                        }
+
+                                        catch (Exception ex)
+                                        {
+                                            string stattus = (string)CompanyInfo.InsertErrorLogDetails(ex.Message.Replace("\'", "\\'"), 0, "Complience Assist AMl Check - 3rd api call  ", obj.Branch_ID, obj.Client_ID);
+
+                                        }
+
+                                        if (subjectId != 0)
+                                        {
+
+                                            try
+                                            {
+
+                                                client = new RestClient(url + "subjects?id=" + subjectId);
+                                                client.Timeout = -1;
+                                                request = new RestRequest(Method.GET);
+                                                request.AddHeader("Authorization", "Bearer " + accessToken);
+                                                request.AddHeader("Accept", "application/json");
+
+                                                response1 = client.Execute(request);
+
+
+                                                // Parse the JSON response
+                                                jsonResponse = JObject.Parse(response1.Content);
+
+
+                                                status3 = (string)jsonResponse["status"];
+                                                int apiRequestId3 = (int)jsonResponse["apiRequestId"];
+                                                DateTime dateTime3 = (DateTime)jsonResponse["dateTime"];
+
+                                                JArray subjects = (JArray)jsonResponse["subjects"];
+
+                                                if (subjects != null)
+                                                {
+                                                    foreach (var subject in subjects)
+                                                    {
+                                                        JObject subjectObject = (JObject)subject;
+                                                        int subjectId3 = (int)subjectObject["subjectId"];
+                                                        string subjectReference3 = (string)subjectObject["subjectReference"];
+                                                        string subjectIdentifier = (string)subjectObject["subjectIdentifier"];
+                                                        string subjectType = (string)subjectObject["subjectType"];
+                                                        string subjectStatus = (string)subjectObject["subjectStatus"];
+                                                        bool isMonitored = (bool)subjectObject["isMonitored"];
+                                                        string monitoredRequestType = (string)subjectObject["monitoredRequestType"];
+                                                        string riskRating = (string)subjectObject["riskRating"];
+
+                                                    }
+                                                }
+
+
+                                                string request3 = url + "subjects?id=" + subjectId;
+                                                try
+                                                {
+                                                    MySqlCommand _cmd = new MySqlCommand("SaveAPIRequestResponce");
+                                                    _cmd.CommandType = CommandType.StoredProcedure;
+                                                    _cmd.Parameters.AddWithValue("_API_ID", 10);
+                                                    _cmd.Parameters.AddWithValue("_Client_ID", Client_ID);
+                                                    _cmd.Parameters.AddWithValue("_Customer_ID", Customer_ID);
+                                                    _cmd.Parameters.AddWithValue("_status", 0);
+                                                    _cmd.Parameters.AddWithValue("_Function_name", CallFrom);
+                                                    _cmd.Parameters.AddWithValue("_Remark", Remark);
+                                                    _cmd.Parameters.AddWithValue("_comments", request3);
+                                                    _cmd.Parameters.AddWithValue("_Record_Insert_DateTime", Record_Insert_DateTime);
+                                                    _cmd.Parameters.AddWithValue("_Branch_ID", obj.Branch_ID);
+                                                    int msg1 = db_connection.ExecuteNonQueryProcedure(_cmd);
+                                                }
+                                                catch (Exception ex)
+                                                {
+                                                    string error = ex.ToString().Replace("\'", "\\'");
+                                                    MySqlCommand _cmd = new MySqlCommand("SaveException");
+                                                    _cmd.CommandType = CommandType.StoredProcedure;
+                                                    _cmd.Parameters.AddWithValue("_Record_Insert_DateTime", Record_Insert_DateTime);
+                                                    _cmd.Parameters.AddWithValue("_error", error);
+                                                    _cmd.Parameters.AddWithValue("_Client_ID", Client_ID);
+                                                    int msg1 = db_connection.ExecuteNonQueryProcedure(_cmd);
+                                                }
+
+                                            }
+
+                                            catch (Exception ex)
+                                            {
+                                                string stattus = (string)CompanyInfo.InsertErrorLogDetails(ex.Message.Replace("\'", "\\'"), 0, "Complience Assist AMl Check - 4th api call (Subject Information)  ", obj.Branch_ID, obj.Client_ID);
+
+                                            }
+
+                                            //string Remark = Convert.ToString(CompanyInfo.getAPIStatus(Bandtext, obj.Client_ID));
+
+                                            try
+                                            {
+                                                MySqlCommand _cmd = new MySqlCommand("SaveAPIRequestResponce");
+                                                _cmd.CommandType = CommandType.StoredProcedure;
+                                                _cmd.Parameters.AddWithValue("_API_ID", API_ID);
+                                                _cmd.Parameters.AddWithValue("_Client_ID", obj.Client_ID);
+                                                _cmd.Parameters.AddWithValue("_Customer_ID", Customer_ID);
+                                                _cmd.Parameters.AddWithValue("_status", 1);
+                                                _cmd.Parameters.AddWithValue("_Function_name", CallFrom);
+                                                _cmd.Parameters.AddWithValue("_Remark", Remark);
+                                                _cmd.Parameters.AddWithValue("_comments", jsonResponse);
+                                                _cmd.Parameters.AddWithValue("_Record_Insert_DateTime", Record_Insert_DateTime);
+                                                _cmd.Parameters.AddWithValue("_Branch_ID", obj.Branch_ID);
+                                                int msg1 = db_connection.ExecuteNonQueryProcedure(_cmd);
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                                string error = ex.ToString().Replace("\'", "\\'");
+                                                MySqlCommand _cmd = new MySqlCommand("SaveException");
+                                                _cmd.CommandType = CommandType.StoredProcedure;
+                                                _cmd.Parameters.AddWithValue("_Record_Insert_DateTime", Record_Insert_DateTime);
+                                                _cmd.Parameters.AddWithValue("_error", error);
+                                                _cmd.Parameters.AddWithValue("_Client_ID", obj.Client_ID);
+                                                int msg1 = db_connection.ExecuteNonQueryProcedure(_cmd);
+                                            }
+
+
+                                        }
+
+                                    }
+                                    catch (Exception ex)
+
+                                    {
+                                        //send complaince alert
+                                        string Record_DateTime_exception = Record_Insert_DateTime;
+                                        string notification_icon_exception = "aml-referd.jpg";
+                                        string notification_message_exception = "<span class='cls-admin'>Complience AML check <strong class='cls-cancel'> Request failed.</strong></span><span class='cls-customer'></span>";
+                                        CompanyInfo.save_notification_compliance(notification_message_exception, notification_icon_exception, Convert.ToString(Customer_ID), Convert.ToDateTime(Record_DateTime_exception), obj.Client_ID, 1, obj.User_ID, obj.Branch_ID, 0, 1, 1, 0, context);
+
+
+                                        try
+                                        {
+                                            mail_send = string.Empty;
+                                            string sendmsg = "Complience AML check Request failed. Please contact Complience support team. ";
+                                            string EmailID = "";
+                                            DataTable dt_admin_Email_list = (DataTable)getAdminEmailList(obj.Client_ID, obj.Branch_ID);
+                                            if (dt_admin_Email_list.Rows.Count > 0)
+                                            {
+                                                for (int a = 0; a < dt_admin_Email_list.Rows.Count; a++)
+                                                {
+                                                    string AdminEmailID = Convert.ToString(dt_admin_Email_list.Rows[a]["Email_ID"]) + ",";
+                                                    EmailID += AdminEmailID;
+                                                }
+                                            }
+                                            string email = EmailID;
+                                            string subject = string.Empty;
+                                            string body = string.Empty;
+                                            HttpWebRequest httpRequest;
+
+                                            httpRequest = (HttpWebRequest)WebRequest.Create("" + EmailUrl + "Email/customemail.html");
+
+                                            httpRequest.UserAgent = "Code Sample Web Client";
+                                            HttpWebResponse webResponse = (HttpWebResponse)httpRequest.GetResponse();
+                                            using (StreamReader reader = new StreamReader(webResponse.GetResponseStream()))
+                                            {
+                                                body = reader.ReadToEnd();
+                                            }
+                                            body = body.Replace("[name]", "Administrators");
+
+                                            body = body.Replace("[msg]", sendmsg);
+
+                                            subject = "" + Company_Name + " - Compliance Alert - " + WireTransfer_ReferanceNo;
+                                            mail_send = (string)CompanyInfo.Send_Mail(dt_admin_Email_list, email, body, subject, Convert.ToInt32(obj.Client_ID), Convert.ToInt32(obj.Branch_ID), "", "", "", context);
+
+                                        }
+                                        catch { }
+
+                                    }
+
+
+
+
+
+
+                                    if (flag > 0)
+                                    {
+                                        if (obj.Branch_ID == 0)
+                                        {
+                                            obj.Branch_ID = 2;
+                                        }
+                                        using (MySqlCommand cmd = new MySqlCommand("update_sanction_flag"))//, cn
+                                        {
+                                            //if (cn.State != ConnectionState.Open) { cn.Open(); }
+                                            cmd.CommandType = CommandType.StoredProcedure;
+                                            cmd.Parameters.AddWithValue("_Customer_ID", Customer_ID);
+                                            cmd.Parameters.AddWithValue("_record_date", Record_Insert_DateTime);
+                                            cmd.Parameters.AddWithValue("_clientId", 1);
+                                            cmd.Parameters.AddWithValue("_branchId", obj.Branch_ID);
+                                            cmd.Parameters.AddWithValue("_sanction_flag", flag);
+                                            int n = db_connection.ExecuteNonQueryProcedure(cmd);
+
+                                        }
+
+                                        using (MySqlCommand cmd = new MySqlCommand("Insert_pep_sanc_detail"))
+                                        {
+
+                                            cmd.CommandType = CommandType.StoredProcedure;
+                                            cmd.Parameters.AddWithValue("p_SenderID_ID", SenderID_ID);
+                                            cmd.Parameters.AddWithValue("p_Flag", 1);
+                                            cmd.Parameters.AddWithValue("p_Record_Insert_DateTime", Record_Insert_DateTime.ToString());
+                                            cmd.Parameters.AddWithValue("p_Customer_ID", Customer_ID);
+                                            cmd.Parameters.AddWithValue("p_API_ID", 10);
+                                            int n = db_connection.ExecuteNonQueryProcedure(cmd);
+
+                                        }
+
+
+                                        try
+                                        {
+                                            MySqlCommand cmd_update = new MySqlCommand("update documents_details set aml_sanctions_flag=1 where SenderID_ID=@SenderID_ID");
+                                            cmd_update.Parameters.AddWithValue("@SenderID_ID", SenderID_ID);
+                                            db_connection.ExecuteNonQueryProcedure(cmd_update);
+                                        }
+                                        catch
+                                        {
+
+                                        }
+
+                                    }
+                                    if (flag == 0)
+                                    {
+                                        if (obj.Branch_ID == 0)
+                                        {
+                                            obj.Branch_ID = 2;
+                                        }
+                                        using (MySqlCommand cmd = new MySqlCommand("update_sanction_flag"))
+                                        {
+
+                                            cmd.CommandType = CommandType.StoredProcedure;
+                                            cmd.Parameters.AddWithValue("_Customer_ID", Customer_ID);
+                                            cmd.Parameters.AddWithValue("_record_date", Record_Insert_DateTime);
+                                            cmd.Parameters.AddWithValue("_clientId", 1);
+                                            cmd.Parameters.AddWithValue("_branchId", obj.Branch_ID);
+                                            cmd.Parameters.AddWithValue("_sanction_flag", 0);
+                                            int n = db_connection.ExecuteNonQueryProcedure(cmd);
+
+                                        }
+
+                                        using (MySqlCommand cmd = new MySqlCommand("Insert_pep_sanc_detail"))
+                                        {
+
+                                            cmd.CommandType = CommandType.StoredProcedure;
+                                            cmd.Parameters.AddWithValue("p_SenderID_ID", SenderID_ID);
+                                            cmd.Parameters.AddWithValue("p_Flag", 0);
+                                            cmd.Parameters.AddWithValue("p_Record_Insert_DateTime", Record_Insert_DateTime.ToString());
+                                            cmd.Parameters.AddWithValue("p_Customer_ID", Customer_ID);
+                                            cmd.Parameters.AddWithValue("p_API_ID", 10);
+                                            int n = db_connection.ExecuteNonQueryProcedure(cmd);
+
+                                        }
+
+
+                                    }
+
+
+
+
+                                    if (requestStatus != "" && requestStatus != null)
+                                    {
+
+                                        if (matchStatusesArr != null)
+                                        {
+
+                                            foreach (JObject matchStatusObj in matchStatusesArr)
+                                            {
+                                                string matchStatus1 = (string)matchStatusObj["matchStatus"];
+                                                int numberOfMatches1 = (int)matchStatusObj["numberOfMatches"];
+
+                                                // Extract nested properties under "matchTypes"
+                                                JObject matchTypesObj1 = (JObject)matchStatusObj["matchTypes"];
+                                                bool isSan = (bool)matchTypesObj1["san"];
+                                                bool isAdv = (bool)matchTypesObj1["adv"];
+                                                bool isPep = (bool)matchTypesObj1["pep"];
+                                                bool isRca = (bool)matchTypesObj1["rca"];
+                                                bool isSoc = (bool)matchTypesObj1["soc"];
+                                                bool isOther = (bool)matchTypesObj1["other"];
+                                                if (isPep == true)
+                                                {
+
+
+                                                    string description1 = "Customer Found In Pep";
+                                                    string Record_DateTime = Record_Insert_DateTime;
+                                                    string notification_icon = "aml-referd.jpg";
+                                                    //string notification_message = "<span class='cls-admin'> International PEP Alert - <strong class='cls-cancel'></strong><br/>" + description1 + "</span><span class='cls-customer'></span>";
+                                                    string notification_message = "<span class='cls-admin'> - <span class='cls-cancel'><strong> International PEP Alert </strong>- </span><span class='cls-addr-confirm'>" + description1 + " </span></span></span><span class='cls-customer'></span>";
+                                                    CompanyInfo.save_notification_compliance(notification_message, notification_icon, Convert.ToString(Customer_ID), Convert.ToDateTime(Record_DateTime), obj.Client_ID, 1, obj.User_ID, obj.Branch_ID, 0, 1, 1, 0, context);
+
+
+
+
+
+                                                }
+                                                if (isSan == true)
+                                                {
+
+
+
+                                                    string description1 = "Customer Found In Sanctions";
+                                                    string Record_DateTime = Record_Insert_DateTime;
+                                                    string notification_icon = "pep-match-not-found.jpg";
+                                                    //notification_message = "<span class='cls-admin'> - <span class='cls-cancel'><strong> International Sanctions Alert  </strong>- </span><span class='cls-addr-confirm'>" + description1 + " </span></span></span><span class='cls-customer'></span>";
+                                                    string notification_message = "<span class='cls-admin'> - <span class='cls-cancel'><strong> International Sanctions Alert </strong>- </span><span class='cls-addr-confirm'>" + description1 + " </span></span></span><span class='cls-customer'></span>";
+                                                    CompanyInfo.save_notification(notification_message, notification_icon, Convert.ToInt32(Customer_ID), Convert.ToDateTime(Record_Insert_DateTime), Convert.ToInt32(obj.Client_ID), 1, obj.User_ID, Convert.ToInt32(obj.Branch_ID), 0, 0, 1, 0, context);
+
+
+
+
+                                                }
+                                                if (isAdv == true)
+                                                {
+
+
+
+                                                    string description1 = "Customer Found In Adverse media matchess";
+                                                    string Record_DateTime = Record_Insert_DateTime;
+                                                    string notification_icon = "pep-match-not-found.jpg";
+                                                    //notification_message = "<span class='cls-admin'> - <span class='cls-cancel'><strong> International Sanctions Alert  </strong>- </span><span class='cls-addr-confirm'>" + description1 + " </span></span></span><span class='cls-customer'></span>";
+                                                    string notification_message = "<span class='cls-admin'> - <span class='cls-cancel'><strong> Adverse media matches Alert </strong>- </span><span class='cls-addr-confirm'>" + description1 + " </span></span></span><span class='cls-customer'></span>";
+                                                    CompanyInfo.save_notification(notification_message, notification_icon, Convert.ToInt32(Customer_ID), Convert.ToDateTime(Record_Insert_DateTime), Convert.ToInt32(obj.Client_ID), 1, obj.User_ID, Convert.ToInt32(obj.Branch_ID), 0, 0, 1, 0, context);
+
+
+
+
+                                                }
+                                                if (isRca == true)
+                                                {
+
+
+
+                                                    string description1 = "Customer Found In RCA (relatives or close associates) matches";
+                                                    string Record_DateTime = Record_Insert_DateTime;
+                                                    string notification_icon = "pep-match-not-found.jpg";
+                                                    //notification_message = "<span class='cls-admin'> - <span class='cls-cancel'><strong> International Sanctions Alert  </strong>- </span><span class='cls-addr-confirm'>" + description1 + " </span></span></span><span class='cls-customer'></span>";
+                                                    string notification_message = "<span class='cls-admin'> - <span class='cls-cancel'><strong> RCA (relatives or close associates) matches Alert </strong>- </span><span class='cls-addr-confirm'>" + description1 + " </span></span></span><span class='cls-customer'></span>";
+                                                    CompanyInfo.save_notification(notification_message, notification_icon, Convert.ToInt32(Customer_ID), Convert.ToDateTime(Record_Insert_DateTime), Convert.ToInt32(obj.Client_ID), 1, obj.User_ID, Convert.ToInt32(obj.Branch_ID), 0, 0, 1, 0, context);
+
+
+
+
+                                                }
+                                                if (isSoc == true)
+                                                {
+
+
+
+                                                    string description1 = "Customer Found In SOC (state owned companies) matches";
+                                                    string Record_DateTime = Record_Insert_DateTime;
+                                                    string notification_icon = "pep-match-not-found.jpg";
+                                                    //notification_message = "<span class='cls-admin'> - <span class='cls-cancel'><strong> International Sanctions Alert  </strong>- </span><span class='cls-addr-confirm'>" + description1 + " </span></span></span><span class='cls-customer'></span>";
+                                                    string notification_message = "<span class='cls-admin'> - <span class='cls-cancel'><strong> SOC (state owned companies) matches Alert </strong>- </span><span class='cls-addr-confirm'>" + description1 + " </span></span></span><span class='cls-customer'></span>";
+                                                    CompanyInfo.save_notification(notification_message, notification_icon, Convert.ToInt32(Customer_ID), Convert.ToDateTime(Record_Insert_DateTime), Convert.ToInt32(obj.Client_ID), 1, obj.User_ID, Convert.ToInt32(obj.Branch_ID), 0, 0, 1, 0, context);
+
+
+
+
+                                                }
+                                                if (isOther == true)
+                                                {
+
+
+
+                                                    string description1 = "Cutomer Found in others";
+                                                    string Record_DateTime = Record_Insert_DateTime;
+                                                    string notification_icon = "pep-match-not-found.jpg";
+                                                    //notification_message = "<span class='cls-admin'> - <span class='cls-cancel'><strong> International Sanctions Alert  </strong>- </span><span class='cls-addr-confirm'>" + description1 + " </span></span></span><span class='cls-customer'></span>";
+                                                    string notification_message = "<span class='cls-admin'> - <span class='cls-cancel'><strong> International AML Alert </strong>- </span><span class='cls-addr-confirm'>" + description1 + " </span></span></span><span class='cls-customer'></span>";
+                                                    CompanyInfo.save_notification(notification_message, notification_icon, Convert.ToInt32(Customer_ID), Convert.ToDateTime(Record_Insert_DateTime), Convert.ToInt32(obj.Client_ID), 1, obj.User_ID, Convert.ToInt32(obj.Branch_ID), 0, 0, 1, 0, context);
+
+
+
+
+                                                }
+
+                                                //string ssa = childd.InnerXml;
+                                                //string Address_match = childd.InnerText.ToString();
+
+
+
+
+
+
+                                            }
+                                        }
+
+                                        if (flag1 > 0 && flag2 > 0)
+                                        {
+                                            try
+                                            {
+                                                MySqlCommand cmd_update = new MySqlCommand("update documents_details set aml_sanctions_flag=3 where SenderID_ID=@SenderID_ID");
+                                                cmd_update.Parameters.AddWithValue("@SenderID_ID", SenderID_ID);
+                                                db_connection.ExecuteNonQueryProcedure(cmd_update);
+
+                                                using (MySqlCommand cmd = new MySqlCommand("update_sanction_flag"))//, cn
+                                                {
+                                                    //if (cn.State != ConnectionState.Open) { cn.Open(); }
+                                                    cmd.CommandType = CommandType.StoredProcedure;
+                                                    cmd.Parameters.AddWithValue("_Customer_ID", Customer_ID);
+                                                    cmd.Parameters.AddWithValue("_record_date", Record_Insert_DateTime);
+                                                    cmd.Parameters.AddWithValue("_clientId", obj.Client_ID);
+                                                    cmd.Parameters.AddWithValue("_branchId", obj.Branch_ID);
+                                                    cmd.Parameters.AddWithValue("_sanction_flag", flag1);
+                                                    int n = db_connection.ExecuteNonQueryProcedure(cmd);
+
+                                                }
+                                            }
+                                            catch { }
+                                        }
+                                        else if (flag1 > 0)
+                                        {
+                                            try
+                                            {
+                                                MySqlCommand cmd_update = new MySqlCommand("update documents_details set aml_sanctions_flag=1 where SenderID_ID=@SenderID_ID");
+                                                cmd_update.Parameters.AddWithValue("@SenderID_ID", SenderID_ID);
+                                                db_connection.ExecuteNonQueryProcedure(cmd_update);
+
+                                                using (MySqlCommand cmd = new MySqlCommand("update_sanction_flag"))//, cn
+                                                {
+                                                    //if (cn.State != ConnectionState.Open) { cn.Open(); }
+                                                    cmd.CommandType = CommandType.StoredProcedure;
+                                                    cmd.Parameters.AddWithValue("_Customer_ID", obj.Customer_ID);
+                                                    cmd.Parameters.AddWithValue("_record_date", obj.Record_Insert_DateTime);
+                                                    cmd.Parameters.AddWithValue("_clientId", obj.Client_ID);
+                                                    cmd.Parameters.AddWithValue("_branchId", obj.Branch_ID);
+                                                    cmd.Parameters.AddWithValue("_sanction_flag", flag1);
+                                                    int n = db_connection.ExecuteNonQueryProcedure(cmd);
+
+                                                }
+
+                                            }
+                                            catch { }
+                                        }
+                                        else if (flag2 > 0)
+                                        {
+                                            try
+                                            {
+                                                MySqlCommand cmd_update = new MySqlCommand("update documents_details set aml_sanctions_flag=2 where SenderID_ID=@SenderID_ID");
+                                                cmd_update.Parameters.AddWithValue("@SenderID_ID", SenderID_ID);
+                                                db_connection.ExecuteNonQueryProcedure(cmd_update);
+
+
+                                                using (MySqlCommand cmd = new MySqlCommand("update_sanction_flag"))//, cn
+                                                {
+                                                    //if (cn.State != ConnectionState.Open) { cn.Open(); }
+                                                    cmd.CommandType = CommandType.StoredProcedure;
+                                                    cmd.Parameters.AddWithValue("_Customer_ID", Customer_ID);
+                                                    cmd.Parameters.AddWithValue("_record_date", Record_Insert_DateTime);
+                                                    cmd.Parameters.AddWithValue("_clientId", obj.Client_ID);
+                                                    cmd.Parameters.AddWithValue("_branchId", obj.Branch_ID);
+                                                    cmd.Parameters.AddWithValue("_sanction_flag", flag2);
+                                                    int n = db_connection.ExecuteNonQueryProcedure(cmd);
+
+                                                }
+                                            }
+                                            catch { }
+                                        }
+                                        else
+                                if (requestStatus == "Complete" && flag == 0)
+                                        {
+                                            string Record_DateTime = Record_Insert_DateTime;
+                                            string notification_icon = "primary-id-upload.jpg";
+                                            string notification_message = "<span class='cls-admin'>Complience AML check result is <strong class='cls-priamary'>" + requestStatus + ".</strong></span><span class='cls-customer'></span>";
+                                            CompanyInfo.save_notification(notification_message, notification_icon, Convert.ToInt32(Customer_ID), Convert.ToDateTime(Record_DateTime), obj.Client_ID, 1, obj.User_ID, obj.Branch_ID, 0, 1, 1, 0, context);
+
+                                        }
+
+                                        try
+                                        {
+                                            //string Remark = Convert.ToString(CompanyInfo.getAPIStatus(Bandtext, obj.Client_ID));
+                                            if (Remark == "2" || Remark == "1")//alert or refer then  send mail to admin
+                                            {
+                                                string Record_DateTime = DateTime.Now.ToString();
+                                                string notification_icon = "aml-referd.jpg";
+                                                string notification_message = "<span class='cls-admin'>Complience AML check result is <strong class='cls-cancel'>" + Bandtext + ".</strong></span><span class='cls-customer'></span>";
+                                                CompanyInfo.save_notification_compliance(notification_message, notification_icon, Convert.ToString(Customer_ID), Convert.ToDateTime(Record_DateTime), obj.Client_ID, 1, obj.User_ID, obj.Branch_ID, 0, 1, 1, 0, context);
+                                            }
+                                            else
+                                            {
+                                                string Record_DateTime = Record_Insert_DateTime;
+                                                string notification_icon = "primary-id-upload.jpg";
+                                                string notification_message = "<span class='cls-admin'>Complience AML check result is <strong class='cls-priamary'>" + Bandtext + ".</strong></span><span class='cls-customer'></span>";
+                                                CompanyInfo.save_notification_compliance(notification_message, notification_icon, Convert.ToString(Customer_ID), Convert.ToDateTime(Record_DateTime), obj.Client_ID, 1, obj.User_ID, obj.Branch_ID, 0, 1, 1, 0, context);
+                                            }
+
+                                        }
+                                        catch (Exception e)
+                                        {
+                                        }
+                                        try
+                                        {
+                                            //string Remark = Convert.ToString(CompanyInfo.getAPIStatus(Bandtext, obj.Client_ID));
+                                            if (Remark == "1" || Remark == "2" || Remark == "3")//alert or refer then  send mail to admin
+                                            {
+
+                                                //DataTable ds1 = CompanyInfo.get(Client_ID, context);
+                                                if (ds1.Rows.Count > 0)
+                                                {
+                                                    BaseCurrency_Code = Convert.ToString(ds1.Rows[0]["BaseCurrency_Code"]);
+                                                    BaseCurrency_TimeZone = Convert.ToString(ds1.Rows[0]["BaseCurrency_TimeZone"]);
+                                                    BaseCurrency_Sign = Convert.ToString(ds1.Rows[0]["BaseCurrency_Sign"]);
+                                                    BaseCurrency_Country = Convert.ToString(ds1.Rows[0]["BaseCurrency_Country"]);
+                                                    BaseCountry_ID = Convert.ToString(ds1.Rows[0]["BaseCountry_ID"]);
+                                                    EmailUrl = Convert.ToString(ds1.Rows[0]["Company_URL_Admin"]);
+                                                    CustomerURL = Convert.ToString(ds1.Rows[0]["Company_URL_Customer"]);
+                                                    Company_Name = Convert.ToString(ds1.Rows[0]["Company_Name"]);
+                                                    Cancel_Transaction_Hours = Convert.ToString(ds1.Rows[0]["Cancel_Transaction_Hours"]);
+                                                }
+
+
+                                                MySqlCommand _cmd = new MySqlCommand("customer_details_by_param");
+                                                _cmd.CommandType = CommandType.StoredProcedure;
+                                                string _whereclause = " and cr.Client_ID=" + obj.Client_ID + " and cr.Customer_ID=" + Customer_ID;
+                                                //  DataTable d1 = (DataTable)mtsmethods.GetCustDetailsByID(c.Customer_ID); //get customer details by id
+
+                                                _cmd.Parameters.AddWithValue("_whereclause", _whereclause);
+                                                _cmd.Parameters.AddWithValue("_SecurityKey", CompanyInfo.SecurityKey());
+                                                DataTable d1 = db_connection.ExecuteQueryDataTableProcedure(_cmd);
+                                                string sendmsg = "Response from third Party AML check for  " + d1.Rows[0]["WireTransfer_ReferanceNo"] + "   is   " + Bandtext + "";
+
+
+
+
+                                                string EmailID = "";
+                                                DataTable dt_admin_Email_list = (DataTable)getAdminEmailList(obj.Client_ID, obj.Branch_ID);
+                                                if (dt_admin_Email_list.Rows.Count > 0)
+                                                {
+                                                    for (int a = 0; a < dt_admin_Email_list.Rows.Count; a++)
+                                                    {
+                                                        string AdminEmailID = Convert.ToString(dt_admin_Email_list.Rows[a]["Email_ID"]) + ",";
+                                                        EmailID += AdminEmailID;
+                                                    }
+                                                }
+                                                string email = EmailID;
+                                                string subject = string.Empty;
+                                                string body = string.Empty;
+
+                                                HttpWebRequest httpRequest;
+
+                                                httpRequest = (HttpWebRequest)WebRequest.Create("" + EmailUrl + "Email/customemail.html");
+
+                                                httpRequest.UserAgent = "Code Sample Web Client";
+                                                HttpWebResponse webResponse = (HttpWebResponse)httpRequest.GetResponse();
+                                                using (StreamReader reader = new StreamReader(webResponse.GetResponseStream()))
+                                                {
+                                                    body = reader.ReadToEnd();
+                                                }
+                                                body = body.Replace("[name]", "Administrators");
+
+                                                body = body.Replace("[msg]", sendmsg);
+
+                                                subject = "" + Company_Name + " - Compliance - Alert - " + d1.Rows[0]["WireTransfer_ReferanceNo"];
+                                                //subject = "" + HttpContext.Current.Session["Company_Name"] + " -  Incomplete Customer Registration Details " + c.WireTransfer_ReferanceNo;
+                                                mail_send = (string)CompanyInfo.Send_Mail(dt_admin_Email_list, email, body, subject, Convert.ToInt32(obj.Client_ID), Convert.ToInt32(obj.Branch_ID), "Alert Admins", "", "", context);
+                                            }
+                                        }
+                                        catch (Exception ae)
+                                        {
+                                            string stattus = (string)CompanyInfo.InsertErrorLogDetails(ae.Message.Replace("\'", "\\'"), 0, "Check Credit Safe", obj.Branch_ID, obj.Client_ID);
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    stattus12 = (int)CompanyInfo.InsertActivityLogDetails("Records Not Found in ds datatable" + whereclause + Customer_ID + Client_ID, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), Convert.ToInt32(Customer_ID), "GetJourney", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "ID Upload", context);
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    mail_send = string.Empty;
+                    string stattus = (string)CompanyInfo.InsertErrorLogDetails(ex.ToString().Replace("\'", "\\'"), 0, "Check_AML", obj.Branch_ID, obj.Client_ID);
+                    string sendmsg = "Customer Registered successfully but we are unable to check Credit Safe";
+                    string EmailID = "";
+                    DataTable dt_admin_Email_list = (DataTable)getAdminEmailList(obj.Client_ID, obj.Branch_ID);
+                    if (dt_admin_Email_list.Rows.Count > 0)
+                    {
+                        for (int a = 0; a < dt_admin_Email_list.Rows.Count; a++)
+                        {
+                            string AdminEmailID = Convert.ToString(dt_admin_Email_list.Rows[a]["Email_ID"]) + ",";
+                            EmailID += AdminEmailID;
+                        }
+                    }
+                    string email = EmailID;
+                    string subject = string.Empty;
+                    string body = string.Empty;
+
+                    HttpWebRequest httpRequest;
+
+                    if (Convert.ToString(EmailUrl) == "" || Convert.ToString(EmailUrl) == null)
+                    {
+
+                        MySqlCommand _cmd = new MySqlCommand("customer_details_by_param");
+                        _cmd.CommandType = CommandType.StoredProcedure;
+                        string _whereclause = " and cr.Client_ID=" + obj.Client_ID + " and cr.Customer_ID=" + Customer_ID;
+                        //  DataTable d1 = (DataTable)mtsmethods.GetCustDetailsByID(c.Customer_ID); //get customer details by id
+
+                        _cmd.Parameters.AddWithValue("_whereclause", _whereclause);
+                        _cmd.Parameters.AddWithValue("_SecurityKey", CompanyInfo.SecurityKey());
+                        DataTable dss = db_connection.ExecuteQueryDataTableProcedure(_cmd);
+
+                        if (dss.Rows.Count > 0)
+                        {
+                            BaseCurrency_Code = Convert.ToString(dss.Rows[0]["BaseCurrency_Code"]);
+                            BaseCurrency_TimeZone = Convert.ToString(dss.Rows[0]["BaseCurrency_TimeZone"]);
+                            BaseCurrency_Sign = Convert.ToString(dss.Rows[0]["BaseCurrency_Sign"]);
+                            BaseCurrency_Country = Convert.ToString(dss.Rows[0]["BaseCurrency_Country"]);
+                            BaseCountry_ID = Convert.ToString(dss.Rows[0]["BaseCountry_ID"]);
+                            EmailUrl = Convert.ToString(dss.Rows[0]["Company_URL_Admin"]);
+                            CustomerURL = Convert.ToString(dss.Rows[0]["Company_URL_Customer"]);
+                            RootURL = Convert.ToString(dss.Rows[0]["RootURL"]); //"C:/inetpub/wwwroot/bureaudechangesoftware-LIVE/MTS/MTS/";//"C:/inetpub/wwwroot/mts-teeparam-admin/";
+                        }
+                    }
+
+
+
+                    httpRequest = (HttpWebRequest)WebRequest.Create("" + EmailUrl + "Email/customemail.html");
+
+                    httpRequest.UserAgent = "Code Sample Web Client";
+                    HttpWebResponse webResponse = (HttpWebResponse)httpRequest.GetResponse();
+                    using (StreamReader reader = new StreamReader(webResponse.GetResponseStream()))
+                    {
+                        body = reader.ReadToEnd();
+                    }
+                    body = body.Replace("[name]", "Administrators");
+
+                    body = body.Replace("[msg]", sendmsg);
+                    subject = "" + Company_Name + " -  Incomplete Customer Registration Details.";
+                    //HttpWebRequest httpRequest1 = (HttpWebRequest)WebRequest.Create("" + HttpContext.Current.Session["EmailUrl"] + "Email/RegisteredSuccessMail.txt");
+
+                    //httpRequest1.UserAgent = "Code Sample Web Client";
+                    //HttpWebResponse webResponse1 = (HttpWebResponse)httpRequest1.GetResponse();
+                    //using (StreamReader reader = new StreamReader(webResponse1.GetResponseStream()))
+                    //{
+                    //    subject = reader.ReadLine();
+                    //}
+                    mail_send = (string)CompanyInfo.Send_Mail(dt_admin_Email_list, email, body, subject, Convert.ToInt32(obj.Client_ID), Convert.ToInt32(obj.Branch_ID), "Alert Admins", "", "", context);
+                    stattus = (string)CompanyInfo.InsertErrorLogDetails(ex.Message.Replace("\'", "\\'"), 0, "Check_AML", obj.Branch_ID, obj.Client_ID);
+                }
+            }
+            catch (Exception ex)
+            {
+                string stattus = (string)CompanyInfo.InsertErrorLogDetails("Error In Check_AML funcrtion" + ex.Message.Replace("\'", "\\'"), 0, "Check_AML", obj.Branch_ID, obj.Client_ID);
+            }
+
+            string[] response = { Status.ToString(), Bandtext };
+            return response;
+        }
+
+        public static object getAdminEmailList(int Client_ID, int Branch_ID)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("GetAdmins");
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("_Client_ID", Client_ID);
+                string where = "";
+                if (Branch_ID > 3 || Branch_ID == 1)
+                {
+                    where = " and u.Branch_ID=" + Branch_ID + " ";
+                }
+                cmd.Parameters.AddWithValue("_whereclause", where);
+                dt = (DataTable)db_connection.ExecuteQueryDataTableProcedure(cmd);
+            }
+            catch (Exception ae)
+            {
+
+            }
+            return dt;
+        }
     }
 
     internal class WatermarkDirection
