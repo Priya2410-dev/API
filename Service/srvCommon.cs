@@ -204,5 +204,34 @@ namespace Calyx_Solutions.Service
             return result;
         }
 
+        public DataTable GetSidebarDashboardConfig(Model.Customer obj, HttpContext context)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                List<Model.Customer> _lst = new List<Model.Customer>();
+                string Client_ID_regex = validation.validate(Convert.ToString(obj.Client_ID), 0, 1, 1, 1, 1, 1, 1, 1, 1);
+                if (Client_ID_regex != "false")
+                {
+                    string whereclause = "";
+                    MySqlCommand _cmd = new MySqlCommand("getsidebardashboardconfig");
+                    _cmd.CommandType = CommandType.StoredProcedure;
+                    _cmd.Parameters.AddWithValue("_Client_ID", obj.Client_ID);
+                    _cmd.Parameters.AddWithValue("_whereclause", whereclause);
+                    dt = db_connection.ExecuteQueryDataTableProcedure(_cmd);
+                }
+                else
+                {
+                    string msg = "Validation Error Client_ID_regex-" + Client_ID_regex;
+                    int stattus = (int)CompanyInfo.InsertActivityLogDetails(msg, Convert.ToInt32(obj.User_ID), 0, Convert.ToInt32(obj.User_ID), 0, "GetSidebarDashboardConfig", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "GetSidebarDashboardConfig", context);
+                }
+            }
+            catch (Exception ex)
+            {
+                string msg = "Api GetSidebarDashboardConfig: " + ex.ToString() + " ";
+                CompanyInfo.InsertErrorLogTracker(msg, 0, 0, 0, 0, "GetSidebarDashboardConfig", Convert.ToInt32(obj.Branch_ID), Convert.ToInt32(obj.Client_ID), "", context);
+            }
+            return dt;
+        }
     }
 }
