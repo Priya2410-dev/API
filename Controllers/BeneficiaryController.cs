@@ -2328,37 +2328,39 @@ namespace Calyx_Solutions.Controllers
                 if (!SqlInjectionProtector.ReadJsonElementValues_SingleElement(objdata).isValid)
                 {
                     string fieldName = string.Empty;
+                    string detectedPattern = string.Empty;
 
                     var sqlValidationResult = SqlInjectionProtector.ReadJsonElementValues_SingleElement(objdata);   // Checked SQL injection validation
                     if (!sqlValidationResult.isValid)
                     {
                         fieldName = sqlValidationResult.fieldName;  // Captured the field name from the validation
+                        detectedPattern = sqlValidationResult.detectedPattern;
                     }
 
                     string errorMessage = fieldName switch
                     {
-                        "AccountHolderName" => "Invalid input detected for Account Holder Name",
-                        "Account_Number" => "Invalid input detected for Account Number",
-                        "BankCode" => "Invalid input detected for Bank Code",
-                        "beneficiaryAddress" => "Invalid input detected for Address",
-                        "Beneficiary_Address1" => "Invalid input detected for Address",
-                        "Beneficiary_CityName" => "Invalid input detected for City Name",
-                        "Beneficiary_CountryName" => "Invalid input detected for Country Name",
-                        "beneficiaryMobile" => "Invalid input detected for Mobile",
-                        "beneficiaryName" => "Invalid input detected for Name",
-                        "Beneficiary_PostCode" => "Invalid input detected for Post Code",
-                        "Beneficiary_Telephone" => "Invalid input detected for Telephone",
-                        "Benf_BIC" => "Invalid input detected for BIC",
-                        "Benf_Iban" => "Invalid input detected for Iban",
-                        "Birth_Date" => "Invalid input detected for Birth Date",
-                        "Branch" => "Invalid input detected for Branch",
-                        "BranchCode" => "Invalid input detected for Branch Code",
-                        "First_Name" => "Invalid input detected for First Name",
-                        "Ifsc_Code" => "Invalid input detected for Ifsc Code",
-                        "Last_Name" => "Invalid input detected for Last Name",
-                        "Middle_Name" => "Invalid input detected for Middle Name",
-                        "Wallet_provider" => "Invalid input detected for Wallet Provider",
-                        _ => "Invalid input detected for " + fieldName
+                        "AccountHolderName" => $"Your account holder name cannot contain '{detectedPattern}'.",
+                        "Account_Number" => $"Your account number cannot contain '{detectedPattern}'.",
+                        "BankCode" => $"Your bank code cannot contain '{detectedPattern}'.",
+                        "beneficiaryAddress" => $"Your address cannot contain '{detectedPattern}'.",
+                        "Beneficiary_Address1" => $"Your address cannot contain '{detectedPattern}'.",
+                        "Beneficiary_CityName" => $"Your city name cannot contain '{detectedPattern}'.",
+                        "Beneficiary_CountryName" => $"Your country name cannot contain '{detectedPattern}'.",
+                        "beneficiaryMobile" => $"Your mobile number cannot contain '{detectedPattern}'.",
+                        "beneficiaryName" => $"Your name cannot contain '{detectedPattern}'.",
+                        "Beneficiary_PostCode" => $"Your postal code cannot contain '{detectedPattern}'.",
+                        "Beneficiary_Telephone" => $"Your telephone number cannot contain '{detectedPattern}'.",
+                        "Benf_BIC" => $"Your BIC cannot contain '{detectedPattern}'.",
+                        "Benf_Iban" => $"Your IBAN cannot contain '{detectedPattern}'.",
+                        "Birth_Date" => $"Your birth date cannot contain '{detectedPattern}'.",
+                        "Branch" => $"Your branch cannot contain '{detectedPattern}'.",
+                        "BranchCode" => $"Your branch code cannot contain '{detectedPattern}'.",
+                        "First_Name" => $"Your first name cannot contain '{detectedPattern}'.",
+                        "Ifsc_Code" => $"Your IFSC code cannot contain '{detectedPattern}'.",
+                        "Last_Name" => $"Your last name cannot contain '{detectedPattern}'.",
+                        "Middle_Name" => $"Your middle name cannot contain '{detectedPattern}'.",
+                        "Wallet_provider" => $"Your wallet provider cannot contain '{detectedPattern}'.",
+                        _ => $"Your '{fieldName}' cannot contain '{detectedPattern}'."
                     };
 
                     if (errorMessage != null)
@@ -4424,39 +4426,41 @@ namespace Calyx_Solutions.Controllers
             if (!SqlInjectionProtector.ReadJsonElementValues_SingleElement(obj1).isValid)
             {
                 string fieldName = string.Empty;
+                string detectedPattern = string.Empty;
 
                 var sqlValidationResult = SqlInjectionProtector.ReadJsonElementValues_SingleElement(obj1);   // Checked SQL injection validation
                 if (!sqlValidationResult.isValid)
                 {
-                    fieldName = sqlValidationResult.fieldName;  // Captured the field name from the validation
+                    fieldName = sqlValidationResult.fieldName;
+                    detectedPattern = sqlValidationResult.detectedPattern;
                 }
 
                 string errorMessage = fieldName switch
                 {
-                    "accountHolderName" => "Invalid input detected for Account Holder Name",
-                    "accountNumber" => "Invalid input detected for Account Number",
-                    "bankCode" => "Invalid input detected for Bank Code",
-                    "bankName" => "Invalid input detected for Bank Name",
-                    "beneficiaryAddress" => "Invalid input detected for Address",
-                    "beneficiaryAddress1" => "Invalid input detected for Address",
-                    "beneficiaryCityName" => "Invalid input detected for City Name",
-                    "beneficiaryCountryName" => "Invalid input detected for Country Name",
-                    "beneficiaryMobile" => "Invalid input detected for Mobile",
-                    "beneficiaryName" => "Invalid input detected for Name",
-                    "beneficiaryPostCode" => "Invalid input detected for Post Code",
-                    "beneficiaryTelephone" => "Invalid input detected for Telephone",
-                    "benfBIC" => "Invalid input detected for BIC",
-                    "benfIban" => "Invalid input detected for Iban",
-                    "birthDate" => "Invalid input detected for Birth Date",
-                    "branch" => "Invalid input detected for Branch",
-                    "branchCode" => "Invalid input detected for Branch Code",
-                    "firstName" => "Invalid input detected for First Name",
-                    "ifscCode" => "Invalid input detected for Ifsc Code",
-                    "lastName" => "Invalid input detected for Last Name",
-                    "middleName" => "Invalid input detected for Middle Name",
-                    "walletProvider" => "Invalid input detected for Wallet Provider",
-                    "sectionvalue" => "Invalid input detected for Section Value",
-                    _ => "Invalid input detected for " + fieldName
+                    "accountHolderName" => $"Your account holder name cannot contain '{detectedPattern}'.",
+                    "accountNumber" => $"Your account number cannot contain '{detectedPattern}'.",
+                    "bankCode" => $"Your bank code cannot contain '{detectedPattern}'.",
+                    "bankName" => $"Your bank name cannot contain '{detectedPattern}'.",
+                    "beneficiaryAddress" => $"Your address cannot contain '{detectedPattern}'.",
+                    "beneficiaryAddress1" => $"Your address cannot contain '{detectedPattern}'.",
+                    "beneficiaryCityName" => $"Your city name cannot contain '{detectedPattern}'.",
+                    "beneficiaryCountryName" => $"Your country name cannot contain '{detectedPattern}'.",
+                    "beneficiaryMobile" => $"Your mobile number cannot contain '{detectedPattern}'.",
+                    "beneficiaryName" => $"Your name cannot contain '{detectedPattern}'.",
+                    "beneficiaryPostCode" => $"Your postal code cannot contain '{detectedPattern}'.",
+                    "beneficiaryTelephone" => $"Your telephone number cannot contain '{detectedPattern}'.",
+                    "benfBIC" => $"Your BIC cannot contain '{detectedPattern}'.",
+                    "benfIban" => $"Your IBAN cannot contain '{detectedPattern}'.",
+                    "birthDate" => $"Your birth date cannot contain '{detectedPattern}'.",
+                    "branch" => $"Your branch cannot contain '{detectedPattern}'.",
+                    "branchCode" => $"Your branch code cannot contain '{detectedPattern}'.",
+                    "firstName" => $"Your first name cannot contain '{detectedPattern}'.",
+                    "ifscCode" => $"Your IFSC code cannot contain '{detectedPattern}'.",
+                    "lastName" => $"Your last name cannot contain '{detectedPattern}'.",
+                    "middleName" => $"Your middle name cannot contain '{detectedPattern}'.",
+                    "walletProvider" => $"Your wallet provider cannot contain '{detectedPattern}'.",
+                    "sectionvalue" => $"Your section value cannot contain '{detectedPattern}'.",
+                    _ => $"Your '{fieldName}'cannot contain '{detectedPattern}'."
                 };
 
                 if (errorMessage != null)

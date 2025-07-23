@@ -163,25 +163,27 @@ namespace Calyx_Solutions.Controllers
                     if (!SqlInjectionProtector.ReadJsonElementValues_SingleElement(objdata).isValid)
                     {
                         string fieldName = string.Empty;
+                        string detectedPattern = string.Empty;
 
                         var sqlValidationResult = SqlInjectionProtector.ReadJsonElementValues_SingleElement(objdata);   // Checked SQL injection validation
                         if (!sqlValidationResult.isValid)
                         {
                             fieldName = sqlValidationResult.fieldName;  // Captured the field name from the validation
+                            detectedPattern = sqlValidationResult.detectedPattern;
                         }
 
                         string errorMessage = fieldName switch
                         {
-                            "userName" => "Invalid input detected for Email address",
-                            "password" => "Invalid input detected for Password",
-                            "credentialFlag" => "Invalid input detected for Credential Flag",
-                            "otp" => "Invalid input detected for OTP",
-                            "resendotp" => "Invalid input detected for Resend OTP",                           
-                            "latitude" => "Invalid input detected for Latitude",
-                            "longitude" => "Invalid input detected for Longitude",
-                            "deviceId" => "Invalid input detected for Device ID",
-                            "ipAddress" => "Invalid input detected for IP Address",
-                            _ => "Invalid input detected for " + fieldName
+                            "userName" => $"Your email address cannot contain '{detectedPattern}'.",
+                            "password" => $"Your password cannot contain '{detectedPattern}'.",
+                            "credentialFlag" => $"Your credential flag cannot contain '{detectedPattern}'.",
+                            "otp" => $"Your OTP cannot contain '{detectedPattern}'.",
+                            "resendotp" => $"Your resend OTP value cannot contain '{detectedPattern}'.",
+                            "latitude" => $"Your latitude cannot contain '{detectedPattern}'.",
+                            "longitude" => $"Your longitude cannot contain '{detectedPattern}'.",
+                            "deviceId" => $"Your device ID cannot contain '{detectedPattern}'.",
+                            "ipAddress" => $"Your IP address cannot contain '{detectedPattern}'.",
+                            _ => $"Your '{fieldName}' cannot contain '{detectedPattern}'."
                         };
 
                         if (errorMessage != null)
