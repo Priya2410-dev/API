@@ -46,7 +46,7 @@ namespace Calyx_Solutions
         }
         //Start Parth added for return isValid along with field name
         #region return isValid along with field name
-        public static (bool isValid, string fieldName) ReadJsonElementValues_SingleElement(JsonElement jsonElement)
+        public static (bool isValid, string fieldName, string detectedPattern) ReadJsonElementValues_SingleElement(JsonElement jsonElement)
         {
             // If the element is an object, enumerate its properties
             if (jsonElement.ValueKind == JsonValueKind.Object)
@@ -56,13 +56,20 @@ namespace Calyx_Solutions
 
                     var value = Convert.ToString(property.Value);
                     var keyName = Convert.ToString(property.Name);
-                    if (value != null && ContainsSqlInjection(value))
+
+                    if (!string.IsNullOrEmpty(value))
                     {
-                        return (false, keyName); // SQL injection pattern detected
+                        foreach (var pattern in SqlInjectionPatterns)
+                        {
+                            if (value.IndexOf(pattern, StringComparison.OrdinalIgnoreCase) >= 0)
+                            {
+                                return (false, keyName, pattern); // Found pattern in value
+                            }
+                        }
                     }
                 }
             }
-            return (true, string.Empty);
+            return (true, string.Empty, string.Empty);
         }
         # endregion return isValid along with field name
         //End Parth added return isValid along with field name
