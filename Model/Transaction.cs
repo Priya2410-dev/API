@@ -238,7 +238,7 @@
         public int referee_applicablefor { set; get; } //Digvijay changes for reward info show transfer tyep wise
 
         public int Benf_BankDetails_ID { set; get; } // Vyankatesh change for multiple bank beneficiary details
-
+        public int Relation_ID { set; get; } //Digvijay changes for relation wise purpose show on send money details 24-12-24
         public string readTokenValue { set; get; }
 
         public int checklimit_step {  set; get; }
